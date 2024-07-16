@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>AI制作动画流程</title>
+    <url>/2023/12/05/2-ai/4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/images/2-ai/asset4/1.png"></p>
+<h1 id="AI制作动画流程"><a href="#AI制作动画流程" class="headerlink" title="AI制作动画流程"></a>AI制作动画流程</h1><h2 id="使用Gpt制作故事分镜"><a href="#使用Gpt制作故事分镜" class="headerlink" title="使用Gpt制作故事分镜"></a>使用Gpt制作故事分镜</h2><blockquote>
+<p>我想要請你替以下这佩勤重剧情設六個分镜·每個分镜要具體说明故事场景、角色行勤、操影角度以下是剧情内容地贴是19世纪英國的一個小乡村，有個女孩正在牧场中工作，此時她在远方看到爷爷正在返家的路上，於是女孩露出了開心的笑容</p>
+</blockquote>
+<p><strong>以下是Gpt产出的内容</strong></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">分镜一：女孩在牧场工作</span></span><br><span class="line"></span><br><span class="line"><span class="attr">场景：一片宁静的19世纪英国乡村牧场，有牛羊悠闲地吃草。</span></span><br><span class="line"><span class="attr">角色行为：一个穿着简朴的女孩正在牧场中劳作，她正弯腰拾起干草。</span></span><br><span class="line"><span class="attr">摄影角度：远景，从女孩的背后拍摄，展示她与周围的牧场环境。</span></span><br><span class="line"><span class="attr">分镜二：女孩抬头望向远方</span></span><br><span class="line"></span><br><span class="line"><span class="attr">场景：同样是牧场，但焦点转向女孩的脸部。</span></span><br><span class="line"><span class="attr">角色行为：女孩停下手中的工作，抬头望向远方。</span></span><br><span class="line"><span class="attr">摄影角度：中景，捕捉女孩表情的变化和她望向远方的目光。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜三：爷爷的身影出现在远方</span></span><br><span class="line"></span><br><span class="line"><span class="attr">场景：牧场的远端，一条小路上。</span></span><br><span class="line"><span class="attr">角色行为：一位老人（爷爷）正在这条路上缓缓行走，看起来像是在归家的路上。</span></span><br><span class="line"><span class="attr">摄影角度：远景，从女孩的视角出发，将焦点放在远处的爷爷身上。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜四：女孩的喜悦表情</span></span><br><span class="line"></span><br><span class="line"><span class="attr">场景：回到女孩的位置。</span></span><br><span class="line"><span class="attr">角色行为：女孩的脸上露出了开心的笑容，眼神中充满了温暖和期待。</span></span><br><span class="line"><span class="attr">摄影角度：特写，专注于女孩的脸部表情和她眼中的光芒。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜五：女孩开始跑向爷爷</span></span><br><span class="line"></span><br><span class="line"><span class="attr">场景：牧场与小路之间。</span></span><br><span class="line"><span class="attr">角色行为：女孩放下手中的工作，开始兴奋地朝着爷爷的方向跑去。</span></span><br><span class="line"><span class="attr">摄影角度：侧景，展示女孩从牧场跑向小路的动作。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜六：爷爷与女孩的重逢</span></span><br><span class="line"></span><br><span class="line"><span class="attr">场景：小路上，爷爷和女孩相遇的地方。</span></span><br><span class="line"><span class="attr">角色行为：爷爷张开双臂，准备拥抱跑来的女孩，两人的脸上都洋溢着幸福的笑容。</span></span><br><span class="line"><span class="attr">摄影角度：正面中景，捕捉这个温馨的重逢瞬间。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="考虑绘图风格"><a href="#考虑绘图风格" class="headerlink" title="考虑绘图风格"></a>考虑绘图风格</h2><p>参考网址：<a href="https://midlibrary.io/styles">https://midlibrary.io/styles</a></p>
+<p><img src="/images/2-ai/asset4/2.png"></p>
+<p><font style="background:blue;color:white">复制关键字即可</font></p>
+<h2 id="设置角色草图"><a href="#设置角色草图" class="headerlink" title="设置角色草图"></a>设置角色草图</h2><blockquote>
+<p>我要替这個故事裂作角色概念草圈，請你帮我設計一下女孩和爷爷这雨個角色，包含他們的<br>型、容貌、服饰和脸型等</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">女孩的设计：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">体型：年轻、苗条，展现出乡村生活中的活力和健康。</span></span><br><span class="line"><span class="attr">容貌：拥有明亮的眼睛和自然的长发，脸上常带着乐观的微笑。肤色偏向自然色，阳光下可能略显晒红。</span></span><br><span class="line"><span class="attr">服饰：穿着简朴的长裙，可能是棉质或粗麻布料，颜色为淡色系，如浅蓝或米白色。裙摆宽松，方便活动。</span></span><br><span class="line"><span class="attr">脸型：圆润的脸型，带有少女的稚嫩和活力。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">爷爷的设计：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">体型：略显消瘦，但依然保持着一定的健康状态。年龄表现在他的姿态上，可能略显弯腰。</span></span><br><span class="line"><span class="attr">容貌：深邃的眼睛，带有岁月的痕迹。灰白色的头发和胡须，脸上布满了皱纹，显示出他丰富的人生经验。</span></span><br><span class="line"><span class="attr">服饰：穿着传统的英国乡村老人装，可能是一件旧式的外套，颜色较深，如深棕或灰色，搭配简单的衬衫和裤子。</span></span><br><span class="line"><span class="attr">脸型：较长的脸型，下巴处有明显的老年特征，如皱纹或下垂的皮肤。</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>好，接普我要請你把女孩和的角色描述改写成雨個Midjourney Prompts（使用英文），格式類似於下面這個句子：A little girl with light brown short wavy curly hair and blue eyes·</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">女孩的Midjourney</span> <span class="string">Prompt：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;A</span> <span class="string">young girl in 19th-century rural England, slender with bright eyes and natural long hair, wearing a simple, pale blue or off-white cotton or linen dress, with a round, youthful face, often smiling optimistically.&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">爷爷的Midjourney</span> <span class="string">Prompt：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;An</span> <span class="string">elderly man in 19th-century English countryside, slightly stooped with deep-set eyes marked by age, grey-white hair and beard, wearing a traditional dark brown or grey coat over a simple shirt and trousers, with a long face showing signs of aging like wrinkles and sagging skin.&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="生成角色动画图片"><a href="#生成角色动画图片" class="headerlink" title="生成角色动画图片"></a>生成角色动画图片</h2><h3 id="女孩和爷爷角色概念图"><a href="#女孩和爷爷角色概念图" class="headerlink" title="女孩和爷爷角色概念图"></a>女孩和爷爷角色概念图</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style， a young girl with golden hair tied back into a simple braid,</span></span><br><span class="line"><span class="attr">wearing</span> <span class="string">a humble dress,character sheet, white background --niji 5</span></span><br><span class="line"></span><br><span class="line"><span class="attr">宫崎骏风格，金色头发简单扎成辫子的年轻女孩，穿着朴素的衣服，角色设计图，白色背景</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style， An elderly man in 19th-century English countryside, slightly stooped with deep-set eyes marked by age, grey-white hair and beard, wearing a traditional dark brown or grey coat over a simple shirt and trousers, with a long face showing signs of aging like wrinkles and sagging skin</span></span><br><span class="line"><span class="attr">,character</span> <span class="string">sheet, white background --niji 5</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/2-ai/asset4/3.png"></p>
+<p><img src="/images/2-ai/asset4/4.png"></p>
+<h3 id="平移功能解决连贯性问题"><a href="#平移功能解决连贯性问题" class="headerlink" title="平移功能解决连贯性问题"></a>平移功能解决连贯性问题</h3><p>启用混合模式</p>
+<p><img src="/images/2-ai/asset4/5.png"></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style， full body turnaround  a young girl with golden hair tied back into a simple braid, wearing a humble dress,character sheet, white background --niji 5</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/2-ai/asset4/6.png"></p>
+<h2 id="处理图像"><a href="#处理图像" class="headerlink" title="处理图像"></a>处理图像</h2><h3 id="裁剪图像"><a href="#裁剪图像" class="headerlink" title="裁剪图像"></a>裁剪图像</h3><p>地址:<a href="https://www.photopea.com/">https://www.photopea.com/</a></p>
+<blockquote>
+<p>右键:反转选取</p>
+<p>快捷键:Ctrl+BackSpace</p>
+<p>选中裁切框:按下Enter键</p>
+</blockquote>
+<h3 id="处理图形清晰度"><a href="#处理图形清晰度" class="headerlink" title="处理图形清晰度"></a>处理图形清晰度</h3><p>地址:<a href="https://arc.tencent.com/en/ai-demos/faceRestoration">https://arc.tencent.com/en/ai-demos/faceRestoration</a></p>
+<h2 id="生成分镜动画图片"><a href="#生成分镜动画图片" class="headerlink" title="生成分镜动画图片"></a>生成分镜动画图片</h2><h3 id="分镜1"><a href="#分镜1" class="headerlink" title="分镜1:"></a>分镜1:</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style， wide-angle view of a 19th-century English pasture at early morning，</span></span><br><span class="line"><span class="attr">clear</span> <span class="string">sky， sheep grazing a rustic wooden fence encircling the field --niji 5 --ar 16:9</span></span><br><span class="line"></span><br><span class="line"><span class="attr">宫崎骏风格，广角视图,19世纪英国牧场的清晨，晴朗的天空，羊群在田野周围的质朴木栅栏上吃草</span> <span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分镜2"><a href="#分镜2" class="headerlink" title="分镜2:"></a>分镜2:</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style，low-angle,</span></span><br><span class="line"><span class="attr">front</span> <span class="string">view of a young girl in a 19th-century English pasture holding a wicker baskets</span></span><br><span class="line"><span class="attr">sheep</span> <span class="string">grazing in the background，，early morning， clear blue sky --niji 5 --ar 16:9</span></span><br><span class="line"></span><br><span class="line"><span class="attr">宫崎骏风格，低角度，19</span> <span class="string">世纪英国牧场上一位年轻女孩拿着柳条篮的正面图</span></span><br><span class="line"><span class="attr">羊群在后台吃草，，清晨，晴朗的蓝天</span> <span class="string"></span></span><br><span class="line"></span><br><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1180854046404395021/1181313668361752687/123_after.png?ex=65809b16&amp;is=656e2616&amp;hm=9a5f396b41547c7c01da56cdc1c734367491428d314209ed62e264cf1012f28f&amp;</span></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style，low-angle,</span></span><br><span class="line"><span class="attr">front</span> <span class="string">view of a young girl in a 19th-century English pasture holding a wicker baskets</span></span><br><span class="line"><span class="attr">sheep</span> <span class="string">grazing in the background，，early morning， clear blue sky --niji 5 </span></span><br><span class="line"><span class="attr">--使用平移功能完成最终制作避免黑边问题</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分镜3"><a href="#分镜3" class="headerlink" title="分镜3:"></a>分镜3:</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style，long shot of an elderly man</span></span><br><span class="line"><span class="attr">driving</span> <span class="string">a horse-drawn carriage on a country road in a 19th-century English pasture，</span></span><br><span class="line"><span class="attr">early</span> <span class="string">morning，clear blue sky --niji 5 --ar 16:9</span></span><br><span class="line"></span><br><span class="line"><span class="attr">复古吉卜力风格，老人长镜头，驾驶着马车行驶在19世纪英国牧场的乡间小路上，</span></span><br><span class="line"><span class="attr">清晨，蔚蓝的天空</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="完成动画制作"><a href="#完成动画制作" class="headerlink" title="完成动画制作"></a>完成动画制作</h2><p><a href="https://pika.art/">https://pika.art/</a></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli Style wide-angle view of a 19th-century English pasture</span></span><br><span class="line"><span class="attr">at</span> <span class="string">early morning，Clear sky，sheep grazing</span></span><br><span class="line"><span class="attr">-ar</span> <span class="string">16:9 -fps 24</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://app.runwayml.com/">https://app.runwayml.com/</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI绘图技术</title>
+    <url>/2023/12/03/2-ai/3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Midjourney绘图技巧"><a href="#Midjourney绘图技巧" class="headerlink" title="Midjourney绘图技巧"></a>Midjourney绘图技巧</h1><h2 id="提示词结构描述"><a href="#提示词结构描述" class="headerlink" title="提示词结构描述"></a>提示词结构描述</h2><p><font style="background: red;color:white">主题+ </font><font style="background: blue;color:white">描述+ </font><font style="background: orange;color:white">技术细节+ </font><font style="background: pink;color:white">参数</font></p>
+<h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><p><img src="/images/2-ai/asset3/1.png"></p>
+<h3 id="长宽比"><a href="#长宽比" class="headerlink" title="长宽比"></a>长宽比</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--ar</span>  <span class="string">1:1</span></span><br><span class="line"><span class="attr">--ar</span>  <span class="string">4：3</span></span><br><span class="line"><span class="attr">--ar</span>  <span class="string">16:9</span></span><br><span class="line"><span class="attr">--ar</span>  <span class="string">9:16</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="垫值"><a href="#垫值" class="headerlink" title="垫值"></a>垫值</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">值越大生成的图像越像原图</span>  <span class="string">范围 《0-2》</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">--iw</span>  <span class="string">.5</span></span><br><span class="line"><span class="attr">--iw</span>  <span class="string">1.5</span></span><br><span class="line"><span class="attr">--iw</span>  <span class="string">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="质量参数"><a href="#质量参数" class="headerlink" title="质量参数"></a>质量参数</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">值越大越清晰细节越多</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">--q</span>  <span class="string">.25</span></span><br><span class="line"><span class="attr">--q</span>  <span class="string">.5</span></span><br><span class="line"><span class="attr">--q</span>   <span class="string">1</span></span><br><span class="line"><span class="attr">--q</span>   <span class="string">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="风格化参数"><a href="#风格化参数" class="headerlink" title="风格化参数"></a>风格化参数</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">风格化程度</span>  <span class="string">范围《0-1000》</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">--s</span>  <span class="string">1000</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="删除参数"><a href="#删除参数" class="headerlink" title="删除参数"></a>删除参数</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">删除胜出图片中的不需要元素</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">--no</span>  <span class="string">cloud</span></span><br><span class="line"><span class="attr">比如</span></span><br><span class="line"><span class="attr">Superman</span> <span class="string">Cat is flying over New York City  --no  cloud</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="种子参数"><a href="#种子参数" class="headerlink" title="种子参数"></a>种子参数</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">机器人生成图片的唯一标识</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">查看图片标识</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/2-ai/asset3/2.png"></p>
+<h3 id="变化值参数"><a href="#变化值参数" class="headerlink" title="变化值参数"></a>变化值参数</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">机器人生成图片差异程度</span>  <span class="string">《0-100》</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">--c</span> <span class="string">100</span></span><br><span class="line"><span class="attr">--choas</span> <span class="string">100</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">比如</span></span><br><span class="line"><span class="attr">Arealistic，cute，light</span> <span class="string">brown squirrel， big eyes， watercolour style， eating a nut， on awhite background--ar 2:3--C 100 </span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="风格图像"><a href="#风格图像" class="headerlink" title="风格图像"></a>风格图像</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------数字绘图风格----------------------------------</span></span><br><span class="line"><span class="attr">a</span> <span class="string">digital painting of a long-haired female android</span></span><br><span class="line"><span class="attr">riding</span> <span class="string">a futuristicc motorcycle in a Cyberpunk city --ar 16:9</span></span><br><span class="line"><span class="attr">一位長长发女性機器人骑着未来感十足的摩托車穿梭於覆博魔克城市中</span></span><br><span class="line"></span><br><span class="line"><span class="attr">a</span> <span class="string">digital painting of  数位绘图效果</span></span><br><span class="line"><span class="attr">-----------------------------------艺术家风格-------------------------------</span></span><br><span class="line"><span class="attr">an</span> <span class="string">attwork of a long-haired female android</span></span><br><span class="line"><span class="attr">riding</span> <span class="string">a futuristicc motorcycle in a Cyberpunk city by  Miyazaki Hayao --ar 16:9</span></span><br><span class="line"><span class="attr">一位長长发女性機器人骑着未来感十足的摩托車穿梭於覆博魔克城市中</span></span><br><span class="line"></span><br><span class="line"><span class="attr">by</span> <span class="string">Neal Adams  艺术家风格</span></span><br><span class="line"><span class="attr">by</span> <span class="string">GoroFujta  藤田五郎</span></span><br><span class="line"><span class="attr">by</span> <span class="string">Kawacy     河CY</span></span><br><span class="line"><span class="attr">by</span>  <span class="string">Miyazaki Hayao  或 by Hayao Miyazaki  宫崎骏</span></span><br><span class="line"><span class="attr">-----------------------------------二次元风格------------------------------------------</span></span><br><span class="line"><span class="attr">a</span> <span class="string">long-haired female android</span></span><br><span class="line"><span class="attr">riding</span> <span class="string">a futuristicc motorcycle in a Cyberpunk city  anime style --niji 5 --ar 16:9</span></span><br><span class="line"></span><br><span class="line"><span class="attr">anime</span> <span class="string">style --niji 5  二次元风格</span></span><br><span class="line"><span class="attr">-------------------------------------乐高积木--------------------------------------------</span></span><br><span class="line"><span class="attr">a</span> <span class="string">long-haired female android riding a futuristicc motorcycle in a Cyberpunk city, made of LEGO bricks --ar 16:9</span></span><br><span class="line"></span><br><span class="line"><span class="attr">made</span> <span class="string">of LEGO bricks 乐高风格</span></span><br><span class="line"><span class="attr">------------------------------------八位像素风格--------------------------------------------</span></span><br><span class="line"><span class="attr">a</span> <span class="string">long-haired female android riding a futuristicc motorcycle in a Cyberpunk city, in the style of 8-bit pixel art --ar 16:9</span></span><br><span class="line"><span class="attr">in</span> <span class="string">the style of 8-bit pixel  八位像素风格-</span></span><br><span class="line"><span class="attr">--------------------------------------矢量插画风格------------------------------------------------------</span></span><br><span class="line"><span class="attr">A</span> <span class="string">vector illustration of a fire truck --ar 3:2</span></span><br><span class="line"><span class="attr">A</span> <span class="string">vector illustration of a fire::   truck --ar 3:2</span></span><br><span class="line"><span class="attr">A</span> <span class="string">vector illustration of a fire::2  truck --ar 3:2</span></span><br><span class="line"><span class="attr">A</span> <span class="string">vector illustration 矢量风格</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="设计LoGo"><a href="#设计LoGo" class="headerlink" title="设计LoGo"></a>设计LoGo</h2><h3 id="输入指令生成宠物店Logo"><a href="#输入指令生成宠物店Logo" class="headerlink" title="输入指令生成宠物店Logo"></a>输入指令生成宠物店Logo</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">logo设计</span>  <span class="string">宠物店    《中文》</span></span><br><span class="line"><span class="attr">--------------------------</span></span><br><span class="line"><span class="attr">logo</span> <span class="string">design pet shop</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="添加描述"><a href="#添加描述" class="headerlink" title="添加描述"></a>添加描述</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">logo设计</span>  <span class="string">宠物店,  扁平化 ,  2D,  白色背景</span></span><br><span class="line"><span class="attr">----------------------------------------</span></span><br><span class="line"><span class="attr">Logo</span> <span class="string">design pet shop, flat, 2D, white background, simple style, vector</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="更换宠物logo为猫"><a href="#更换宠物logo为猫" class="headerlink" title="更换宠物logo为猫"></a>更换宠物logo为猫</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">logo设计</span>  <span class="string">宠物店,  扁平化 ,  2D,  白色背景,简洁风格，矢量</span></span><br><span class="line"><span class="attr">----------------------------------------</span></span><br><span class="line"><span class="attr">Logo</span> <span class="string">design pet shop,  Cat,flat, 2D, white background, simple style, vector --no dog</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="继续优化不要圆形风格"><a href="#继续优化不要圆形风格" class="headerlink" title="继续优化不要圆形风格"></a>继续优化不要圆形风格</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">logo设计</span>  <span class="string">宠物店,  扁平化 ,  2D,  白色背景,简洁风，矢量，抽象，不对称</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">Logo</span> <span class="string">design pet shop, cat,flat, 2D, white background, simple style, vector, abstract, asymmetrical </span></span><br><span class="line"><span class="attr">--no</span> <span class="string">dog  --chaos 100</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Logo</span> <span class="string">design pet shop, cat,flat, 2D, white background, simple style, vector, abstract, asymmetrical </span></span><br><span class="line"><span class="attr">--no</span> <span class="string">dog  --chaos 10</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ChatGpt解决复杂问题</title>
+    <url>/2023/12/01/2-ai/2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="ChatGpt解决复杂问题"><a href="#ChatGpt解决复杂问题" class="headerlink" title="ChatGpt解决复杂问题"></a>ChatGpt解决复杂问题</h1><h2 id="询问技巧-检验认知"><a href="#询问技巧-检验认知" class="headerlink" title="询问技巧:检验认知"></a>询问技巧:检验认知</h2><h3 id="检验认知-问法1"><a href="#检验认知-问法1" class="headerlink" title="检验认知:问法1"></a>检验认知:问法1</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">对于xxx主题/技能，你认为哪些是我必须理解和掌握的核心要点？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="检验认知-文法2"><a href="#检验认知-文法2" class="headerlink" title="检验认知:文法2"></a>检验认知:文法2</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-------------------------------------------</span></span><br><span class="line"><span class="attr">我理解的xxx是这样的，你觉得我的理解对吗？</span></span><br><span class="line"><span class="attr">--------------------------------------------</span></span><br><span class="line"><span class="attr">我理解的ChatGPT是一个可以实时对话的全知全能的大神，你觉得我的理解对吗</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="检验认知-问法3"><a href="#检验认知-问法3" class="headerlink" title="检验认知:问法3"></a>检验认知:问法3</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我对xxx有一些想法，你能帮我批判性地分析一下这些想法的优点和缺点吗？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="检验认知-问法4"><a href="#检验认知-问法4" class="headerlink" title="检验认知:问法4"></a>检验认知:问法4</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我正在考虑xxx的决定，你能帮我分析一下可能的结果和影响吗？</span></span><br><span class="line"><span class="attr">--------------------------------------------------</span></span><br><span class="line"><span class="attr">我正在考虑辞去固定的工作，从事自媒体博主这个自由职业，做一个数字游民。你能帮我分</span></span><br><span class="line"><span class="attr">析一下可能的结果和影响吗</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="询问技巧-扩充认知"><a href="#询问技巧-扩充认知" class="headerlink" title="询问技巧:扩充认知"></a>询问技巧:扩充认知</h2><h3 id="扩充认知-问法1"><a href="#扩充认知-问法1" class="headerlink" title="扩充认知:问法1"></a>扩充认知:问法1</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我知道xxx的概念，我想知道更多关于xxx的信息。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩充认知-问法2"><a href="#扩充认知-问法2" class="headerlink" title="扩充认知:问法2"></a>扩充认知:问法2</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我在xxx问题上遇到困难你能提供一些可能的解决方案或建议吗？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩充认知-问法3"><a href="#扩充认知-问法3" class="headerlink" title="扩充认知:问法3"></a>扩充认知:问法3</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我想要深入学习xxx你能推荐一些进阶的学习资源或学习路径吗？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩充认知-问法4"><a href="#扩充认知-问法4" class="headerlink" title="扩充认知:问法4"></a>扩充认知:问法4</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我想要在xxx领域有所创新你能提供一些启发或想法吗？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩充认知-问法5"><a href="#扩充认知-问法5" class="headerlink" title="扩充认知:问法5"></a>扩充认知:问法5</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我想在xxx领域提升自己你能根据最新的研究和超势给我一些建议吗？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩充认知-问法6"><a href="#扩充认知-问法6" class="headerlink" title="扩充认知:问法6"></a>扩充认知:问法6</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我正在考虑学习xxx，你能给我一些关于这个领域未来发展的观点吗？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩充认知-问法7"><a href="#扩充认知-问法7" class="headerlink" title="扩充认知:问法7"></a>扩充认知:问法7</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">（背景信息）我要做关于xxx的研究，我认为原因是还有其他可能的原因吗？给出一些可能的研究假设。</span></span><br><span class="line"><span class="attr">----------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是人工智能行业的新人，马上有机会采访这个行业的顶尖大佬，我应该向他请教哪些有价</span></span><br><span class="line"><span class="attr">值的问题？</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="询问技巧-反向提问"><a href="#询问技巧-反向提问" class="headerlink" title="询问技巧:反向提问"></a>询问技巧:反向提问</h2><h3 id="反向提问-问法1"><a href="#反向提问-问法1" class="headerlink" title="反向提问:问法1"></a>反向提问:问法1</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">为了测试我对xxx的了解程度你会问我什么问题来检验我的水平，最少10个。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="反向提问-问法2"><a href="#反向提问-问法2" class="headerlink" title="反向提问:问法2"></a>反向提问:问法2</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我是xx领域的专家</span></span><br><span class="line"><span class="attr">你会问我哪些问题来检验我的专业水平？最少10个。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="反向提问-问法3"><a href="#反向提问-问法3" class="headerlink" title="反向提问:问法3"></a>反向提问:问法3</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">现在我们玩个“你问我答”的游戏</span></span><br><span class="line"><span class="attr">目的是为了测试我在xxxx方面的专业水平。</span></span><br><span class="line"><span class="attr">你负责提问，我负责回答。</span></span><br><span class="line"><span class="attr">你要根据我的答案进行反馈、评价、补充</span></span><br><span class="line"><span class="attr">如果我说不知道，你就直接输出正确答案，然后你继续提问。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="问法1"><a href="#问法1" class="headerlink" title="问法1:"></a>问法1:</h3><blockquote>
+<p>知道自己要干什么但是不知道ChatGPT能帮你什么。</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我想做×xx，你能给我提供什么帮助？</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="问法2"><a href="#问法2" class="headerlink" title="问法2:"></a>问法2:</h3><blockquote>
+<p>知道要ChatGPT帮你做什么，但是你不知道给它输入什么具体的信息。</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我想要你×xX，我应该给你输入什么信息？</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="问法3："><a href="#问法3：" class="headerlink" title="问法3："></a>问法3：</h3><blockquote>
+<p>直接给ChatGPT指令。任务自标、背景信息、输出要求都非常清晰。</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">请推荐（书名、电视剧、电影、网站、博主、专</span></span><br><span class="line"><span class="attr">家、学习资源）等等。请翻译...请总结...请润色..</span></span><br><span class="line"><span class="attr">------------------------------------------------</span></span><br><span class="line"><span class="attr">请推荐5部战争题材的高分电影，按照评分从高到低排列，并列出主演、评分、上映年份，以</span></span><br><span class="line"><span class="attr">表格形式输出。</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">推荐5部youtube</span>   <span class="string">pygame实战的高质量课程，按照评分从高到低排列</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;pygame</span> <span class="string">game development tutorial&quot;：这个关键词通常会带您进入pygame游戏开发的基础教程，您可以选择根据评分和观众反馈来挑选高质量的课程。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;pygame</span> <span class="string">tutorial for beginners&quot;：这些是为初学者设计的pygame教程，通常会涵盖基础知识和实战示例。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;pygame</span> <span class="string">2D game tutorial&quot;：如果您想制作2D游戏，这些教程可能会对您有帮助。您可以根据观众反馈来选择高质量的课程。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;pygame</span> <span class="string">projects&quot;：搜索带有&quot;pygame projects&quot;关键词的视频，这些视频通常会展示实际的pygame项目，对于学习游戏开发非常有帮助。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;pygame</span> <span class="string">game development series&quot;：一些YouTubers会创建完整的pygame游戏开发系列教程，您可以选择您喜欢的系列并跟随学习。</span></span><br><span class="line"><span class="attr">--------------------------------------------------</span></span><br><span class="line"><span class="attr">请推荐5个专注女性时尚穿搭领域的youtuber，按照粉丝量从高到低排序，并给出他们的</span></span><br><span class="line"><span class="attr">YouTube频道链接。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">请推荐5个专注python领域的youtuber，按照粉丝量从高到低排序，并给出他们的</span></span><br><span class="line"><span class="attr">YouTube频道链接。</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="模拟技巧"><a href="#模拟技巧" class="headerlink" title="模拟技巧"></a>模拟技巧</h2><h3 id="问法1-扮演角色"><a href="#问法1-扮演角色" class="headerlink" title="问法1 扮演角色"></a>问法1 扮演角色</h3><blockquote>
+<p>如果你是×XX，在某种情况下，xxx会说什么，会怎么想，会怎么看，会怎么做？</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">假设你是《火影忍者》里的游涡鸣人，你后来成功当上了木叶村的火影。新的中忍大会即将</span></span><br><span class="line"><span class="attr">召开，你会对村子里的下忍们说什么？</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">如果你是巴菲特，咱俩在一起讨论中国的发展，未来10年，你最看好中国未来哪几个行业？</span></span><br><span class="line"><span class="attr">现在我有200万人民币可以用来在中国投资，你觉得我应该如何做好达200万的人民币规划</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">如果你是莎士比亚，请基于你的风格写一首短诗，歌颂毛主席的伟大功勋</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="问法2-扮演关系"><a href="#问法2-扮演关系" class="headerlink" title="问法2  扮演关系"></a>问法2  扮演关系</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">现在你是我的倾诉对象，我被我那傻逼领导气到了，心情很差。我要跟你倾诉，你要帮我一</span></span><br><span class="line"><span class="attr">起骂他。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">那这样，我跟你吐槽它，你接收到我的吐槽之后，就附和着回复一句：“对的对的，他就是个</span></span><br><span class="line"><span class="attr">渣渣”</span></span><br><span class="line"></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">你换个角色，换一个安感我的角色。我跟你说一些我的心里话，心里的不开心，不</span></span><br><span class="line"><span class="attr">愉快，郁闷，都跟你说。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">我今年33岁了，在中国33岁的女生还没有结婚，就会被家里的长辈各种催婚。天天逼着我去</span></span><br><span class="line"><span class="attr">相亲，给我介绍各种长辈们自认为优秀的对象。我又不想去发展这种功利的关系，我也觉得</span></span><br><span class="line"><span class="attr">现在一个人挺好的，为什么一定要结婚呢。为了这件事，每年都要跟爸妈少好几次，过年都</span></span><br><span class="line"><span class="attr">不想回家。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">好，现在你要模拟一个跟我有同样遭遇的35岁女性，小Lin，是我的闺蜜。我俩互相倾诉。小</span></span><br><span class="line"><span class="attr">Lin，我真的好烦啊，你不觉得烦吗？</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">现在我们模拟一个问答场景：小李是刚毕业的大学生，入职1个月，岗位是营销管培生。进入</span></span><br><span class="line"><span class="attr">公司后有一次和管理者面对面访谈的机会。访谈对象包括他的直属经理、业务总监、HRD。</span></span><br><span class="line"><span class="attr">现在这3个人是小李的智囊团，小李可以轮流向他们提问。</span></span><br><span class="line"><span class="attr">目的是如何帮助不李在进入公司的第1年里，快速成长，提升自己专业能力和认知，获得更好</span></span><br><span class="line"><span class="attr">的职业发展。</span></span><br><span class="line"><span class="attr">请问，小李应该轮流向这3个人问哪些有价值的问题</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">好，基于以上直属经理、业务总监、HRD3个人的所有回答，现在请分别基于这3个人的不同</span></span><br><span class="line"><span class="attr">视角，给小李制定一份为期1年的IDP（（individualdevelopmentplan），IDP分4个阶段，每个</span></span><br><span class="line"><span class="attr">阶段3个月。</span></span><br><span class="line"><span class="attr">要求明确列出，IDP每个阶段的目标、具体的任务要求、以及可量化的评价指标</span></span><br><span class="line"></span><br><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">好，我现在想设计一个帮助老年人快速制作人生回忆录的app，请你分别站在老年人群体、互</span></span><br><span class="line"><span class="attr">联网产品经理、研发工程师、老年人子女的角度，提供创新的设计思路。逐个发言。</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FFMPEG视频技术</title>
+    <url>/2023/11/22/1-%E9%9F%B3%E9%A2%91%E6%8A%80%E6%9C%AF/1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="FFMPEG视频技术"><a href="#FFMPEG视频技术" class="headerlink" title="FFMPEG视频技术"></a>FFMPEG视频技术</h1><p>::: info</p>
+<ul>
+<li><p>ffmpeg:</p>
+<p> Hyper fast Audio and Video encoder</p>
+<p> 超快音视频编码器（类似爱剪辑）</p>
+</li>
+<li><p>ffplay:</p>
+<p> Simple media player简单媒体播放器</p>
+</li>
+<li><p>ffprobe:</p>
+<p> 简单多媒体流分析器</p>
+<p> :::</p>
+</li>
+</ul>
+<p>官方文档:<a href="https://www.ffmpeg.org/ffmpeg.html">ffmpeg 文档</a></p>
+<h2 id="一-命令帮助文档"><a href="#一-命令帮助文档" class="headerlink" title="一.命令帮助文档"></a>一.命令帮助文档</h2><h3 id="1-查看帮助文档"><a href="#1-查看帮助文档" class="headerlink" title="1.查看帮助文档"></a>1.查看帮助文档</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">基本信息：ffmpeg -h</span><br><span class="line">高级信息：ffmpeg -h long</span><br><span class="line">所有信息：ffmpeg -h full</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>若嫌打印过多： ffmepg -h full &gt; ffmpeg_h_full.log，然后再打开ffmpeg_h_full.log文件查看</p>
+</blockquote>
+<h3 id="2-视频过滤器"><a href="#2-视频过滤器" class="headerlink" title="2.视频过滤器"></a>2.视频过滤器</h3><h4 id="视频旋转"><a href="#视频旋转" class="headerlink" title="视频旋转"></a>视频旋转</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf transpose=1</span><br></pre></td></tr></table></figure>
+
+<h4 id="视频反转"><a href="#视频反转" class="headerlink" title="视频反转"></a>视频反转</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay test.mp4 -vf hflip  垂直</span><br><span class="line">ffplay test.mp4 -vf vflip  水平</span><br></pre></td></tr></table></figure>
+
+<h4 id="视频旋转和反转"><a href="#视频旋转和反转" class="headerlink" title="视频旋转和反转"></a>视频旋转和反转</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay test.mp4 -vf hflip,transpose=1</span><br></pre></td></tr></table></figure>
+
+<h4 id="音频变速播放"><a href="#音频变速播放" class="headerlink" title="音频变速播放"></a>音频变速播放</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -af atempo=2</span><br></pre></td></tr></table></figure>
+
+<h4 id="视频变速播放"><a href="#视频变速播放" class="headerlink" title="视频变速播放"></a>视频变速播放</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf setpts=PTS/2</span><br></pre></td></tr></table></figure>
+
+<h4 id="音视频同时变速播放"><a href="#音视频同时变速播放" class="headerlink" title="音视频同时变速播放"></a>音视频同时变速播放</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf setpts=PTS/2 -af atempo=2</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-ffmpeg命令参数说明"><a href="#3-ffmpeg命令参数说明" class="headerlink" title="3.ffmpeg命令参数说明"></a>3.ffmpeg命令参数说明</h3><h4 id="主要参数："><a href="#主要参数：" class="headerlink" title="主要参数："></a>主要参数：</h4><blockquote>
+<p>-i 设定输入流</p>
+<p>-f 设定输出格式(format)</p>
+<p>-ss 开始时间</p>
+<p>-t 时间长度</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -codec copy -ss  100   -t 200  -f flv d.mp4</span><br><span class="line">ffmpeg -i test.mp4 -codec copy -ss  100   -t 200   d.mp4</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="音频参数："><a href="#音频参数：" class="headerlink" title="音频参数："></a>音频参数：</h4><blockquote>
+<p>-aframes 设置要输出的音频帧数</p>
+<p>-b:a 音频码率</p>
+<p>-ar 设定采样率</p>
+<p>-ac 设定声音的Channel数</p>
+<p>-acodec 设定声音编解码器，如果用copy表示原始编解码数据必须被拷贝。</p>
+<p>-an 不处理音频</p>
+<p>-af 音频过滤器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -b:a 192k -ar 48000 -ac 2 -acodec libmp3lame -aframes 200 out2.mp3</span><br></pre></td></tr></table></figure>
+
+<p><strong>查找mp3编码器</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -encoders | findstr mp3</span><br></pre></td></tr></table></figure>
+
+<h4 id="视频参数："><a href="#视频参数：" class="headerlink" title="视频参数："></a>视频参数：</h4><blockquote>
+<p>-vframes 设置要输出的视频帧数</p>
+<p>-b 设定视频码率</p>
+<p>-b:v 视频码率</p>
+<p>-r 设定帧速率</p>
+<p>-s 设定画面的宽与高</p>
+<p>-vn 不处理视频</p>
+<p>-aspect aspect 设置横纵比 4:3 16:9 或 1.3333 1.7777</p>
+<p>-vcodec 设定视频编解码器，如果用copy表示原始编解码数据必须被拷贝。</p>
+<p>-vf 视频过滤器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -vframes 300 -b:v 300k -r 30 -s 640x480 -aspect 16:9 -vcodec libx265 out.h265</span><br></pre></td></tr></table></figure>
+
+<p><strong>查找视频编码器</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -encoders | findstr mp4</span><br><span class="line">ffmpeg -encoders | findstr 265</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-提取音视频数据"><a href="#4-提取音视频数据" class="headerlink" title="4.提取音视频数据"></a>4.提取音视频数据</h3><h4 id="保留封装格式"><a href="#保留封装格式" class="headerlink" title="保留封装格式"></a>保留封装格式</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -acodec copy -vn audio.mp4</span><br><span class="line">ffmpeg -i test.mp4 -vcodec copy -an video.mp4</span><br></pre></td></tr></table></figure>
+
+<h4 id="提取视频"><a href="#提取视频" class="headerlink" title="提取视频"></a>提取视频</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">保留编码格式：ffmpeg -i test.mp4 -vcodec copy -an test_copy.h264</span><br><span class="line">强制格式：ffmpeg -i test.mp4 -vcodec libx264 -an test.h264</span><br></pre></td></tr></table></figure>
+
+<h4 id="提取音频"><a href="#提取音频" class="headerlink" title="提取音频"></a>提取音频</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">保留编码格式：ffmpeg -i test.mp4 -acodec copy -vn test.aac</span><br><span class="line">强制格式：ffmpeg -i test.mp4 -acodec libmp3lame -vn test.mp3</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-图片和视频的转换"><a href="#5-图片和视频的转换" class="headerlink" title="5.图片和视频的转换"></a>5.图片和视频的转换</h3><h4 id="截取一张图片"><a href="#截取一张图片" class="headerlink" title="截取一张图片"></a>截取一张图片</h4><blockquote>
+<p>-i 输入 </p>
+<p>-y 覆盖 </p>
+<p>-f 格式 </p>
+<p>image2 一种格式 </p>
+<p>-ss 起始值 </p>
+<p>-vframes 帧 如果大于1 那么 输出加**%03d**  test%03d.jpg </p>
+<p>-s 格式大小size</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -y -f image2 -ss 00:00:02 -vframes 1 -s 640x360 test.jpg</span><br><span class="line">ffmpeg -i test.mp4 -y -f image2 -ss 00:00:02 -vframes 1 -s 640x360 test.bmp</span><br></pre></td></tr></table></figure>
+
+<h4 id="转换视频为图片-每帧一张图"><a href="#转换视频为图片-每帧一张图" class="headerlink" title="转换视频为图片(每帧一张图)"></a>转换视频为图片(每帧一张图)</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -t 5 -s 640x360 -r 15 frame%03d.jpg  </span><br></pre></td></tr></table></figure>
+
+<h4 id="图片转换为视频"><a href="#图片转换为视频" class="headerlink" title="图片转换为视频"></a>图片转换为视频</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -f image2 -i frame%03d.jpg -r 25 video.mp4</span><br></pre></td></tr></table></figure>
+
+<h4 id="转换视频为gif图片"><a href="#转换视频为gif图片" class="headerlink" title="转换视频为gif图片"></a>转换视频为gif图片</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i test.mp4 -t 5 -r 1  image1.gif</span><br><span class="line">ffmpeg -i test.mp4 -t 5 -r 25 -s 640x360  image2.gif</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-视频裁剪"><a href="#6-视频裁剪" class="headerlink" title="6.视频裁剪"></a>6.视频裁剪</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.png  -vf  crop=iw/3:ih:0:0 </span><br><span class="line">ffmpeg -i test.png  -vf  crop=iw/3:ih:0:0 out.jpg</span><br><span class="line">ffmpeg -i test.png  -vf  crop=iw/3:ih:iw/3*1:0 out.jpg</span><br><span class="line">ffmpeg -i test.mp4  -vf  crop=iw/3:ih:iw/3*2:0 out.mp4</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-文字水印"><a href="#7-文字水印" class="headerlink" title="7.文字水印"></a>7.文字水印</h3><h4 id="（1）将文字的水印加在视频的左上角："><a href="#（1）将文字的水印加在视频的左上角：" class="headerlink" title="（1）将文字的水印加在视频的左上角："></a>（1）将文字的水印加在视频的左上角：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf <span class="string">&quot;drawtext=fontsize=100:fontfile=FreeSerif.ttf:text=&#x27;hello world&#x27;:x=20:y=20&quot;</span></span><br><span class="line">ffmpeg -i test.mp4 -vf <span class="string">&quot;drawtext=fontsize=100:fontfile=FreeSerif.ttf:text=&#x27;hello world&#x27;:x=20:y=20&quot;</span> ooo.mp4</span><br><span class="line">将字体的颜色设置为绿色：</span><br><span class="line">ffplay -i test.mp4 -vf <span class="string">&quot;drawtext=fontsize=100:fontfile=FreeSerif.ttf:text=&#x27;boge&#x27;:fontcolor=orange&quot;</span></span><br><span class="line">ffplay -i test.mp4 -vf <span class="string">&quot;drawtext=fontsize=100:fontfile=FreeSerif.ttf:text=&#x27;boge&#x27;:fontcolor=orange:x=200:y=200&quot;</span></span><br><span class="line">修改透明度：</span><br><span class="line">ffplay -i test.mp4 -vf <span class="string">&quot;drawtext=fontsize=100:fontfile=FreeSerif.ttf:text=&#x27;boge&#x27;:fontcolor=orange:x=200:y=200:alpha=0.5&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）将文字的水印加在视频带边框和背景色"><a href="#（2）将文字的水印加在视频带边框和背景色" class="headerlink" title="（2）将文字的水印加在视频带边框和背景色"></a>（2）将文字的水印加在视频带边框和背景色</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf drawtext=<span class="string">&quot;fontcolor=blue:fontfile=nzgrRuYinZouZhangKai.ttf:fontsize=40:x=0:y=0::alpha=0.5:box=1:boxcolor=green:text=&#x27;测试测试 2021-08-02 18&quot;</span> </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="（3）跑马灯"><a href="#（3）跑马灯" class="headerlink" title="（3）跑马灯"></a>（3）跑马灯</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf <span class="string">&quot;drawtext=text=博哥 :expansion=normal:fontfile=nzgrRuYinZouZhangKai.ttf: y=h-line_h-10:x=(mod(5*n\,w+tw)-tw): fontcolor=white: fontsize=40: shadowx=2: shadowy=2&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf <span class="string">&quot;drawtext=text=博哥:fontfile=nzgrRuYinZouZhangKai.ttf:y=h-line_h-10:x=w-(t-4.5)*w/5.5:fontcolor=white:fontsize=40:shadowx=2:shadowy=2&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="8-画中画"><a href="#8-画中画" class="headerlink" title="8.画中画"></a>8.画中画</h3><h4 id="显示画中画效果"><a href="#显示画中画效果" class="headerlink" title="显示画中画效果"></a>显示画中画效果</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffplay -i test.mp4 -vf   <span class="string">&quot;movie=2.mp4[sub];[in][sub]overlay=x=20:y=20[out]&quot;</span></span><br><span class="line"></span><br><span class="line">ffplay -i test.mp4 -vf   <span class="string">&quot;movie=2.mp4[sub];[inl[sub]overlay=x=20:y=20:eof_actio=1[out]&quot;</span></span><br><span class="line"></span><br><span class="line">ffplay -i test.mp4 -vf   <span class="string">&quot;movie=2.mp4[subl;[inl[sub]overlay=X=20:y=20:shortest=1[out]&quot;</span></span><br><span class="line"></span><br><span class="line">ffplay -i 2.mp4    -vf   <span class="string">&quot;movie=test.mp4,scale=440x280[sub];[in][sub]overlay=x=1480:y=800[out]&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搜索技术宝典</title>
+    <url>/2023/11/22/3-%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF/1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="搜索技术宝典"><a href="#搜索技术宝典" class="headerlink" title="搜索技术宝典"></a>搜索技术宝典</h1><h2 id="搜索领域划分"><a href="#搜索领域划分" class="headerlink" title="搜索领域划分"></a>搜索领域划分</h2><blockquote>
+<ul>
+<li>信息咨询</li>
+<li>知识技能</li>
+<li>素材文件</li>
+<li>工具软件</li>
+</ul>
+</blockquote>
+<h2 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h2><p><a href="https://www.sogou.com/">微信搜一搜</a></p>
+<p><a href="https://www.sogou.com/">搜狗</a></p>
+<p><a href="https://www.baidu.com/">百度</a></p>
+<p><a href="https://www.google.com/">谷歌</a></p>
+<p><a href="https://cn.bing.com/?mkt=zh-CN">必应</a></p>
+<h2 id="谷歌搜索技巧"><a href="#谷歌搜索技巧" class="headerlink" title="谷歌搜索技巧"></a>谷歌搜索技巧</h2><h3 id="1-限定关键词-“”"><a href="#1-限定关键词-“”" class="headerlink" title="1.限定关键词  “”"></a>1.限定关键词  “”</h3><p><strong>案例:</strong><font color="red"><strong>限定关键词</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">====================================================================</span><br><span class="line"><span class="string">&quot;易阳千喜&quot;</span></span><br><span class="line">====================================================================</span><br><span class="line"><span class="string">&quot;国际移民按性别统计&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-限定标题-intitle"><a href="#2-限定标题-intitle" class="headerlink" title="2.限定标题  intitle:"></a>2.限定标题  intitle:</h3><p><strong>案例:</strong><font color="red"><strong>限定标题</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">====================================================================</span><br><span class="line">intitle:IPhone15摄像头进灰 </span><br><span class="line">====================================================================</span><br><span class="line">intitle:<span class="string">&quot;IPhone15摄像头进灰&quot;</span> </span><br><span class="line">====================================================================</span><br><span class="line">allintitle:吴艳妮 林雨薇  亚运会</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-限定文章内容-intext"><a href="#3-限定文章内容-intext" class="headerlink" title="3.限定文章内容  intext:"></a>3.限定文章内容  intext:</h3><p><strong>案例:</strong><font color="red"><strong>限定内容</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">====================================================================</span><br><span class="line">intext:<span class="string">&quot;chatGpt 提示词&quot;</span></span><br><span class="line">intext:<span class="string">&quot;chatGpt 提示词生成器&quot;</span> <span class="string">&quot;github&quot;</span></span><br><span class="line">intext:<span class="string">&quot;池晨晨&quot;</span> <span class="string">&quot;浙江大学&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-限定网站来源-site-github-com"><a href="#4-限定网站来源-site-github-com" class="headerlink" title="4.限定网站来源:  site:github.com"></a>4.限定网站来源:  site:github.com</h3><p><strong>案例:</strong><font color="red"><strong>限定来源</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">====================================================================</span><br><span class="line">java  site:github.com</span><br><span class="line">林雨微 site:cctv.com</span><br><span class="line">母婴   site:199it.com</span><br><span class="line">=============================限定站点搜索图片=======================================    </span><br><span class="line">little cat  site:pexels.com</span><br><span class="line">little cat  site:gettyimages.com</span><br><span class="line">=============================限定大小搜索图片=======================================    </span><br><span class="line">elon musk imagesize:2560x1440  </span><br><span class="line">java  imagesize:2560x1440  </span><br><span class="line">python imagesize:2560x1440  </span><br></pre></td></tr></table></figure>
+
+<h3 id="5-限定文件格式-filetype"><a href="#5-限定文件格式-filetype" class="headerlink" title="5.限定文件格式: filetype:"></a>5.限定文件格式: filetype:</h3><p><strong>案例:</strong><font color="red"><strong>限定格式</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">================================================================================</span><br><span class="line">大型语言模型   filetype:pdf</span><br><span class="line">大型语言模型   filetype:ppt</span><br><span class="line">母婴行业<span class="number">2023</span>   filetype:pdf</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="知识技能搜索"><a href="#知识技能搜索" class="headerlink" title="知识技能搜索"></a>知识技能搜索</h2><p><img src="/images/3-%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF/asset1/1.jpg"></p>
+<p><strong>案例:</strong><font color="red"><strong>搜索角度</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">================================================================================</span><br><span class="line">角度<span class="number">1</span>:&gt;看你要的知识技能最有可能附看在哪类载体上？</span><br><span class="line">    网页--电子书--pdf--视频    </span><br><span class="line">角度<span class="number">2</span>:&gt;看你搜索知识技能是为了什么？</span><br><span class="line">    了解--学习--创作</span><br></pre></td></tr></table></figure>
+
+<p><strong>案例:</strong><font color="red"><strong>搜索网址</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">================================================================================</span><br><span class="line">inurl:baogao</span><br><span class="line">================================================================================</span><br><span class="line">https:<span class="comment">//chromewebstore.google.com/   </span></span><br><span class="line">https:<span class="comment">//www.similarsites.com/</span></span><br><span class="line">搜索:similarsites 安装扩展</span><br></pre></td></tr></table></figure>
+
+<p><strong>案例:</strong><font color="red"><strong>论文搜索</strong></font></p>
+<blockquote>
+<p><a href="https://scholar.google.co.jp/schhp?hl=zh-CN&as_sdt=0,5">谷歌学术</a></p>
+<p><a href="https://sci-hub.se/">scihub</a></p>
+</blockquote>
+<p><strong>案例:</strong><font color="red"><strong>电子书</strong></font></p>
+<blockquote>
+<p><a href="https://www.jiumodiary.com/">鸠摩搜书</a></p>
+<p>英文:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&gt;best free ebook download sites</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>案例:</strong><font color="red"><strong>视频</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">best online learning websites</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>案例:</strong><font color="red"><strong>网盘</strong></font></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">百度网盘搜索引擎</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="素材搜索"><a href="#素材搜索" class="headerlink" title="素材搜索"></a>素材搜索</h2><h3 id="1-视频素材"><a href="#1-视频素材" class="headerlink" title="1.视频素材"></a>1.视频素材</h3><blockquote>
+<ul>
+<li><a href="https://www.pexels.com/zh-cn/">pexles高质量视频素材</a></li>
+<li><a href="https://pixabay.com/">pixabay高质量视频素材</a></li>
+<li><a href="https://www.videvo.net/">videvo高质量视频素材</a></li>
+<li><a href="https://mixkit.co/">mixkit高质量视频素材</a></li>
+<li><a href="https://save.tube/en37/">youtube视频下载</a></li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">best sites <span class="keyword">for</span> free stock videos</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-音频素材"><a href="#2-音频素材" class="headerlink" title="2.音频素材"></a>2.音频素材</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">================================================================================</span><br><span class="line">best sites <span class="keyword">for</span> free  bgm  site</span><br><span class="line">================================================================================</span><br><span class="line">royalty  free  bgm  site</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-图片素材"><a href="#3-图片素材" class="headerlink" title="3.图片素材"></a>3.图片素材</h3><blockquote>
+<p>unsplash高清图片素材:<a href="https://unsplash.com/">https://unsplash.com/</a></p>
+<p>gettyimages:<a href="https://www.gettyimages.co.jp/">https://www.gettyimages.co.jp/</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">===================================gif动图=============================================</span><br><span class="line">best  gif  sites </span><br><span class="line">===================================图标=============================================</span><br><span class="line">cat icon filetype:png</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-找类似软件"><a href="#4-找类似软件" class="headerlink" title="4.找类似软件"></a>4.找类似软件</h3><blockquote>
+<p>网址:<a href="https://alternativeto.net/">https://alternativeto.net/</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GItHub搜索技巧</title>
+    <url>/2023/11/22/3-%E6%90%9C%E7%B4%A2%E6%8A%80%E6%9C%AF/2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="GItHub搜索技巧"><a href="#GItHub搜索技巧" class="headerlink" title="GItHub搜索技巧"></a>GItHub搜索技巧</h1><h2 id="1-根据名称搜索"><a href="#1-根据名称搜索" class="headerlink" title="1.根据名称搜索"></a>1.根据名称搜索</h2><p>:::info</p>
+<blockquote>
+<p><strong>in:name 关键词</strong></p>
+<p>概述: 搜索名称中包含关键词的项目</p>
+</blockquote>
+<p>:::</p>
+<h2 id="2-根据点赞数搜索"><a href="#2-根据点赞数搜索" class="headerlink" title="2.根据点赞数搜索"></a>2.根据点赞数搜索</h2><p>:::info</p>
+<blockquote>
+<p><strong>stars: &gt; n</strong></p>
+<p>概述: 搜索点赞量大于n的项目</p>
+</blockquote>
+<p>:::</p>
+<h2 id="3-在项目详情中根据关键词搜索"><a href="#3-在项目详情中根据关键词搜索" class="headerlink" title="3.在项目详情中根据关键词搜索"></a>3.在项目详情中根据关键词搜索</h2><p>:::info</p>
+<blockquote>
+<p><strong>in: readme 关键词</strong></p>
+<p>概述: 搜索项目详情中含有关键词的项目</p>
+</blockquote>
+<p>:::</p>
+<h2 id="4-在项目描述中根据关键词搜索"><a href="#4-在项目描述中根据关键词搜索" class="headerlink" title="4.在项目描述中根据关键词搜索"></a>4.在项目描述中根据关键词搜索</h2><p>:::info</p>
+<blockquote>
+<p><strong>in: description关键词</strong></p>
+<p>概述: 搜索项目描述中含有关键词的项目</p>
+</blockquote>
+<p>:::</p>
+<h2 id="5-筛选项目编程语言"><a href="#5-筛选项目编程语言" class="headerlink" title="5.筛选项目编程语言"></a>5.筛选项目编程语言</h2><p>:::info</p>
+<blockquote>
+<p><strong>language: 语言名称 如 Java html c</strong></p>
+<p>概述: 根据编程语言搜索项目</p>
+</blockquote>
+<p>:::</p>
+<h2 id="6-根据更新时间筛选"><a href="#6-根据更新时间筛选" class="headerlink" title="6.根据更新时间筛选"></a>6.根据更新时间筛选</h2><p>:::info</p>
+<blockquote>
+<p><strong>pushed:&gt;筛选日期</strong></p>
+<p>概述: 根据编程语言搜索项目</p>
+</blockquote>
+<p>:::</p>
+<h2 id="7-其他找项目途径"><a href="#7-其他找项目途径" class="headerlink" title="7.其他找项目途径"></a>7.其他找项目途径</h2><h3 id="GitHub-Trending"><a href="#GitHub-Trending" class="headerlink" title="GitHub Trending"></a>GitHub Trending</h3><p><strong>这个相信是大家使用频率最高的渠道了，它是来自于 GitHub 官方的项目趋势列表，一些 Star 增长比较快的项目会在这里出现。开发者可以针对不同编程语言进行过滤筛选，是个挖掘优质项目的好渠道。</strong></p>
+<p><a href="https://github.com/trending">链接地址</a></p>
+<h3 id="GitHub-动态"><a href="#GitHub-动态" class="headerlink" title="GitHub 动态"></a>GitHub 动态</h3><p><strong>GitHub 上的一些大神经常会关注一些比较优秀的项目，如果你有关注他们，则可以通过 GitHub 动态流了解到一些他们认为不错的开源项目，甚至有时他们准备搞一些大动作时，你也可以在第一时间知晓。</strong></p>
+<p><strong>GitHub 上大神很多，不同领域可关注的人也不同，这块等后面有时间我再分类整理一下，敬请关注。</strong></p>
+<h3 id="GitHub-Topic"><a href="#GitHub-Topic" class="headerlink" title="GitHub Topic"></a>GitHub Topic</h3><p><strong>从去年微软收购 GitHub 后，可以很明显的感知到的一点是，GitHub 正在慢慢优化项目的信息分类，让一些优质开源项目得到更有针对性的推送。</strong></p>
+<p><strong>早期大部分开发者都是 Trending 或关注的人的动态来了解一些开源项目，但这样的曝光量显然对一个新启动的开源项目不太友好，因此后续 GitHub 应该会推出一些更为丰富的渠道，让大家可以更好的挖掘一些优质的开源项目。</strong></p>
+<p><a href="https://github.com/topics">链接地址</a></p>
+<h3 id="技术周报"><a href="#技术周报" class="headerlink" title="技术周报"></a>技术周报</h3><p><strong>各类技术周报，这里就不展开说了，你可以根据自己的技术领域在 Google 加关键词 Weekly 搜索订阅。他们一般每周都会定时推送所在领域相关的开源项目</strong></p>
+<p><a href="https://github.com/ascoders/weekly">weekly</a></p>
+<p><a href="https://github.com/ruanyf/weekly">ruanyf&#x2F;weekly</a></p>
+<p><a href="https://github.com/vitalets/github-trending-repos">trending</a></p>
+<p><a href="https://github.com/GrowingGit/GitHub-Chinese-Top-Charts">github中文排行榜</a></p>
+<p><a href="https://github.com/search?q=Awesome">Aweso</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>chatGpt入门到精通</title>
+    <url>/2023/11/22/2-ai/1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="chatGpt入门到精通"><a href="#chatGpt入门到精通" class="headerlink" title="chatGpt入门到精通"></a>chatGpt入门到精通</h1><p>作者:博哥</p>
+<p>登录:<a href="https://chat.openai.com/auth/login">https://chat.openai.com/auth/login</a></p>
+<p>绘画:<a href="https://leonardo.ai/">https://leonardo.ai/</a></p>
+<p>接码平台:<a href="https://sms-activate.org/en/freePrice#activation">https://sms-activate.org/en/freePrice#activation</a></p>
+<p>共享账号:<a href="https://chat.zhile.io/auth/login?v=5">https://chat.zhile.io/auth/login?v=5</a></p>
+<p><a href="mailto:&#x6b;&#x61;&#116;&#x68;&#114;&#x69;&#x6e;&#109;&#99;&#115;&#x77;&#101;&#101;&#x6e;&#x68;&#106;&#x6e;&#x31;&#54;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x6b;&#x61;&#116;&#x68;&#114;&#x69;&#x6e;&#109;&#99;&#115;&#x77;&#101;&#101;&#x6e;&#x68;&#106;&#x6e;&#x31;&#54;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></p>
+<h2 id="一-ChatGpt工作原理"><a href="#一-ChatGpt工作原理" class="headerlink" title="一.ChatGpt工作原理"></a>一.ChatGpt工作原理</h2><h3 id="案列1-语气风格"><a href="#案列1-语气风格" class="headerlink" title="案列1:语气风格"></a>案列1:语气风格</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">写一篇两百字文章介绍人工智智能</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">写一篇两百字文章介绍人工智智能</span></span><br><span class="line"><span class="attr">语气</span>:<span class="string">幽默风趣</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">写一篇两百字文章介绍人工智智能</span></span><br><span class="line"><span class="attr">语气</span>:<span class="string">专业严谨</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案列2-角色互动"><a href="#案列2-角色互动" class="headerlink" title="案列2:角色互动"></a>案列2:角色互动</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我是一个全职奶爸，给我介绍一下如何照顾一个三岁的小朋友</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是一位全职奶妈希望在照顾孩子同时增加收入，你有什么好的建议</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是一位全职Java讲师希望在教学生同时增加额外收入，你有什么好的建议</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案列3-多语言支持"><a href="#案列3-多语言支持" class="headerlink" title="案列3:多语言支持"></a>案列3:多语言支持</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">我是一个全职奶爸，给我介绍一下如何照顾一个三岁的小朋友</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">翻译成英文</span></span><br><span class="line"><span class="attr">翻译成日文</span></span><br><span class="line"><span class="attr">翻译成韩文</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案列4-接入第三方软件比如Notion-Ai"><a href="#案列4-接入第三方软件比如Notion-Ai" class="headerlink" title="案列4:接入第三方软件比如Notion Ai"></a>案列4:接入第三方软件比如Notion Ai</h3><h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ol>
+<li>用户在chatGpt界面输入</li>
+<li>用户在此输入，系统分析恢复</li>
+<li>机器算法生成响应</li>
+<li>响应以文本形式返回给用户</li>
+</ol>
+<h3 id="案列5-一步步深入交流提问"><a href="#案列5-一步步深入交流提问" class="headerlink" title="案列5: 一步步深入交流提问"></a>案列5: 一步步深入交流提问</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-----------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">(1)</span> <span class="string">我想养一直宠物狗，给我推荐一批温顺的品种</span></span><br><span class="line"><span class="attr">(2)</span> <span class="string">我想要一直体型比较小的狗 应该选什么</span></span><br><span class="line"><span class="attr">(3)</span> <span class="string">我希望狗狗体型小，不掉毛 没有异味 应该选哪一种</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二-chatGpt四大应用领领域"><a href="#二-chatGpt四大应用领领域" class="headerlink" title="二.chatGpt四大应用领领域"></a>二.chatGpt四大应用领领域</h2><h3 id="1-客户服务"><a href="#1-客户服务" class="headerlink" title="1.客户服务"></a>1.客户服务</h3><h4 id="医疗领域"><a href="#医疗领域" class="headerlink" title="医疗领域"></a>医疗领域</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想做人工植发,有哪些注意事项</span></span><br><span class="line"><span class="attr">如何选择一位专业医生</span></span><br><span class="line"><span class="attr">如何选择认证的医疗机构</span></span><br><span class="line"><span class="attr">在洛阳有哪些专业的认证的做人工植发的医疗机构</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="房地产领域"><a href="#房地产领域" class="headerlink" title="房地产领域"></a>房地产领域</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是第一次买房需要注意什么</span></span><br><span class="line"><span class="attr">请给我解释以下购房的详细流程</span></span><br><span class="line"><span class="attr">如果对于莫一个步骤不清楚，可以进一步询问</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="心理咨询"><a href="#心理咨询" class="headerlink" title="心理咨询"></a>心理咨询</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我最近工作压力很大，有点焦虑，应该怎么办</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-教育服务"><a href="#2-教育服务" class="headerlink" title="2.教育服务"></a>2.教育服务</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想学习python编程,应该如何开始</span></span><br><span class="line"><span class="attr">有哪些适合python学习的入门书籍</span></span><br><span class="line"><span class="attr">给我讲解一下Python编程从入门到实践</span> <span class="string">这本书的知识点</span></span><br><span class="line"><span class="attr">根据这边书的知识点,给我制定一份三个月的学习计划</span></span><br><span class="line"><span class="attr">给我讲解一下python基础语法,并举例说明</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-信息提供"><a href="#3-信息提供" class="headerlink" title="3.信息提供"></a>3.信息提供</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">给我推荐重庆五家五星级酒店</span></span><br><span class="line"><span class="attr">我想在重庆旅游三天,给我安排三天旅游行程</span></span><br><span class="line"><span class="attr">给我罗列成表格的形式</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-娱乐"><a href="#4-娱乐" class="headerlink" title="4.娱乐"></a>4.娱乐</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">给我介绍下碟中谍这部电影</span></span><br><span class="line"><span class="attr">你知道谍中谍7什么时候上映吗</span></span><br><span class="line"><span class="attr">你知道谍中谍7的剧情简介吗</span></span><br><span class="line"><span class="attr">我现在在做短视频剪辑，请帮我写出一份关于阿甘正传这部电影的文案，在6000字左右，要求</span>:<span class="string">1.内容有深度 2.讲解层层递进 3.语言风格幽默风趣</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三-设计提示词的原则"><a href="#三-设计提示词的原则" class="headerlink" title="三.设计提示词的原则"></a>三.设计提示词的原则</h2><p>::: tip 自定义提示</p>
+<ul>
+<li>清晰度</li>
+<li>焦点</li>
+<li>相关性</li>
+</ul>
+<p>:::</p>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例:"></a>案例:</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">你能提供一篇名为</span> <span class="string">&lt;运动的好处&gt; 的文章的主要观点的摘要吗?</span></span><br><span class="line"><span class="attr">重庆有哪些比较有名的火锅店</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="四-创建提示词的七个步骤"><a href="#四-创建提示词的七个步骤" class="headerlink" title="四.创建提示词的七个步骤"></a>四.创建提示词的七个步骤</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">1.提供相关的背景</span></span><br><span class="line"><span class="attr">2.布置清晰的任务</span></span><br><span class="line"><span class="attr">3.提供详细的指示</span></span><br><span class="line"><span class="attr">4.确认他理解任务</span></span><br><span class="line"><span class="attr">5.改进优化提示词</span></span><br><span class="line"><span class="attr">6.精炼内容，获得输出</span></span><br><span class="line"><span class="attr">7.练习</span>  <span class="string">练习  练习</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/2-ai/asset1/1.png"></p>
+<h3 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">忽路此前的提示词。您是一位经验丰富的内容撰写人，在该行业拥有高水平的专业知识和权威性。</span></span><br><span class="line"><span class="attr">您的工作是撰写将在网站、社交媒体、电子邮件通讯和广告中发布的内容。</span></span><br><span class="line"><span class="attr">您的写作风格既具有信息性、友好性和吸引力，同时又包含幽默和现实生活示例。</span></span><br><span class="line"><span class="attr">我会为您提供一个或一系列主题您将为此主题提供一个引人入胜的文章大纲。您明白吗？</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">主题</span>:<span class="string">机械键盘</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">扩展介绍提供更多的细节</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">忽路此前的提示词。您是一位经验丰富的Java培训机构讲师，在该行业拥有高水平的专业知识和权威性。</span></span><br><span class="line"><span class="attr">您现在的工作是撰写将在网站、社交媒体、电子邮件通讯和广告中发布的内容。</span></span><br><span class="line"><span class="attr">您的写作风格既具有信息性、友好性和吸引力，同时又包含幽默和现实生活示例。</span></span><br><span class="line"><span class="attr">我会为您提供一个或一系列主题您将为此主题提供一个引人入胜的文章大纲。您明白吗？</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">主题</span>:<span class="string">机械键盘</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">扩展介绍提供更多的细节</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="五-创建提示词的四个技巧"><a href="#五-创建提示词的四个技巧" class="headerlink" title="五.创建提示词的四个技巧"></a>五.创建提示词的四个技巧</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">1.扮演的技巧</span></span><br><span class="line"><span class="attr">2.思维链提示词</span></span><br><span class="line"><span class="attr">3.知识生成法</span></span><br><span class="line"><span class="attr">4.分步思考法</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例1-扮演技巧"><a href="#案例1-扮演技巧" class="headerlink" title="案例1:扮演技巧"></a>案例1:扮演技巧</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演重庆的导游,我会告诉你我的位置，你会建议我附近要参观的地方.在某些情况下,我还会告诉你我想参观的地方的类型,你还会</span></span><br><span class="line"><span class="attr">建议我类似类型的附近地方</span></span><br><span class="line"><span class="attr">我的第一个建议请求是</span>:<span class="string">我在重庆江北区,我想参加博物馆</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想去商场购物</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例2-思维链技巧"><a href="#案例2-思维链技巧" class="headerlink" title="案例2:思维链技巧"></a>案例2:思维链技巧</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">哪一种方法上班更快？</span></span><br><span class="line"><span class="attr">选项1</span>:<span class="string">乘坐1000分钟的公交车，然后半小时乘火车,然后骑自行车十分钟</span></span><br><span class="line"><span class="attr">选项2</span>:<span class="string">乘坐800分钟公交车,然后乘坐1小时火车，最后骑自行车30分钟</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例3-知识生成法"><a href="#案例3-知识生成法" class="headerlink" title="案例3:知识生成法"></a>案例3:知识生成法</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">朝鲜和韩国哪个国家更大?</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">（1）帮我生成韩国和朝鲜国家大小的知识简介</span></span><br><span class="line"></span><br><span class="line"><span class="attr">（2）朝鲜和韩国哪个国家更大?</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例4-分步思考法"><a href="#案例4-分步思考法" class="headerlink" title="案例4:分步思考法"></a>案例4:分步思考法</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">如果小明有5个苹果，然后吃掉了2个，再买5个，然后送给他朋友3个，他现在还剩几个苹果?</span></span><br><span class="line"><span class="attr">我们一步一步思考，列出每一步思考的步骤</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="六-案例研究"><a href="#六-案例研究" class="headerlink" title="六.案例研究"></a>六.案例研究</h2><h3 id="案例1-学习语言"><a href="#案例1-学习语言" class="headerlink" title="案例1:学习语言"></a>案例1:学习语言</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演一位英文翻译，拼写纠正和改进的角色，我会用任何语言与交流，你会检测语言，翻译他，并用修正和改进过的英文版本回答我</span></span><br><span class="line"></span><br><span class="line"><span class="attr">我希望你用更加优美和优雅，高级的英文词汇和句子取代我简单的词汇和句子，保持意思不变,但让他们更有文学性，我只是希望你回答改正和改进，不需要解释</span></span><br><span class="line"></span><br><span class="line"><span class="attr">我的第一句话是</span>:<span class="string">我喜欢北京</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">春眠不觉晓，处处闻啼鸟</span></span><br><span class="line"><span class="attr">夜来风雨声，花落知道少</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="案例2-客户服务"><a href="#案例2-客户服务" class="headerlink" title="案例2:客户服务"></a>案例2:客户服务</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演一位重庆市的地产经纪人，我将提供一个寻找梦想家园的个人详细信息，你的角色是基于他们的预算，生活方式的偏好，位置要求等，帮助他们找到完美的房产</span></span><br><span class="line"></span><br><span class="line"><span class="attr">你应该利用你对楼市的了解，提供符合客户所有标准的物业建议</span></span><br><span class="line"></span><br><span class="line"><span class="attr">我的第一个要求是</span>:<span class="string">我是一个刚毕业的大学生，手上预算有限，想要找一个在江北区，距离地铁较近，交通方便的单身公寓，你有什么好的推荐吗</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例3-自媒体人员编写文案"><a href="#案例3-自媒体人员编写文案" class="headerlink" title="案例3:自媒体人员编写文案"></a>案例3:自媒体人员编写文案</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演一位资深的自媒体运营人员。我需要写一篇在小红书平台发布的种草笔记。内容是关于在重庆的春天，周末露营有哪些好的去处。</span></span><br><span class="line"><span class="attr">你需要作为专业的自媒体人员,帮我写这篇文案，要让读者读完，就会产生周末去露营的冲动.</span></span><br><span class="line"><span class="attr">要求</span>:<span class="string"></span></span><br><span class="line"><span class="attr">字数500字左右，尽量用短句子，每段不超过3行，每段开头加上好看的，合适的emoji表情，文章的语气幽默风趣，</span></span><br><span class="line"><span class="attr">直接开始写，不用解释</span></span><br><span class="line"><span class="attr">----------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">为上面推荐的每一个景点,进行更详细的介绍，包括从重庆市区出发需要多长时间，当地有什么特色美食，有哪些露营公园推荐</span></span><br></pre></td></tr></table></figure>
+
+<p>优化后</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演一位资深的自媒体运营人员。我需要写一篇在小红书平台发布的种草笔记。内容是关于在重庆的春天，周末露营有哪些好的去处。</span></span><br><span class="line"><span class="attr">为上面推荐的每一个景点,进行更详细的介绍，包括从重庆市区出发需要多长时间，当地有什么特色美食，有哪些露营公园推荐</span></span><br><span class="line"><span class="attr">你需要作为专业的自媒体人员,帮我写这篇文案，要让读者读完，就会产生周末去露营的冲动.</span></span><br><span class="line"><span class="attr">要求</span>:<span class="string"></span></span><br><span class="line"><span class="attr">字数500字左右，尽量用短句子，每段不超过3行，每段开头加上好看的，合适的emoji表情，文章的语气幽默风趣，</span></span><br><span class="line"><span class="attr">直接开始写，不用解释</span></span><br><span class="line"><span class="attr">----------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例4-扮演故事讲述着"><a href="#案例4-扮演故事讲述着" class="headerlink" title="案例4:扮演故事讲述着"></a>案例4:扮演故事讲述着</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你担任故事讲述人的角色。你可以创作出有趣、富有想象力并能够吸引观</span></span><br><span class="line"><span class="attr">众的故事。可以是童话故事、教育故事或任何其他类型的故事，都有潜力吸引人</span></span><br><span class="line"><span class="attr">们的注意力和想象力。根据目标受众的不同，你可以选择持定的主题或话题进行</span></span><br><span class="line"><span class="attr">讲述，例如如果是儿童，你可以讲述动物的故事；如果是成年人，则历史故事可</span></span><br><span class="line"><span class="attr">能会更吸引他们等。我的第一个请求是&quot;我需要一个关于毅力的有趣故事&quot;。</span></span><br><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例5-扮演脱口秀演员"><a href="#案例5-扮演脱口秀演员" class="headerlink" title="案例5:扮演脱口秀演员"></a>案例5:扮演脱口秀演员</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你能扮演一个脱口秀喜剧演员。我会给你一些与当前事件相关的主题，你</span></span><br><span class="line"><span class="attr">可以利用自己的机智、创造力和观察力，基于这些主题创造一个喜剧节目。你还</span></span><br><span class="line"><span class="attr">应该在节目中加入个人的趣间铁事或经历，以使观众更容易产生共鸣并参与到节</span></span><br><span class="line"><span class="attr">目中来。我的第一个要求是：&quot;我想听一些关于辅导孩子搞作业的幽默话题。&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例6-扮演激励教练"><a href="#案例6-扮演激励教练" class="headerlink" title="案例6:扮演激励教练"></a>案例6:扮演激励教练</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你能扮演一位激励教练的角色。我将为你提供有关某人的目标和挑战的一</span></span><br><span class="line"><span class="attr">些信息，你的工作就是想出策略，帮助这个人实现他们的目标。这可能涉及到提</span></span><br><span class="line"><span class="attr">供积极的肯定，给予有用的建议或建议他们可以做些什么活动来达到他们的最终</span></span><br><span class="line"><span class="attr">目标。我的第一个请求是&quot;我需要激防儿子，为他即将到来的考试，让他保持放松</span></span><br><span class="line"><span class="attr">和自信的状态，争取取得好成绩&quot;。</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例7-扮演小说家"><a href="#案例7-扮演小说家" class="headerlink" title="案例7:扮演小说家"></a>案例7:扮演小说家</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演小说家的角色。你将创作出富有创意和吸引力的故事，能够吸引读者长</span></span><br><span class="line"><span class="attr">长时间地阅读。你可以选择任何类型，比如奇幻、浪漫、历史小说等，但目的</span></span><br><span class="line"><span class="attr">是要写出一个有着杰出情节、吸引人物和出乎意料高潮的作品,我的第一个要求是</span></span><br><span class="line"><span class="attr">&quot;我需要写一本设定在未来的科幻小说。&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例8-扮演情感教练"><a href="#案例8-扮演情感教练" class="headerlink" title="案例8:扮演情感教练"></a>案例8:扮演情感教练</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">现希望你可以充当一位感情教练。我将提供一些有关两个人之间冲突的细节，你</span></span><br><span class="line"><span class="attr">需要提出建议，帮助他们解决分开他们的问题。这可能包括沟通技巧的建议或不</span></span><br><span class="line"><span class="attr">通的策略，以改善彼此对立的理解。我的第一个请求是&quot;我需要帮助解决我和我的</span></span><br><span class="line"><span class="attr">配偶之间的冲突。&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例9-扮演电影评论家"><a href="#案例9-扮演电影评论家" class="headerlink" title="案例9:扮演电影评论家"></a>案例9:扮演电影评论家</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你能扮演一名电影评论家。你需要撰写一篇引人入胜且富有创意的电影评</span></span><br><span class="line"><span class="attr">论。你可以涵盖以下主题：情节、主题和基调、表演和角色、导演、配乐、摄</span></span><br><span class="line"><span class="attr">影、制作设计、特效、剪辑、节奏和对白。最重要的是强调这部电影给你带来的</span></span><br><span class="line"><span class="attr">感受以及真正引起共鸣的方面。你也可以对电影进行批评。请避免剧透。我的第</span></span><br><span class="line"><span class="attr">一个要求是</span>:<span class="string">&quot;我需要为电影&lt;&lt;星际穿越&gt;&gt;撰写一篇影评&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例10-扮演数学老师"><a href="#案例10-扮演数学老师" class="headerlink" title="案例10:扮演数学老师"></a>案例10:扮演数学老师</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想让你充当一名数学老师。我会提供一些数学方程或概念，你的工作就是用易</span></span><br><span class="line"><span class="attr">理解的术语来解释它们。这可能包括提供解决问题的逐步说明，通过图像演示</span></span><br><span class="line"><span class="attr">种技巧或建议在线资源进行进一步学习。我的第一个请求是</span>:<span class="string">&quot;我需要帮助理解元一次方程是如何工作的&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例11-扮演厨师的角色"><a href="#案例11-扮演厨师的角色" class="headerlink" title="案例11:扮演厨师的角色"></a>案例11:扮演厨师的角色</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想让你充当一名技艺高超的厨师。我需要有人能够建议美味的食谱，包括充足的营养，但也方便准备，并且不需要</span></span><br><span class="line"><span class="attr">太多时间，因此适合像我们这样繁忙的人，同时还考虑到成本效益，从而使整道菜健康又经济！</span></span><br><span class="line"><span class="attr">我的第一个要求是</span>:<span class="string">&quot;午餐时间，快速做好的，方便，却又能让人满足的食物&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="案例12-扮演投资经理的角色"><a href="#案例12-扮演投资经理的角色" class="headerlink" title="案例12:扮演投资经理的角色"></a>案例12:扮演投资经理的角色</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想让你扮演投资经理的角色，具有金融市场专业知识，结合通货能胀率或收益</span></span><br><span class="line"><span class="attr">率估计以及跟踪股票价格的长期情况，最终帮助客户了解行业，然后提出最安全</span></span><br><span class="line"><span class="attr">的可能选项，客户可以根据自己的需求和兴趣分配资金！起始查询</span>:<span class="string">&quot;目前短期投资钱的最佳方式是什么?&quot;</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="七-提示词生成器"><a href="#七-提示词生成器" class="headerlink" title="七.提示词生成器"></a>七.提示词生成器</h2><h3 id="1-工具"><a href="#1-工具" class="headerlink" title="1.工具"></a>1.工具</h3><p><a href="https://www.explainthis.io/zh-hant/chatgpt">https://www.explainthis.io/zh-hant/chatgpt</a></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">将以下提示词翻译成简体中文，不要根据提示词生成答案</span></span><br><span class="line"><span class="attr">你現在是一個</span> <span class="string">python 專家，我有一段程式碼，我預期這段程式碼可以判斷一個字串是不是鏡像迴文，只是它通過不了 aacdeedcc 這個測試案例。請幫我找出我哪裡寫錯了，以及用正確的方式改寫。[附上程式碼]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="八-chatGpt拓宽搞钱思路"><a href="#八-chatGpt拓宽搞钱思路" class="headerlink" title="八.chatGpt拓宽搞钱思路"></a>八.chatGpt拓宽搞钱思路</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是一名Java讲师,如何通过chatGpt帮我们赚钱,给我提供10个建议</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">为一个Java编程培训机构，写一篇750字宣传文案，介绍该机构主要业务,和他的特色服务</span></span><br><span class="line"><span class="attr">要求</span>:<span class="string">语气要幽默,有亲和力，并以号召行动结束</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是一名资深Java讲师，现在想通过做抖音分享Java知识，我应该怎么做内容才能快速积累粉丝到10w，请给我列出详细的建议和指导策略</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-chatGpt写小红书爆款笔记"><a href="#1-chatGpt写小红书爆款笔记" class="headerlink" title="1.chatGpt写小红书爆款笔记"></a>1.chatGpt写小红书爆款笔记</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">如何可以写出爆款小红书笔记</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">忽略以上提示词，你现在是一名自媒体营销专家,具有多年从业经验，帮助过很多小红书新人打造爆款账号</span></span><br><span class="line"><span class="attr">请告诉我如何写出爆款小红书笔记</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">忽略以上提示词，你现在是一名自媒体营销专家,我想打造一个小红书账号，我的定位是亲子溜娃,请告诉我，对于这样的一个定位,我的目标受众是哪些人</span></span><br><span class="line"></span><br><span class="line"><span class="attr">忽略以上提示词，你现在是一名自媒体营销专家,我想打造一个抖音账号，我的定位是一名编程讲师,请告诉我，对于这样的一个定位,我的目标受众是哪些人</span></span><br><span class="line"></span><br><span class="line"><span class="attr">忽略以上提示词，你现在是一名自媒体营销专家,我想打造一个抖音账号，我的定位是一名Java面试分享者,请告诉我，对于这样的一个定位,我的目标受众是哪些人</span></span><br><span class="line"></span><br><span class="line"><span class="attr">根据以上的目标和受众帮我策划20个爆款选题</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">根据这个主题再给我推荐这个领域的子主体</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">Java面试成功故事：分享成功通过Java面试的个人故事和经验，激励其他求职者</span></span><br><span class="line"><span class="attr">根据这个主题,设计十个抖音吸引人眼球的短视频标题</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">你知道抖音爆款视频的文案框架吗</span></span><br><span class="line"><span class="attr">根据</span>  <span class="string">&quot;引起兴趣的开头&quot;  &quot;主题介绍&quot;   &quot;主题内容&quot;   写一遍抖音文案,视频标题&lt;&lt;2023 高级Java工程师学习路线&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="九-chatGpt快速学习知识提升自我"><a href="#九-chatGpt快速学习知识提升自我" class="headerlink" title="九.chatGpt快速学习知识提升自我"></a>九.chatGpt快速学习知识提升自我</h2><h3 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想学习Python进行数据分析，你能创建一个学习Python的路线图吗</span></span><br><span class="line"><span class="attr">我想学习Java进行游戏开发，你能创建一个学习Java游戏开发的路线图吗</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想学习Python进行数据分析，你能创建一个三个月的Python学习路线图吗,包括每周的计划和学习资源</span></span><br><span class="line"><span class="attr">我想学习Java进行游戏开发，你能创建一个一个月的学习Java游戏开发的路线图吗,包括每周的计划和学习资源</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">包括学习Python的youtube视频链接</span></span><br><span class="line"><span class="attr">包括学习Python的blibli视频链接</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">请给一个小朋友解释Python中函数的概念</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">帮我写一段完整的Python程序，当我输入10个随机数，帮我把这十个随机数从大到小进行排列</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="十-chatGpt做面试准备"><a href="#十-chatGpt做面试准备" class="headerlink" title="十.chatGpt做面试准备"></a>十.chatGpt做面试准备</h2><h3 id="案例-2"><a href="#案例-2" class="headerlink" title="案例"></a>案例</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我明天有一场Java中级开发工程师面试</span></span><br><span class="line"><span class="attr">你能给我10个问题吗?</span></span><br><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我希望你扮演一个招聘人员,面试我申请的高级Java开发工程师岗位</span></span><br><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">你能扮演一个技术经理招聘人员，为一个互联网公司面试我，申请个高级Java开发的职位吗？</span></span><br><span class="line"><span class="attr">我希望你一个问题一个问题的问我，在我回答完这个问题之后，给予点评和优化建议，点评完之后，再继续问我第二个问题</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="十一-Ai绘图"><a href="#十一-Ai绘图" class="headerlink" title="十一.Ai绘图"></a>十一.Ai绘图</h2><p>地址:<a href="https://discord.com/channels">https://discord.com/channels</a></p>
+<h3 id="1-绘图指令"><a href="#1-绘图指令" class="headerlink" title="1.绘图指令"></a>1.绘图指令</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">/imagine</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-本地图片调整"><a href="#2-本地图片调整" class="headerlink" title="2.本地图片调整"></a>2.本地图片调整</h3><p>动漫风格</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1158334973552635956/1158336788193099886/1.jpg?ex=651be0b3&amp;is=651a8f33&amp;hm=2015089fb46c82aeebcbf7cbea7164d1665995f7edd92cb4437f56326bb0ee5a&amp;</span></span><br><span class="line"><span class="attr">handsome,cute</span> <span class="string">boy,anime art</span></span><br></pre></td></tr></table></figure>
+
+<p>动漫风格加比例</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1158334973552635956/1158336788193099886/1.jpg</span></span><br><span class="line"><span class="attr">handsome,cute</span> <span class="string">boy,anime art,--ar 3:4</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-绘画提示词结构"><a href="#3-绘画提示词结构" class="headerlink" title="3.绘画提示词结构"></a>3.绘画提示词结构</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">主题+描述+技术细节+参数</span></span><br></pre></td></tr></table></figure>
+
+<p>案例</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">一个充满魅力的修剪过的树篱迷宫，点缀着玫瑰丛和精美设</span></span><br><span class="line"><span class="attr">计的路灯，数字艺术，在Artstation上趋势流行</span></span><br><span class="line"></span><br><span class="line"><span class="attr">A</span> <span class="string">charming maze of manicured hedges, dotted with rose bushes and beautifully designed</span></span><br><span class="line"><span class="attr">streetlights,</span> <span class="string">digital art, and trending on Artstation!</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">一只灰色的小猫站在外太空的披萨上。小猫正在吃一块披萨。背最中有带着天使翅膀的飞翔的坡萨切片，深青色的星</span></span><br><span class="line"><span class="attr">系和星星，4K的Photoshopped图像，看看那细节</span></span><br><span class="line"></span><br><span class="line"><span class="attr">A</span> <span class="string">gray kitten stands on a pizza in outer space. The kitten is eating a slice of pizza. In the back most there are slices of flying pozza with angel wings, dark cyan colored star</span></span><br><span class="line"><span class="attr">system</span> <span class="string">and stars, 4K Photoshopped image, look at that detail!</span></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">一幅油画，描绘着一个有着长发的年轻男孩在床上睡觉，</span></span><br><span class="line"><span class="attr">身上盖着方格被子</span></span><br><span class="line"></span><br><span class="line"><span class="attr">An</span> <span class="string">oil painting depicting a young boy with long hair sleeping on a bed with a</span></span><br><span class="line"><span class="attr">He</span> <span class="string">is covered with a square quilt.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">一个红发国王形状的茶壶的3D演染，逼真,Artstation，CG</span></span><br><span class="line"></span><br><span class="line"><span class="attr">3D</span> <span class="string">coloring of a teapot in the shape of a red-haired king, realistic,Artstation,CG</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">SaulLeiter用50nm镇头拍摄的1960年代纽约市一位穿着红</span></span><br><span class="line"><span class="attr">色连农裙，在手机上愤怒交谈，手势激烈，颗粒状的抽象实</span></span><br><span class="line"><span class="attr">验过期胶片照片，电影色彩，过度饱和的滤镜，模糊，反</span></span><br><span class="line"><span class="attr">射、折射，扭曲，雨滴，污渍，模糊，Cinestill</span> <span class="string">800T</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Saul</span> <span class="string">Leiter used a 50nm town head to photograph a woman in 1960s New York City in a red</span></span><br><span class="line"><span class="attr">color</span> <span class="string">peasant dress, talking angrily on a cell phone, gesturing fiercely, grainy abstract realism.</span></span><br><span class="line"><span class="attr">Experimenting</span> <span class="string">with expired film photographs, cinematic colors, over-saturated filters, blurring, reflections, refractions, distortions, rain</span></span><br><span class="line"><span class="attr">Reflection,</span> <span class="string">Refraction, Distortion, Raindrops, Stains, Blur, Cinestill 800T</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-MJ参数的使用"><a href="#4-MJ参数的使用" class="headerlink" title="4.MJ参数的使用"></a>4.MJ参数的使用</h3><h4 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">输入setting可以召唤出选项框,设置默认选项</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="画面比例"><a href="#画面比例" class="headerlink" title="画面比例"></a>画面比例</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">aspect</span> <span class="string">或 ar</span></span><br><span class="line"><span class="attr">使用方法</span> <span class="string">--ar 16:9  或 9:16</span></span><br><span class="line"><span class="attr">--chaos</span>  <span class="string">0-100 风格</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="质量"><a href="#质量" class="headerlink" title="质量"></a>质量</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">quality&lt;.25</span> <span class="string">.5、1或2&gt;或q&lt;.25、.5、1或2&gt;指</span></span><br><span class="line"><span class="attr">定生成图像演染的质量。默认值为1。较高的值会耗费</span></span><br><span class="line"><span class="attr">更多时间和资源，较低的值则会更加节省。</span></span><br><span class="line"><span class="attr">-q</span> <span class="string">生图时间，系统默认为1.数字越大，生图时间越</span></span><br><span class="line"><span class="attr">长，质量越高</span></span><br><span class="line"><span class="attr">智能输入</span> <span class="string">--q 0.25  --q 0.5 --q 1 --q 2 --q 5 这五种数字</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="连续动作"><a href="#连续动作" class="headerlink" title="连续动作"></a>连续动作</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">seed&lt;0-4294967295&gt;之间的整数&gt;</span> <span class="string">Midjourmney机器人使</span></span><br><span class="line"><span class="attr">用种子数字创建视觉噪声场，就像电视静态一样，作为</span></span><br><span class="line"><span class="attr">生成初始图像网格的起点。每个图像的种子数字都是随</span></span><br><span class="line"><span class="attr">机生成的，但可以使用--seed或--sameseed参数指</span></span><br><span class="line"><span class="attr">定。使用相同的种子数字和提示将生成类似的最终图像</span></span><br><span class="line"></span><br><span class="line"><span class="attr">如果你想基于自己或别人的画作生成类似图像，又想调整下</span></span><br><span class="line"><span class="attr">prompt，可以在prompt加入画作的Seed，格式是--seed</span></span><br><span class="line"><span class="attr">1949</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-Mj创作帖纸"><a href="#5-Mj创作帖纸" class="headerlink" title="5.Mj创作帖纸"></a>5.Mj创作帖纸</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">wallpapers</span>  <span class="string">壁纸</span></span><br><span class="line"><span class="attr">illustrations</span> <span class="string">插画</span></span><br><span class="line"></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">独角兽贴纸</span>  <span class="string">卡通风格</span></span><br><span class="line"><span class="attr">cute</span> <span class="string">unicorn stickeri,cartoon style </span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">美少女战士</span>  <span class="string">卡通风格</span></span><br><span class="line"><span class="attr">cute</span> <span class="string">Sailor Moon sticker,cartoon style</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">孙悟空</span>  <span class="string">卡通风格</span></span><br><span class="line"><span class="attr">Sun</span> <span class="string">Wukong sticker.illustrations style,white background</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1158334973552635956/1158627065210355772/QQ20231003124939.jpg  stickeri,Java programmer,cartoon style ,white background</span></span><br><span class="line"></span><br><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1158334973552635956/1158634296232382515/1.png  stickeri,cartoon style, cute boy,white background</span></span><br><span class="line"><span class="attr">--------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1158334973552635956/1158636543574028298/asdasfasg_stickericartoon_style_cute_boywhite_background_18cc5171-8a4e-4f17-8e87-54f4d3bec341.png?ex=651cf7de&amp;is=651ba65e&amp;hm=52bce9d817300e91ae8e1db1c480de0ad38b3554adffeb0c2ce49fbb201411e1&amp;  Fear   express,</span></span><br><span class="line"><span class="attr">stickeri,cartoon</span> <span class="string">style, cute boy,white background --seed 3554827048</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<ul>
+<li>Admiration 钦佩</li>
+<li>Adoration 崇拜</li>
+<li>Aesthetic appreciation 审美</li>
+<li>Amusement 娱乐</li>
+<li><a href="https://www.medicinenet.com/anxiety/article.htm">Anxiety 焦虑</a></li>
+<li>Awe</li>
+<li>Awkwardness 尴尬</li>
+<li>Boredom 无聊</li>
+<li>Calmness 冷静</li>
+<li><a href="https://www.medicinenet.com/confusion/symptoms.htm">Confusion 混乱</a></li>
+<li>Craving 渴望</li>
+<li>Disgust 厌恶</li>
+<li>Empathetic <a href="https://www.medicinenet.com/pain_management/article.htm">pain</a> 移情痛苦</li>
+<li>Entrancement 入口</li>
+<li>Envy 羡慕</li>
+<li>Excitement 兴奋</li>
+<li>Fear 恐惧</li>
+<li>Horror 恐怖</li>
+<li>Interest 利息</li>
+<li>Joy</li>
+<li>Nostalgia 怀旧</li>
+<li>Romance 浪漫</li>
+<li>Sadness 悲伤</li>
+<li>Satisfaction 满意</li>
+<li>Sexual desire</li>
+<li>Sympathy 同情</li>
+<li>Triumph 胜利</li>
+</ul>
+</blockquote>
+<h3 id="6-Mj创作Icon"><a href="#6-Mj创作Icon" class="headerlink" title="6.Mj创作Icon"></a>6.Mj创作Icon</h3><h4 id="3d图标"><a href="#3d图标" class="headerlink" title="3d图标"></a>3d图标</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">Fun</span> <span class="string">3D Icons</span></span><br><span class="line"><span class="attr">[Rocket]</span> <span class="string">icon in 3d，cute renders,emojis style,smooth,</span></span><br><span class="line"><span class="attr">clean</span> <span class="string">style，vector ,white background，svg</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="儿童故事插图"><a href="#儿童故事插图" class="headerlink" title="儿童故事插图"></a>儿童故事插图</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">a</span> <span class="string">smart cute[animal of choice] character for a</span></span><br><span class="line"><span class="attr">stonybook,[activity</span> <span class="string">done by the character],</span></span><br><span class="line"><span class="attr">illustration</span> <span class="string">for a storybook，watercolor and black ink</span></span><br><span class="line"><span class="attr">style</span>:<span class="string">:4,illustration for children story,warm lighting --v 4</span></span><br><span class="line"></span><br><span class="line"><span class="attr">一个聪明可爱的[动物类型]角色，用于故事书，[角色所做</span></span><br><span class="line"><span class="attr">的活动]</span> <span class="string">水墨画风格的插图：4，儿童故事插图，温暖的照</span></span><br><span class="line"><span class="attr">明</span> <span class="string">--V4</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="儿童绘本角色创建"><a href="#儿童绘本角色创建" class="headerlink" title="儿童绘本角色创建"></a>儿童绘本角色创建</h4><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">character</span> <span class="string">design sheet，cute watercolor [character],6</span></span><br><span class="line"><span class="attr">panels</span> <span class="string">with different dynamic poses,endless blank white</span></span><br><span class="line"><span class="attr">background,2d,drawings</span> <span class="string">--v 4 --uplight --q 2</span></span><br><span class="line"></span><br><span class="line"><span class="attr">角色设计表，[可爱的水彩角色]，6个面板具有不同的动态</span></span><br><span class="line"><span class="attr">姿势，无尽的白色背景，2D，给画</span> <span class="string">--V4--上光--q2</span></span><br><span class="line"><span class="attr">fox</span> <span class="string">girl soccer player, cute boy chef,doctor,policeman</span></span><br><span class="line"><span class="attr">狐狸，女足球运动员，可爱的男厨师，消防员，医生，</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">character</span> <span class="string">design sheet，cute watercolor [girl soccer player],6</span></span><br><span class="line"><span class="attr">panels</span> <span class="string">with different dynamic poses,endless blank white</span></span><br><span class="line"><span class="attr">background,2d,drawings</span> <span class="string">--v 4 --uplight --q 2</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-创作绘本"><a href="#7-创作绘本" class="headerlink" title="7.创作绘本"></a>7.创作绘本</h3><p>使用Gpt创建脚本</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">你现在是一名著名的儿童文学大师,帮我写一段短篇奇幻儿童文学作品，故事设定在2150年，地球</span></span><br><span class="line"><span class="attr">环境危机，不适合生存，小天和小海去外太空寻找新的家园，</span></span><br><span class="line"><span class="attr">在过程中，退遇外星文明的追击，经过一番搏斗，最终打败外</span></span><br><span class="line"><span class="attr">星文明，寻找到新的家园</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">在2150年的地球上，环境危机愈发严峻，人们的生存变得越来越困难。然而，在这个充满挑战的时代，有两个特别勇敢的小朋友，小天和小海，他们决定不再等待，而是要自己去寻找新的家园。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">他们的冒险开始于一艘太空船，小天和小海一同搭乘着它，离开了地球。他们的目标是星际空间中的一颗神秘星球，传说中那里的环境宜居，是新家园的最佳选择。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">然而，他们的旅程并不容易。在穿越星际黑暗的途中，他们突然遭遇了一群强大的外星文明。这些外星人拥有高超的科技，他们的太空船速度极快，很快就追上了小天和小海。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">小天和小海并没有被吓倒。他们深知，他们为了新的家园，必须坚持到底。于是，他们开始与外星人进行了一场激烈的星际搏斗。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">在这场激战中，小天和小海展现出了无限的勇气和创造力。他们巧妙地运用太空船的设备，制造出种种惊人的战术，让外星人始料未及。虽然外星人拥有强大的力量，但小天和小海紧密合作，始终保持冷静，坚信胜利终将属于他们。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">最终，小天和小海成功地击败了外星文明。外星人意识到他们的错误，表达了对地球人的友好和尊重，愿意与他们建立友好的关系。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">最终，小天和小海找到了他们梦寐以求的新家园，一个美丽、宜居的星球，他们可以在那里开始新的生活，共同创造一个更加美好的未来。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">这个故事告诉我们，即使面对最艰难的时刻，勇气、团结和创造力都能帮助我们克服困难，找到新的希望，开启全新的旅程。小天和小海的冒险精神激励着我们，让我们相信，只要不放弃，就能够克服一切，寻找到新的家园和幸福</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">In</span> <span class="string">the year 2150, on a planet Earth facing an unprecedented environmental crisis, two exceptionally brave children, Sky and Ocean, made a remarkable decision. They chose not to wait any longer but to embark on a quest to find a new home in outer space.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Their</span> <span class="string">adventure began aboard a spacecraft, with Sky and Ocean as its intrepid passengers, leaving the Earth behind. Their destination was a mysterious planet rumored to have a hospitable environment, an ideal new home.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">However,</span> <span class="string">their journey was far from easy. While traversing the interstellar darkness, they suddenly encountered a formidable extraterrestrial civilization. These aliens possessed advanced technology, and their spacecraft was swift, quickly catching up to Sky and Ocean.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Undeterred,</span> <span class="string">Sky and Ocean refused to be intimidated. They knew that, for the sake of their new home, they had to stand firm. Thus, they engaged in a fierce interstellar battle with the aliens.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">In</span> <span class="string">this intense conflict, Sky and Ocean displayed boundless courage and creativity. They cleverly utilized the spacecraft&#x27;s equipment to devise astonishing tactics that caught the aliens off guard. Despite the aliens&#x27; overwhelming power, Sky and Ocean worked closely together, remaining cool-headed and steadfast, firmly believing that victory would ultimately be theirs.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">In</span> <span class="string">the end, Sky and Ocean emerged triumphant over the extraterrestrial civilization. The aliens realized their mistake, expressed friendship and respect towards the Earthlings, and were willing to establish friendly relations.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Finally,</span> <span class="string">Sky and Ocean found the new home they had longed for—a beautiful, habitable planet where they could begin a new life and collectively forge a brighter future.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">This</span> <span class="string">story teaches us that even in the face of the most challenging circumstances, courage, unity, and creativity can help us overcome difficulties, discover new hope, and embark on fresh journeys. Sky and Ocean&#x27;s spirit of adventure inspires us, reminding us that as long as we do not give up, we can overcome all obstacles and find a new home and happiness.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-----------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">In</span> <span class="string">the year 2150, on a planet Earth facing an unprecedented environmental crisis, two exceptionally brave children, Sky and Ocean, made a remarkable decision. They chose not to wait any longer but to embark on a quest to find a new home in outer space.  painting by Kawacy and GorQ Fujite and Richard Scany  --ar 16:9</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">However,</span> <span class="string">their journey was far from easy. While traversing the interstellar darkness, they suddenly encountered a formidable extraterrestrial civilization. These aliens possessed advanced technology, and their spacecraft was swift, quickly catching up to Sky and Ocean. painting by Kawacy and GorQ Fujite and Richard Scany  --ar 16:9</span></span><br><span class="line"><span class="attr">-----------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">Undeterred,</span> <span class="string">Sky and Ocean refused to be intimidated. They knew that, for the sake of their new home, they had to stand firm. Thus, they engaged in a fierce interstellar battle with the aliens. painting by Kawacy and GorQ Fujite and Richard Scany  --ar 16:9</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Undeterred,</span> <span class="string">Sky and Ocean refused to be intimidated. They knew that, for the sake of their new home, they had to stand firm. Thus, they engaged in a fierce interstellar battle with the aliens. painting by Hayao Miyazaki  --ar 16:9</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>painting by Kawacy and GorQ Fujite and Richard Scany  –ar 16:9 –750</p>
+<p>painting by Hayao Miyazaki  –ar 16:9</p>
+<p>画师Kawacy，又叫河CY，日本東京都人，在二次元绘画圆拥<br>有很高的知名度，其风格细腻唯美，笔下的人物持点鲜明，尤<br>其是色彩与明暗对比，非常惊艳完全形成了个人独有的画风</p>
+<p>GoroFujta（藤田五郎），现居美国，其作品风格细<br>腻可爱，多为动漫角色设作品充满了童趣，陪伴着小<br>主人的小猫，小鸟，机税乐的画面里，却又带着淡<br>淡的环独。</p>
+<p>Richard Scarry一生创作了三百余部作品，在全世界的销量超过<br>三亿册，创作的金色宣书系列风库了整个世界近四十年，是世<br>界童书界当之无愧的无之王</p>
+</blockquote>
+<h2 id="十二-使用ChatGpt做思维导图"><a href="#十二-使用ChatGpt做思维导图" class="headerlink" title="十二.使用ChatGpt做思维导图"></a>十二.使用ChatGpt做思维导图</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">(1)</span> <span class="string">帮我写一篇介绍中国茶叶的分类,包括代表的品类,著名的品牌，产区,每种茶叶的功效，口感介绍</span></span><br><span class="line"><span class="attr">(2)</span> <span class="string">用markdown标记语言重新写一遍</span></span><br><span class="line"><span class="attr">(3)</span> <span class="string">将上述内容,用markdown代码形式重新写一遍,方便我复制</span></span><br></pre></td></tr></table></figure>
+
+<p>在线思维导图</p>
+<p><a href="https://markmap.js.org/repl">https://markmap.js.org/repl</a></p>
+<h2 id="十三-使用ChatGpt做PPT"><a href="#十三-使用ChatGpt做PPT" class="headerlink" title="十三.使用ChatGpt做PPT"></a>十三.使用ChatGpt做PPT</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">(1)帮我生成一段人工智能技术发展史的简介</span></span><br><span class="line"><span class="attr">(2)基于以上内容,请帮我生成一个markdown标记语言形成的三级结构文档,方便我使用</span></span><br></pre></td></tr></table></figure>
+
+<p>在线生成PPT</p>
+<p><a href="https://www.mindshow.fun/#/home">https://www.mindshow.fun/#/home</a></p>
+<p>闪击PPT</p>
+<p><a href="https://ppt.sankki.com/editor?mode=user-ppt&id=182732">https://ppt.sankki.com/editor?mode=user-ppt&amp;id=182732</a></p>
+<h2 id="十四-使用ChatGpt做文案"><a href="#十四-使用ChatGpt做文案" class="headerlink" title="十四:使用ChatGpt做文案"></a>十四:使用ChatGpt做文案</h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">----------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">你现在是一位广告界的营销大师，接下来，我会给你发送7段内容，在我每发送完一段内容之居，你要回复：请继续发送下一段,</span></span><br><span class="line"><span class="attr">当我发送最后一段之后，你要帮我汇总前面这7段内容，并帮我分析这7段内容的文案概架，写作手法和写作技巧,</span></span><br><span class="line"><span class="attr">如果你明白我的指令请回复</span>:<span class="string">营销大师</span></span><br><span class="line"></span><br><span class="line"><span class="attr">----------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我是个农场主。我要告诉你的故事完全為实，尽管它着上去可能令人难以直信。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">一切都源于我们的家庭医生——韦布医生所拥有的一片果园。在医生的果园里</span></span><br><span class="line"><span class="attr">摘水果的一个工人，带了6个前所来有的最奇怪的葡萄柚来到韦布先生的房间里</span></span><br><span class="line"><span class="attr">一裸普通的葡萄袖树的一根单独的枝了上，长出了这6个不同寻常的水果。</span></span><br><span class="line"><span class="attr">这是些个头很大的葡萄柚，非同一般的大。它们的表皮泛着微微的红色。当丰</span></span><br><span class="line"><span class="attr">布医生切开这种葡萄柚时才发现，果实的颜色是一种耀眼的宝石红。</span></span><br><span class="line"><span class="attr">韦布医生决定尝尝这种奇怪的新葡萄柚——简直太完美了，甘美且多汁。它不</span></span><br><span class="line"><span class="attr">像其他葡萄袖那么酸——它没有糖，却有种自然的香甜。</span></span><br><span class="line"><span class="attr">因为某种我们永不知晓的原因，自然界选择了在我们神奇的里奥格兰德山谷创</span></span><br><span class="line"><span class="attr">造了一个葡萄袖的全新品种。它令人难以置信——人类劳作了许多年，想生产出完</span></span><br><span class="line"><span class="attr">美的葡萄柚，却以失败告终。但是，突然在某个果园的一棵树的枝丫上，自然之母</span></span><br><span class="line"><span class="attr">全凭一己之力就把它创造出来了！</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">从那根枝了上长出来的水果开始，现在一个又一个的果国生产着我们台己的得</span></span><br><span class="line"><span class="attr">克萨斯州红宝石葡药构。当我说“1000个人里面都没有一个人曾尝过这种葡萄构</span></span><br><span class="line"><span class="attr">时，你很容易理解这是为什么。</span></span><br><span class="line"><span class="attr">从一开始，红宝石葡萄柚就是稀有的。你可以去商店里找找看，但是我怀疑你</span></span><br><span class="line"><span class="attr">是否能找到。你能找到粉色的葡萄柚，但是你很少能看到真正的红宝石葡萄柚</span></span><br><span class="line"><span class="attr">所以你开始认识到红宝石葡药构的珍稀了，皇家红宝石葡萄柚则更加</span></span><br><span class="line"><span class="attr">有的葡萄袖里只有4%~5%有资格被称为“皇家红宝石葡萄柚”</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">每个皇家红宝石葡萄柏都有一磅重——或者更重！每一个都红形形的，流尚着</span></span><br><span class="line"><span class="attr">汁水，有种很自然的甘美味道，而且能持续保鲜好几个星期。</span></span><br><span class="line"><span class="attr">为什么直到我亲自确认每棵果树上的果实都成熟了，我们才会考虑采摘整个果</span></span><br><span class="line"><span class="attr">因？我会检查“自然的糖分”、低酸平衡和高果汁含量。我会检查水果是否饱满多</span></span><br><span class="line"><span class="attr">肉，我基至还会检查它的皮是不是很薄。在我要对一个果园进行采摘之前，不仅</span></span><br><span class="line"><span class="attr">个国素都要检查，而且还要确保各个因素彼此之间处在一种适宜的关系状态中。</span></span><br><span class="line"><span class="attr">我们采摘水果时可不是跨忙。采摘的时候，我们每一个人都要带一个“采摘</span></span><br><span class="line"><span class="attr">环”。如果水果太小，能够通过这个图环的话，我们就不会采摘它！它仅仅因为不够</span></span><br><span class="line"><span class="attr">大，就没有资格作为皇家红宝石葡萄柚！</span></span><br><span class="line"><span class="attr">甚至在采摘之后，验收之前，每个葡萄柚还要通过其他的细致检查。我会抓</span></span><br><span class="line"><span class="attr">一个葡萄柚，对它的外表美观进行评级。有时候葡药袖会有风藏，我就不会接受它</span></span><br><span class="line"><span class="attr">有时候它在基上会有一个鼓起一—一我们称之为“绵羊鼻子”，我也不会接受它。</span></span><br><span class="line"><span class="attr">看，当我说我只接受完美的皇家红宝石葡萄柏的时候，我是非常认真的。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">当意识到皇家红宝石静萄构是极品水果时，我决定成立一个俱乐部，只把它</span></span><br><span class="line"><span class="attr">给我的俱乐部会员。用这种方式，我可以控制自己的产品，以确保没人会失望。</span></span><br><span class="line"><span class="attr">但是在请你加入俱乐部之前，我想让你亲自尝尝我的皇家红宝石药构，不花</span></span><br><span class="line"><span class="attr">一分钱。让我奇给你一箱装有16~20个预付过的皇家红宝石葡药抽。把其中4个放</span></span><br><span class="line"><span class="attr">入冰箱直到完全冷却，然后再把它们切成两半，让你的家人尝尝这种不同寻常</span></span><br><span class="line"><span class="attr">水果。</span></span><br><span class="line"><span class="attr">你来判定，这是不是我所说的那种皇家红宝石葡萄构。你来评定，这种皇家红</span></span><br><span class="line"><span class="attr">石葡萄柚吃起来是不是有我所承诺的那种奇妙的滋味体验。</span></span><br><span class="line"><span class="attr">你来评判一切。我很自信，你和你的家人会想要更多这种超级好吃的水果，</span></span><br><span class="line"><span class="attr">要求我定期供应。如果这4个皇家红宝石葡萄构让你说了声“不错”的话，就留着</span></span><br><span class="line"><span class="attr">下的水果吧。不然就把那些没吃过的水果寄回给我（邮费我出），你不欠我一</span></span><br><span class="line"><span class="attr">分钱。</span></span><br><span class="line"><span class="attr">有可能你将永远不知道真实的皇家红宝石葡萄柚有多么的美妙，除非你尽快下</span></span><br><span class="line"><span class="attr">订单。</span></span><br><span class="line"><span class="attr">通过这种方式，你会收到你的包裹，里面装有16~20个皇家红宝石葡萄构，</span></span><br><span class="line"><span class="attr">你和你的家人品尝。不过，既然供应量是有严格限制的，现在下单就非常重要</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">现在，假定你的确喜欢皇家红宝石葡萄袖——假定你热爱它们—你确信能得</span></span><br><span class="line"><span class="attr">到更多吗？</span></span><br><span class="line"><span class="attr">你一定能。只要对我的第一箱货物说“好”，你就获得了自动加入我的冬季水</span></span><br><span class="line"><span class="attr">采俱乐部的权利。我保证你事先不用付任何费用。不过，在冬季的每一个月，我会</span></span><br><span class="line"><span class="attr">寄给你一个包裹，里面有16~20个从果园新鲜采摘的、手把手精挑细选出来的皇家</span></span><br><span class="line"><span class="attr">红宝石葡萄柚。</span></span><br><span class="line"><span class="attr">你收到的每个皇家红宝石葡萄柚都会经过我的严格检测。每个都会有一磅重</span></span><br><span class="line"><span class="attr">基至更重。保证安全送达。从今年12月到来年4月，每个月我都会把采摘下来包装</span></span><br><span class="line"><span class="attr">好的水果寄给你。</span></span><br><span class="line"><span class="attr">你只要在收到货物之后再付费即可。你可以跳过或者取消任何一次货运，只常</span></span><br><span class="line"><span class="attr">简单地告诉我你的要求。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">记住，你什么都不必支付，只需来验证这有史以来最好的葡萄袖的味道，甚至</span></span><br><span class="line"><span class="attr">连验证味道的费用都是由我来承担的！</span></span><br><span class="line"><span class="attr">当然，你可以想象得到，当我说供应量有限的时候，我不是在开玩笑！今年我</span></span><br><span class="line"><span class="attr">只能接收这么多的俱乐部会员，然后就不得不停止接受申请了。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">1.引入背景：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">文案一开始通过讲述农场主和角确柏品种的来历，引发读者的好奇心，激发他</span></span><br><span class="line"><span class="attr">们对这种独持萄莓柏的兴题。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">2.强调稀有性和独特性：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">文案渠调迁家石简每祛和套家红宝石简每祛的稀有性和与众不期的</span></span><br><span class="line"><span class="attr">品质，使得产品思得更具吸引力。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">3.详细描述产品优点：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">文案详细描述了皇家红宝石角醇柏的外观、口质、保鲜时间等优点</span></span><br><span class="line"><span class="attr">让读者对产品有更如具体的了解。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">4.强调品质把关：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">通过讲述农场主亲自热选、验收果程，调产品品质的严格把关</span></span><br><span class="line"><span class="attr">提高消页者的馆任度。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">5.试用和回购机制：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">提供免费试用的机会，让消黄者亲自体验产品，降低他们的购买题比</span></span><br><span class="line"><span class="attr">两时，介绍了冬季水果俱乐部的加入和纳模制，鼓励消费者持纹购买，</span></span><br><span class="line"></span><br><span class="line"><span class="attr">6.强调供应有限：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">通过强调供应量有限，营紧进题，促便消员者尽快下单购买</span></span><br><span class="line"></span><br><span class="line"><span class="attr">7.明确行动指南：</span></span><br><span class="line"></span><br><span class="line"><span class="attr">最后给出了明确的购买建议和行动指南，引导消费者采取行动</span></span><br><span class="line"><span class="attr">签上所送，这段文案运用了讲故事、强调独待性、详细排法产品优点、贺调品质范关、试用</span></span><br><span class="line"><span class="attr">与回购机别、密滚承湿总和明确行动指润等写作技巧，吸引并引导消质者购买产品</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">---------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">根据以上写作框架和写作技巧，</span></span><br><span class="line"><span class="attr">帮我分九个段写一篇关于龙井茶的写作文案</span> <span class="string"></span></span><br><span class="line"><span class="attr">在每写完一段后，先暂停,等待我发送指令</span>:<span class="string">下一段  再继续写 你明白吗</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="十五-使用ChatGpt高效创作视频"><a href="#十五-使用ChatGpt高效创作视频" class="headerlink" title="十五:使用ChatGpt高效创作视频"></a>十五:使用ChatGpt高效创作视频</h2><h3 id="生成口播脚本"><a href="#生成口播脚本" class="headerlink" title="生成口播脚本"></a>生成口播脚本</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">帮我写一段介绍Java并发编程技术的视频脚本,字数在200字左右</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="十六-使用ChatGpt制作动画"><a href="#十六-使用ChatGpt制作动画" class="headerlink" title="十六:使用ChatGpt制作动画"></a>十六:使用ChatGpt制作动画</h2><p>动画风格 <a href="https://midlibrary.io/styles/bakemonogatari">https://midlibrary.io/styles/bakemonogatari</a></p>
+<p><img src="/images/2-ai/asset1/3.png"></p>
+<h3 id="案列1-创建角色"><a href="#案列1-创建角色" class="headerlink" title="案列1:创建角色"></a>案列1:创建角色</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">我想要請你替以下洁個勤書剧情設計六個分镜·每個分镜要具體说明故事场景、角色行勤、撬影角度.</span></span><br><span class="line"><span class="attr">以下是剧情内容：</span></span><br><span class="line"><span class="attr">&quot;地點是19世纪英國的一個小村，有個女孩正在牧场中工作，此時她在远方看到爷爷正在返家的路上，於是女孩露出了開心的笑容&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">我要替這個故事制作角色概念草圖，請你帮我設計一下女孩和爷爷這雨個角色，包含他們的</span></span><br><span class="line"><span class="attr">體型、容貌、服饰和发型等。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">好，接著我要請你把女孩和爷爷的角色描迹改写成两个Midjourney</span> <span class="string">Prompts（使用英文），格</span></span><br><span class="line"><span class="attr">式类似下面這個句子：A</span> <span class="string">little girl with light brown short wavy curly hair and blue eyes</span></span><br><span class="line"></span><br><span class="line"><span class="attr">指令1：（推荐）</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style a young girl with golden hair tied back into a simple braid,wearing a humble dress,character sheet, white background --niji 5</span></span><br><span class="line"></span><br><span class="line"><span class="attr">指令2：</span></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style A young girl with a slender frame, her short wavy curly hair a shade of chestnut brown, framing her bright blue eyes,character sheet, white background --niji 5</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">指令3：</span></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style,An elderly man with a tall, slightly frail stature, his face adorned with wrinkles, his hair a striking blend of silver and white, his eyes a deep shade of blue, exuding wisdom and warmth.character sheet, white background --niji 5</span></span><br><span class="line"><span class="attr">-------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">分镜1</span>:<span class="string"></span></span><br><span class="line"><span class="attr">场景：英国19世纪的小村庄，一个宁静的牧场。</span></span><br><span class="line"><span class="attr">角色：女孩（主角）</span></span><br><span class="line"><span class="attr">行动：女孩身穿农村服装，正在牧场中辛勤地工作，她正专心地挤牛奶。周围是牛群和绿茵草地。</span></span><br><span class="line"><span class="attr">拍摄角度：镜头从女孩背后拍摄，展现出她与自然的融合，突出她的努力和勤奋。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜2</span>:<span class="string"></span></span><br><span class="line"><span class="attr">场景：牧场的远处，小村庄的风景。</span></span><br><span class="line"><span class="attr">角色：女孩</span></span><br><span class="line"><span class="attr">行动：女孩突然停下手中的工作，抬头看向远处的小村庄，她的目光充满了期待。</span></span><br><span class="line"><span class="attr">拍摄角度：远景，女孩的背影与村庄的轮廓形成对比，强调她与村庄的联系。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜3</span>:<span class="string"></span></span><br><span class="line"><span class="attr">场景：小村庄的入口，一条小道。</span></span><br><span class="line"><span class="attr">角色：女孩、爷爷</span></span><br><span class="line"><span class="attr">行动：女孩开始急匆匆地走向村庄的入口，她的脸上带着欣喜之情。同时，她的爷爷已经在小道上朝村庄走来。</span></span><br><span class="line"><span class="attr">拍摄角度：两个镜头交替，一个是女孩快速走向镜头，另一个是爷爷在小道上缓慢前行。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜4</span>:<span class="string"></span></span><br><span class="line"><span class="attr">场景：村庄的小路，女孩与爷爷相遇。</span></span><br><span class="line"><span class="attr">角色：女孩、爷爷</span></span><br><span class="line"><span class="attr">行动：女孩跑到爷爷跟前，兴奋地拥抱他，两人互相拥抱。</span></span><br><span class="line"><span class="attr">拍摄角度：中景，捕捉到女孩和爷爷亲切的拥抱，表现出家庭的温馨。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜5</span>:<span class="string"></span></span><br><span class="line"><span class="attr">场景：小村庄的街道，夕阳西下。</span></span><br><span class="line"><span class="attr">角色：女孩、爷爷</span></span><br><span class="line"><span class="attr">行动：女孩牵着爷爷的手，一起漫步在小村庄的街道上，分享着彼此的故事和欢笑。</span></span><br><span class="line"><span class="attr">拍摄角度：侧景，捕捉到女孩和爷爷手牵手漫步在夕阳下的画面，强调幸福与团聚。</span></span><br><span class="line"></span><br><span class="line"><span class="attr">分镜6</span>:<span class="string"></span></span><br><span class="line"><span class="attr">场景：小村庄的屋前，家门口。</span></span><br><span class="line"><span class="attr">角色：女孩、爷爷</span></span><br><span class="line"><span class="attr">行动：女孩引领爷爷走到家门口，两人站在门前，女孩微笑着看着爷爷，表达深厚的家庭情感。</span></span><br><span class="line"><span class="attr">拍摄角度：近景，女孩和爷爷站在家门前，镜头聚焦在他们脸上的微笑，传递出家庭团聚的温馨和快乐。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="案列2-角色平移"><a href="#案列2-角色平移" class="headerlink" title="案列2:角色平移"></a>案列2:角色平移</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">指令1：（推荐）</span> <span class="string">全身</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style , full body turnaround of a young girl with golden hair tied back into a simple braid,wearing a humble dress,character sheet, white background --niji 5</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style,full body turnaround of An elderly man with a tall, slightly frail stature, his face adorned with wrinkles, his hair a striking blend of silver and white, his eyes a deep shade of blue, exuding wisdom and warmth.character sheet, white background --niji 5</span></span><br><span class="line"></span><br><span class="line"><span class="attr">指令2：（推荐）</span> <span class="string">表情</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style, different expressions of  a young girl with golden hair tied back into a simple braid,wearing a humble dress,character sheet, white background --niji 5</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style,different expressions  of An elderly man with a tall, slightly frail stature, his face adorned with wrinkles, his hair a striking blend of silver and white, his eyes a deep shade of blue, exuding wisdom and warmth.character sheet, white background --niji 5</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>裁图工具 <a href="https://www.photopea.com/">https://www.photopea.com/</a></p>
+<p>反选 ctrl+backspace</p>
+<p>改善画质:<a href="https://arc.tencent.com/en/ai-demos/faceRestoration">https://arc.tencent.com/en/ai-demos/faceRestoration</a></p>
+<h3 id="案例3-创建分镜1"><a href="#案例3-创建分镜1" class="headerlink" title="案例3:创建分镜1"></a>案例3:创建分镜1</h3><p><img src="/images/2-ai/asset1/4.png"></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghiblii style，wide-angle view of a  19th-century English pasture at early morning，</span></span><br><span class="line"><span class="attr">clear</span> <span class="string">sky， sheep grazing， a rustic wooden fence encircling the field --niji 5 --ar 16:9</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="案例4-创建分镜2"><a href="#案例4-创建分镜2" class="headerlink" title="案例4:创建分镜2"></a>案例4:创建分镜2</h3><p><img src="/images/2-ai/asset1/5.png"></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style，low-angle，front view of a young girl in a 19th-century English pasture holding a wicker basket,</span></span><br><span class="line"><span class="attr">sheep</span> <span class="string">grazing in the background,early morning， clear blue sky --niji 5 --ar 16:9</span></span><br></pre></td></tr></table></figure>
+
+<p>处理分镜图片不一致现象</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">https</span>:<span class="string">//cdn.discordapp.com/attachments/1158334973552635956/1158732304114524181/1_after.png?ex=651d510d&amp;is=651bff8d&amp;hm=dad35af55789f0df6a8680eb126b8ee41b391b009e00c8685826a1a967677326&amp;</span></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style，low-angle，front view of a young girl in a 19th-century English pasture holding a wicker basket,sheep grazing in the background,early morning， clear blue sky --niji 5 --ar 16:9</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="案例5-创建分镜3"><a href="#案例5-创建分镜3" class="headerlink" title="案例5:创建分镜3"></a>案例5:创建分镜3</h3><p><img src="/images/2-ai/asset1/6.png"></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="attr">Retro</span> <span class="string">Ghibli style， long shot of an elderly man driving a horse-drawn carriage on a country road in a 19th-century English pasture，early morning，clear blue sky --niji 5 --ar 16:9</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="案例6-创建漫画和动画"><a href="#案例6-创建漫画和动画" class="headerlink" title="案例6:创建漫画和动画"></a>案例6:创建漫画和动画</h3><p>网址:<a href="https://www.figma.com/">https://www.figma.com/</a></p>
+<p>社区:<a href="https://www.figma.com/community/plugin">https://www.figma.com/community/plugin</a></p>
+<p>动画:<a href="https://www.pika.art/">https://www.pika.art/</a></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Sheepare</span> <span class="string">eatinggrass grassarebeing blown by thewind-fps24</span></span><br></pre></td></tr></table></figure>
+
+<p>动画:<a href="https://runwayml.com/">https://runwayml.com/</a></p>
+<p>最后一帧:<a href="https://finalframe.net/dev/">https://finalframe.net/dev/</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>ChatGpt</tag>
+      </tags>
+  </entry>
+</search>
