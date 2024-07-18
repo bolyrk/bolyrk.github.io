@@ -5798,13 +5798,12 @@ hr:before {
 #article-container h6:hover {
     padding-left: 1.2rem
 }
-
 /*
 http://localhost:4000/images/cur/link1.cur
 https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur
 */
 body,html{
-  cursor: url('https://webjg_zhangbo.gitee.io/images/cur/link4.cur'),wait !important;
+  cursor: url('https://zbbhy.gitee.io/images/cur/link4.cur'),wait !important;
 }
 
 .hide-block>.hide-button.open,
@@ -5813,16 +5812,7 @@ body,html{
 }
 
 a,button,img {
-  cursor: url('https://webjg_zhangbo.gitee.io/images/cur/link4.cur'),wait!important;
-}
-
-.hide-block>.hide-button.open,
-.hide-inline>.hide-button.open {
-    display: block
-}
-
-a,button,img {
- 
+  cursor: url('https://zbbhy.gitee.io/images/cur/link4.cur'),wait!important;
 }
 
 ::-webkit-scrollbar {
