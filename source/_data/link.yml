@@ -1,0 +1,15 @@
+- class_name: 博哥个人站点
+  class_desc: 
+  link_list:
+    - name: 博哥导航
+      link: http://www.bogedev.top
+      avatar: https://s1.ax1x.com/2023/05/03/p9JRc0e.jpg
+      descr: 做一个热衷分享的人和不断学习的人
+      #siteshot: https://s1.ax1x.com/2023/05/03/p9JRc0e.jpg
+      # siteshot就是站点缩略图的链接。
+    - name: 博哥资源库
+      link: https://mynotedoc-1307080946.cos-website.ap-nanjing.myqcloud.com/
+      avatar: https://s1.ax1x.com/2023/05/03/p9JRc0e.jpg
+      descr: 做一个热衷分享的人和不断学习的人
+      #siteshot: https://s1.ax1x.com/2023/05/03/p9JRc0e.jpg
+      # siteshot就是站点缩略图的链接。
