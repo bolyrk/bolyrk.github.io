@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    /* 默认主题颜色 (Dark) */
+    --bg-color: #0f0f0f;
+    --text-color: #ffffff;
+    --secondary-text: #cccccc;
+    --header-bg: rgba(0, 0, 0, 0.7);
+    --gradient-1: #ff4d94;
+    --gradient-2: #ff9b4d;
+    --gradient-3: #4dffff;
+    --button-gradient: linear-gradient(45deg, #ff4d94, #ff9b4d);
+    --button-shadow: rgba(255, 77, 148, 0.4);
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-hover-shadow: rgba(0, 0, 0, 0.5);
+    --particle-color: #ffffff;
+    --gradient-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+}
+
+/* 蓝色主题 */
+[data-theme="blue"] {
+    --bg-color: #0a192f;
+    --text-color: #ffffff;
+    --secondary-text: #8892b0;
+    --header-bg: rgba(10, 25, 47, 0.7);
+    --gradient-1: #00b4d8;
+    --gradient-2: #4361ee;
+    --gradient-3: #7209b7;
+    --button-gradient: linear-gradient(45deg, #00b4d8, #4361ee);
+    --button-shadow: rgba(0, 180, 216, 0.4);
+    --card-shadow: rgba(0, 30, 60, 0.3);
+    --card-hover-shadow: rgba(0, 30, 60, 0.5);
+    --particle-color: #64ffda;
+}
+
+/* 绿色主题 */
+[data-theme="green"] {
+    --bg-color: #0b2412;
+    --text-color: #ffffff;
+    --secondary-text: #b0d0a4;
+    --header-bg: rgba(11, 36, 18, 0.7);
+    --gradient-1: #38b000;
+    --gradient-2: #70e000;
+    --gradient-3: #ccff33;
+    --button-gradient: linear-gradient(45deg, #38b000, #70e000);
+    --button-shadow: rgba(56, 176, 0, 0.4);
+    --card-shadow: rgba(0, 40, 0, 0.3);
+    --card-hover-shadow: rgba(0, 40, 0, 0.5);
+    --particle-color: #aaff00;
+}
+
+/* 紫色主题 */
+[data-theme="purple"] {
+    --bg-color: #1a0b2e;
+    --text-color: #ffffff;
+    --secondary-text: #c8b6e2;
+    --header-bg: rgba(26, 11, 46, 0.7);
+    --gradient-1: #7b2cbf;
+    --gradient-2: #c77dff;
+    --gradient-3: #e0aaff;
+    --button-gradient: linear-gradient(45deg, #7b2cbf, #c77dff);
+    --button-shadow: rgba(123, 44, 191, 0.4);
+    --card-shadow: rgba(26, 11, 46, 0.3);
+    --card-hover-shadow: rgba(26, 11, 46, 0.5);
+    --particle-color: #e0aaff;
+}
+
+/* 橙色主题 */
+[data-theme="orange"] {
+    --bg-color: #1c0f0a;
+    --text-color: #ffffff;
+    --secondary-text: #ffcb8e;
+    --header-bg: rgba(28, 15, 10, 0.7);
+    --gradient-1: #ff7700;
+    --gradient-2: #ff9500;
+    --gradient-3: #ffc300;
+    --button-gradient: linear-gradient(45deg, #ff7700, #ff9500);
+    --button-shadow: rgba(255, 119, 0, 0.4);
+    --card-shadow: rgba(28, 15, 10, 0.3);
+    --card-hover-shadow: rgba(28, 15, 10, 0.5);
+    --particle-color: #ffaa00;
+    --gradient-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+}
+
+/* 白色主题 */
+[data-theme="light"] {
+    --bg-color: #f5f5f7;
+    --text-color: #1d1d1f;
+    --secondary-text: #515154;
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --gradient-1: #007bff;
+    --gradient-2: #6c5ce7;
+    --gradient-3: #00cec9;
+    --button-gradient: linear-gradient(45deg, #007bff, #6c5ce7);
+    --button-shadow: rgba(0, 123, 255, 0.4);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: rgba(0, 0, 0, 0.2);
+    --particle-color: #007bff;
+    --gradient-overlay: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6));
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--header-bg);
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.5s ease;
+}
+
+.header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientText 5s ease infinite;
+    transition: background 0.5s ease;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    transition: color 0.5s ease;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 20px var(--card-shadow);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px var(--card-hover-shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+    z-index: 1;
+}
+
+.gallery-item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+    transform: translateY(20px);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-item p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: var(--secondary-text);
+    transition: color 0.5s ease;
+}
+
+.gallery-item .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--button-gradient);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--button-shadow);
+}
+
+.cursor,
+.cursor-follower {
+    display: none; /* 隐藏鼠标跟随元素 */
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 粒子背景 */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* 主题切换器 */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 20px 0 0 20px;
+    backdrop-filter: blur(10px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.theme-switcher:hover {
+    transform: translateX(0);
+}
+
+.theme-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-btn.active {
+    border: 2px solid white;
+    transform: scale(1.1);
+}
+
+.dark-theme {
+    background: linear-gradient(45deg, #ff4d94, #ff9b4d, #4dffff);
+}
+
+.blue-theme {
+    background: linear-gradient(45deg, #00b4d8, #4361ee, #7209b7);
+}
+
+.green-theme {
+    background: linear-gradient(45deg, #38b000, #70e000, #ccff33);
+}
+
+.purple-theme {
+    background: linear-gradient(45deg, #7b2cbf, #c77dff, #e0aaff);
+}
+
+.orange-theme {
+    background: linear-gradient(45deg, #ff7700, #ff9500, #ffc300);
+}
+
+.light-theme {
+    background: linear-gradient(45deg, #f5f5f7, #ffffff, #e0e0e0);
+    border: 1px solid #cccccc;
+}
+
+/* 主题切换器标签 */
+.theme-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.theme-switcher:hover .theme-label {
+    opacity: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none;
+    }
+
+    .theme-switcher {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    /* 移动端主题切换器悬停修复 */
+    .theme-switcher:hover {
+        transform: translateX(50%);
+    }
+}
+
+/* 加载动画 */
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+    grid-column: 1 / -1;
+    animation: pulse 1.5s infinite;
+}
+
+.error {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5rem;
+    color: #ff5252;
+    grid-column: 1 / -1;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* 全屏按钮样式 */
+.fullscreen-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.fullscreen-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.fullscreen-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* 主题切换器触发区域 */
+.theme-hover-area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;  /* 扩大触发区域 */
+    height: 80px;  /* 扩大触发区域 */
+    z-index: 99;
+    background-color: transparent;  /* 确保透明 */
+}
+
+/* 添加主题指示器，让用户知道有主题切换功能 */
+.theme-indicator {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 10px;
+    height: 30px;
+    background: linear-gradient(to bottom, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    border-radius: 4px 0 0 4px;
+    opacity: 0.8;
+    animation: pulse 2s infinite;
+} 

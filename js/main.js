@@ -1,827 +1,307 @@
-document.addEventListener('DOMContentLoaded', function () {
-  let headerContentWidth, $nav
-  let mobileSidebarOpen = false
+// 初始化应用
+async function initApp() {
+    try {
+        // 动态时间显示功能
+        function updateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const day = now.getDate().toString().padStart(2, '0');
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            
+            document.getElementById('current-time').textContent = 
+                `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+        }
 
-  const adjustMenu = init => {
-    const getAllWidth = ele => {
-      let width = 0
-      ele.length && Array.from(ele).forEach(i => { width += i.offsetWidth })
-      return width
+        // 初始化时间并每秒更新
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // 初始默认主题
+        document.body.setAttribute('data-theme', 'dark');
+        
+        // 加载主题数据
+        await loadThemes();
+        
+        // 加载工具数据
+        await loadTools();
+        
+        // 初始化粒子背景
+        updateParticlesColor();
+        
+        // 设置主题切换器悬停效果
+        setupThemeSwitcher();
+        
+        // 注释或删除以下行来禁用鼠标跟随效果
+        // setupCursorEffects();
+    } catch (error) {
+        console.error('初始化应用失败:', error);
     }
+}
 
-    if (init) {
-      const blogInfoWidth = getAllWidth(document.querySelector('#blog-info > a').children)
-      const menusWidth = getAllWidth(document.getElementById('menus').children)
-      headerContentWidth = blogInfoWidth + menusWidth
-      $nav = document.getElementById('nav')
-    }
-
-    let hideMenuIndex = ''
-    if (window.innerWidth <= 768) hideMenuIndex = true
-    else hideMenuIndex = headerContentWidth > $nav.offsetWidth - 120
-
-    if (hideMenuIndex) {
-      $nav.classList.add('hide-menu')
+// 新增：设置主题切换器悬停效果的函数
+function setupThemeSwitcher() {
+    const themeHoverArea = document.querySelector('.theme-hover-area');
+    const themeSwitcher = document.querySelector('.theme-switcher');
+    
+    if (themeHoverArea && themeSwitcher) {
+        // 显示主题切换器的提示按钮
+        const themeIndicator = document.createElement('div');
+        themeIndicator.className = 'theme-indicator';
+        themeHoverArea.appendChild(themeIndicator);
+        
+        // 添加悬停事件
+        themeHoverArea.addEventListener('mouseenter', function() {
+            themeSwitcher.style.transform = 'translateX(0)';
+        });
+        
+        themeSwitcher.addEventListener('mouseleave', function() {
+            themeSwitcher.style.transform = 'translateX(100%)';
+        });
+        
+        console.log('主题切换器设置完成');
     } else {
-      $nav.classList.remove('hide-menu')
+        console.error('找不到主题切换器元素');
     }
-  }
+}
 
-  // 初始化header
-  const initAdjust = () => {
-    adjustMenu(true)
-    $nav.classList.add('show')
-  }
-
-  // sidebar menus
-  const sidebarFn = {
-    open: () => {
-      btf.sidebarPaddingR()
-      document.body.style.overflow = 'hidden'
-      btf.animateIn(document.getElementById('menu-mask'), 'to_show 0.5s')
-      document.getElementById('sidebar-menus').classList.add('open')
-      mobileSidebarOpen = true
-    },
-    close: () => {
-      const $body = document.body
-      $body.style.overflow = ''
-      $body.style.paddingRight = ''
-      btf.animateOut(document.getElementById('menu-mask'), 'to_hide 0.5s')
-      document.getElementById('sidebar-menus').classList.remove('open')
-      mobileSidebarOpen = false
-    }
-  }
-
-  /**
-   * 首頁top_img底下的箭頭
-   */
-  const scrollDownInIndex = () => {
-    const $scrollDownEle = document.getElementById('scroll-down')
-    $scrollDownEle && $scrollDownEle.addEventListener('click', function () {
-      btf.scrollToDest(document.getElementById('content-inner').offsetTop, 300)
-    })
-  }
-
-  /**
-   * 代碼
-   * 只適用於Hexo默認的代碼渲染
-   */
-  const addHighlightTool = function () {
-    const highLight = GLOBAL_CONFIG.highlight
-    if (!highLight) return
-
-    const isHighlightCopy = highLight.highlightCopy
-    const isHighlightLang = highLight.highlightLang
-    const isHighlightShrink = GLOBAL_CONFIG_SITE.isHighlightShrink
-    const highlightHeightLimit = highLight.highlightHeightLimit
-    const isShowTool = isHighlightCopy || isHighlightLang || isHighlightShrink !== undefined
-    const $figureHighlight = highLight.plugin === 'highlighjs' ? document.querySelectorAll('figure.highlight') : document.querySelectorAll('pre[class*="language-"]')
-
-    if (!((isShowTool || highlightHeightLimit) && $figureHighlight.length)) return
-
-    const isPrismjs = highLight.plugin === 'prismjs'
-
-    let highlightShrinkEle = ''
-    let highlightCopyEle = ''
-    const highlightShrinkClass = isHighlightShrink === true ? 'closed' : ''
-
-    if (isHighlightShrink !== undefined) {
-      highlightShrinkEle = `<i class="fas fa-angle-down expand ${highlightShrinkClass}"></i>`
-    }
-
-    if (isHighlightCopy) {
-      highlightCopyEle = '<div class="copy-notice"></div><i class="fas fa-paste copy-button"></i>'
-    }
-
-    const copy = (text, ctx) => {
-      if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
-        document.execCommand('copy')
-        if (GLOBAL_CONFIG.Snackbar !== undefined) {
-          btf.snackbarShow(GLOBAL_CONFIG.copy.success)
-        } else {
-          const prevEle = ctx.previousElementSibling
-          prevEle.innerText = GLOBAL_CONFIG.copy.success
-          prevEle.style.opacity = 1
-          setTimeout(() => { prevEle.style.opacity = 0 }, 700)
+// 从API加载主题数据并生成主题按钮
+async function loadThemes() {
+    const themesContainer = document.getElementById('theme-buttons-container');
+    
+    try {
+        const themes = await window.api.getThemes();
+        themesContainer.innerHTML = '';
+        
+        if (!themes || Object.keys(themes).length === 0) {
+            throw new Error('没有获取到主题数据');
         }
-      } else {
-        if (GLOBAL_CONFIG.Snackbar !== undefined) {
-          btf.snackbarShow(GLOBAL_CONFIG.copy.noSupport)
-        } else {
-          ctx.previousElementSibling.innerText = GLOBAL_CONFIG.copy.noSupport
+        
+        // 获取主题键名的数组
+        const themeKeys = Object.keys(themes);
+        
+        themeKeys.forEach((themeKey, index) => {
+            const theme = themes[themeKey];
+            const themeButton = document.createElement('div');
+            themeButton.className = `theme-btn ${themeKey}-theme${index === 0 ? ' active' : ''}`;
+            themeButton.setAttribute('data-theme', themeKey);
+            themesContainer.appendChild(themeButton);
+            
+            // 添加事件监听器
+            themeButton.addEventListener('click', function() {
+                // 移除所有按钮的active类
+                document.querySelectorAll('.theme-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // 给当前点击的按钮添加active类
+                this.classList.add('active');
+                
+                // 获取并设置主题
+                const selectedTheme = this.getAttribute('data-theme');
+                document.body.setAttribute('data-theme', selectedTheme);
+                
+                // 更新粒子颜色
+                updateParticlesColor();
+            });
+            
+            // 添加悬停效果显示主题名称
+            themeButton.addEventListener('mouseenter', function() {
+                document.querySelector('.theme-label').textContent = theme.name;
+            });
+        });
+    } catch (error) {
+        console.error('加载主题失败:', error);
+        // 使用默认主题作为后备方案
+        document.body.setAttribute('data-theme', 'dark');
+        // 显示错误但不阻止用户使用网站
+        themesContainer.innerHTML = '<div class="theme-btn dark-theme active" data-theme="dark"></div>';
+        document.querySelector('.theme-label').textContent = '主题加载失败';
+    }
+}
+
+// 从API加载工具数据并生成工具卡片
+async function loadTools() {
+    const toolsContainer = document.getElementById('tools-container');
+    
+    try {
+        // 显示加载状态
+        toolsContainer.innerHTML = '<div class="loading">加载中...</div>';
+        
+        const tools = await window.api.getTools();
+        
+        // 清除加载提示
+        toolsContainer.innerHTML = '';
+        
+        if (!tools || tools.length === 0) {
+            throw new Error('没有获取到工具数据');
         }
-      }
+        
+        tools.forEach(tool => {
+            const toolCard = document.createElement('div');
+            toolCard.className = 'gallery-item';
+            toolCard.onclick = function() {
+                location.href = tool.url;
+            };
+            
+            toolCard.innerHTML = `
+                <img src="${tool.image}" alt="${tool.name}">
+                <div class="gallery-item-content">
+                    <h2>${tool.name}</h2>
+                    <p>${tool.description}</p>
+                    <a href="${tool.url}" class="btn">立即使用</a>
+                </div>
+            `;
+            
+            toolsContainer.appendChild(toolCard);
+        });
+        
+        // 注释或删除以下行来禁用工具卡片的鼠标效果
+        // setupCursorItemEffects();
+        
+    } catch (error) {
+        console.error('加载工具失败:', error);
+        toolsContainer.innerHTML = 
+            `<div class="error">加载失败: ${error.message || '未知错误'}，请刷新页面重试</div>`;
     }
+}
 
-    // click events
-    const highlightCopyFn = (ele) => {
-      const $buttonParent = ele.parentNode
-      $buttonParent.classList.add('copy-true')
-      const selection = window.getSelection()
-      const range = document.createRange()
-      if (isPrismjs) range.selectNodeContents($buttonParent.querySelectorAll('pre code')[0])
-      else range.selectNodeContents($buttonParent.querySelectorAll('table .code pre')[0])
-      selection.removeAllRanges()
-      selection.addRange(range)
-      const text = selection.toString()
-      copy(text, ele.lastChild)
-      selection.removeAllRanges()
-      $buttonParent.classList.remove('copy-true')
-    }
+// 更新粒子颜色的函数
+function updateParticlesColor() {
+    // 获取当前主题的粒子颜色
+    const computedStyle = getComputedStyle(document.documentElement);
+    const particleColor = computedStyle.getPropertyValue('--particle-color').trim();
 
-    const highlightShrinkFn = (ele) => {
-      const $nextEle = [...ele.parentNode.children].slice(1)
-      ele.firstChild.classList.toggle('closed')
-      if (btf.isHidden($nextEle[$nextEle.length - 1])) {
-        $nextEle.forEach(e => { e.style.display = 'block' })
-      } else {
-        $nextEle.forEach(e => { e.style.display = 'none' })
-      }
-    }
-
-    const highlightToolsFn = function (e) {
-      const $target = e.target.classList
-      if ($target.contains('expand')) highlightShrinkFn(this)
-      else if ($target.contains('copy-button')) highlightCopyFn(this)
-    }
-
-    const expandCode = function () {
-      this.classList.toggle('expand-done')
-    }
-
-    function createEle (lang, item, service) {
-      const fragment = document.createDocumentFragment()
-
-      if (isShowTool) {
-        const hlTools = document.createElement('div')
-        hlTools.className = `highlight-tools ${highlightShrinkClass}`
-        hlTools.innerHTML = highlightShrinkEle + lang + highlightCopyEle
-        hlTools.addEventListener('click', highlightToolsFn)
-        fragment.appendChild(hlTools)
-      }
-
-      if (highlightHeightLimit && item.offsetHeight > highlightHeightLimit + 30) {
-        const ele = document.createElement('div')
-        ele.className = 'code-expand-btn'
-        ele.innerHTML = '<i class="fas fa-angle-double-down"></i>'
-        ele.addEventListener('click', expandCode)
-        fragment.appendChild(ele)
-      }
-
-      if (service === 'hl') {
-        item.insertBefore(fragment, item.firstChild)
-      } else {
-        item.parentNode.insertBefore(fragment, item)
-      }
-    }
-
-    if (isHighlightLang) {
-      if (isPrismjs) {
-        $figureHighlight.forEach(function (item) {
-          const langName = item.getAttribute('data-language') ? item.getAttribute('data-language') : 'Code'
-          const highlightLangEle = `<div class="code-lang">${langName}</div>`
-          btf.wrap(item, 'figure', { class: 'highlight' })
-          createEle(highlightLangEle, item)
-        })
-      } else {
-        $figureHighlight.forEach(function (item) {
-          let langName = item.getAttribute('class').split(' ')[1]
-          if (langName === 'plain' || langName === undefined) langName = 'Code'
-          const highlightLangEle = `<div class="code-lang">${langName}</div>`
-          createEle(highlightLangEle, item, 'hl')
-        })
-      }
-    } else {
-      if (isPrismjs) {
-        $figureHighlight.forEach(function (item) {
-          btf.wrap(item, 'figure', { class: 'highlight' })
-          createEle('', item)
-        })
-      } else {
-        $figureHighlight.forEach(function (item) {
-          createEle('', item, 'hl')
-        })
-      }
-    }
-  }
-
-  /**
-   * PhotoFigcaption
-   */
-  function addPhotoFigcaption () {
-    document.querySelectorAll('#article-container img').forEach(function (item) {
-      const parentEle = item.parentNode
-      const altValue = item.title || item.alt
-      if (altValue && !parentEle.parentNode.classList.contains('justified-gallery')) {
-        const ele = document.createElement('div')
-        ele.className = 'img-alt is-center'
-        ele.textContent = altValue
-        parentEle.insertBefore(ele, item.nextSibling)
-      }
-    })
-  }
-
-  /**
-   * Lightbox
-   */
-  const runLightbox = () => {
-    btf.loadLightbox(document.querySelectorAll('#article-container img:not(.no-lightbox)'))
-  }
-
-  /**
-   * justified-gallery 圖庫排版
-   */
-  const runJustifiedGallery = function (ele) {
-    const htmlStr = arr => {
-      let str = ''
-      const replaceDq = str => str.replace(/"/g, '&quot;') // replace double quotes to &quot;
-      arr.forEach(i => {
-        const alt = i.alt ? `alt="${replaceDq(i.alt)}"` : ''
-        const title = i.title ? `title="${replaceDq(i.title)}"` : ''
-        str += `<div class="fj-gallery-item"><img src="${i.url}" ${alt + title}"></div>`
-      })
-      return str
-    }
-
-    const lazyloadFn = (i, arr, limit) => {
-      const loadItem = limit
-      const arrLength = arr.length
-      if (arrLength > loadItem) i.insertAdjacentHTML('beforeend', htmlStr(arr.splice(0, loadItem)))
-      else {
-        i.insertAdjacentHTML('beforeend', htmlStr(arr))
-        i.classList.remove('lazyload')
-      }
-      return arrLength > loadItem ? loadItem : arrLength
-    }
-
-    const fetchUrl = async (url) => {
-      const response = await fetch(url)
-      return await response.json()
-    }
-
-    const runJustifiedGallery = (item, arr) => {
-      if (!item.classList.contains('lazyload')) item.innerHTML = htmlStr(arr)
-      else {
-        const limit = item.getAttribute('data-limit')
-        lazyloadFn(item, arr, limit)
-        const clickBtnFn = () => {
-          const lastItemLength = lazyloadFn(item, arr, limit)
-          fjGallery(item, 'appendImages', item.querySelectorAll(`.fj-gallery-item:nth-last-child(-n+${lastItemLength})`))
-          btf.loadLightbox(item.querySelectorAll('img'))
-          lastItemLength < limit && item.nextElementSibling.removeEventListener('click', clickBtnFn)
-        }
-        item.nextElementSibling.addEventListener('click', clickBtnFn)
-      }
-      btf.initJustifiedGallery(item)
-      btf.loadLightbox(item.querySelectorAll('img'))
-    }
-
-    const addJustifiedGallery = () => {
-      ele.forEach(item => {
-        item.classList.contains('url')
-          ? fetchUrl(item.textContent).then(res => { runJustifiedGallery(item, res) })
-          : runJustifiedGallery(item, JSON.parse(item.textContent))
-      })
-    }
-
-    if (window.fjGallery) {
-      addJustifiedGallery()
-      return
-    }
-
-    getCSS(`${GLOBAL_CONFIG.source.justifiedGallery.css}`)
-    getScript(`${GLOBAL_CONFIG.source.justifiedGallery.js}`).then(addJustifiedGallery)
-  }
-
-  /**
-   * rightside scroll percent
-   */
-  const rightsideScrollPercent = currentTop => {
-    const perNum = btf.getScrollPercent(currentTop, document.body)
-    const $goUp = document.getElementById('go-up')
-    if (perNum < 95) {
-      $goUp.classList.add('show-percent')
-      $goUp.querySelector('.scroll-percent').textContent = perNum
-    } else {
-      $goUp.classList.remove('show-percent')
-    }
-  }
-
-  /**
-   * 滾動處理
-   */
-  const scrollFn = function () {
-    const $rightside = document.getElementById('rightside')
-    const innerHeight = window.innerHeight + 56
-
-    // 當滾動條小于 56 的時候
-    if (document.body.scrollHeight <= innerHeight) {
-      $rightside.style.cssText = 'opacity: 1; transform: translateX(-58px)'
-      return
-    }
-
-    // find the scroll direction
-    function scrollDirection (currentTop) {
-      const result = currentTop > initTop // true is down & false is up
-      initTop = currentTop
-      return result
-    }
-
-    let initTop = 0
-    let isChatShow = true
-    const $header = document.getElementById('page-header')
-    const isChatBtnHide = typeof chatBtnHide === 'function'
-    const isChatBtnShow = typeof chatBtnShow === 'function'
-    const isShowPercent = GLOBAL_CONFIG.percent.rightside
-
-    const scrollTask = btf.throttle(() => {
-      const currentTop = window.scrollY || document.documentElement.scrollTop
-      const isDown = scrollDirection(currentTop)
-      if (currentTop > 56) {
-        if (isDown) {
-          if ($header.classList.contains('nav-visible')) $header.classList.remove('nav-visible')
-          if (isChatBtnShow && isChatShow === true) {
-            chatBtnHide()
-            isChatShow = false
-          }
-        } else {
-          if (!$header.classList.contains('nav-visible')) $header.classList.add('nav-visible')
-          if (isChatBtnHide && isChatShow === false) {
-            chatBtnShow()
-            isChatShow = true
-          }
-        }
-        $header.classList.add('nav-fixed')
-        if (window.getComputedStyle($rightside).getPropertyValue('opacity') === '0') {
-          $rightside.style.cssText = 'opacity: 0.8; transform: translateX(-58px)'
-        }
-      } else {
-        if (currentTop === 0) {
-          $header.classList.remove('nav-fixed', 'nav-visible')
-        }
-        $rightside.style.cssText = "opacity: ''; transform: ''"
-      }
-
-      isShowPercent && rightsideScrollPercent(currentTop)
-
-      if (document.body.scrollHeight <= innerHeight) {
-        $rightside.style.cssText = 'opacity: 0.8; transform: translateX(-58px)'
-      }
-    }, 200)
-
-    window.scrollCollect = scrollTask
-
-    window.addEventListener('scroll', scrollCollect)
-  }
-
-  /**
-  * toc,anchor
-  */
-  const scrollFnToDo = function () {
-    const isToc = GLOBAL_CONFIG_SITE.isToc
-    const isAnchor = GLOBAL_CONFIG.isAnchor
-    const $article = document.getElementById('article-container')
-
-    if (!($article && (isToc || isAnchor))) return
-
-    let $tocLink, $cardToc, autoScrollToc, $tocPercentage, isExpand
-
-    if (isToc) {
-      const $cardTocLayout = document.getElementById('card-toc')
-      $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0]
-      $tocLink = $cardToc.querySelectorAll('.toc-link')
-      $tocPercentage = $cardTocLayout.querySelector('.toc-percentage')
-      isExpand = $cardToc.classList.contains('is-expand')
-
-      window.mobileToc = {
-        open: () => {
-          $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: 55px'
-        },
-
-        close: () => {
-          $cardTocLayout.style.animation = 'toc-close .2s'
-          setTimeout(() => {
-            $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
-          }, 100)
-        }
-      }
-
-      // toc元素點擊
-      $cardToc.addEventListener('click', e => {
-        e.preventDefault()
-        const target = e.target.classList
-        if (target.contains('toc-content')) return
-        const $target = target.contains('toc-link')
-          ? e.target
-          : e.target.parentElement
-        btf.scrollToDest(btf.getEleTop(document.getElementById(decodeURI($target.getAttribute('href')).replace('#', ''))), 300)
-        if (window.innerWidth < 900) {
-          window.mobileToc.close()
-        }
-      })
-
-      autoScrollToc = item => {
-        const activePosition = item.getBoundingClientRect().top
-        const sidebarScrollTop = $cardToc.scrollTop
-        if (activePosition > (document.documentElement.clientHeight - 100)) {
-          $cardToc.scrollTop = sidebarScrollTop + 150
-        }
-        if (activePosition < 100) {
-          $cardToc.scrollTop = sidebarScrollTop - 150
-        }
-      }
-    }
-
-    // find head position & add active class
-    const list = $article.querySelectorAll('h1,h2,h3,h4,h5,h6')
-    let detectItem = ''
-    const findHeadPosition = function (top) {
-      if (top === 0) {
-        return false
-      }
-
-      let currentId = ''
-      let currentIndex = ''
-
-      list.forEach(function (ele, index) {
-        if (top > btf.getEleTop(ele) - 80) {
-          const id = ele.id
-          currentId = id ? '#' + encodeURI(id) : ''
-          currentIndex = index
-        }
-      })
-
-      if (detectItem === currentIndex) return
-
-      if (isAnchor) btf.updateAnchor(currentId)
-
-      detectItem = currentIndex
-
-      if (isToc) {
-        $cardToc.querySelectorAll('.active').forEach(i => { i.classList.remove('active') })
-
-        if (currentId === '') {
-          return
-        }
-
-        const currentActive = $tocLink[currentIndex]
-        currentActive.classList.add('active')
-
-        setTimeout(() => {
-          autoScrollToc(currentActive)
-        }, 0)
-
-        if (isExpand) return
-        let parent = currentActive.parentNode
-
-        for (; !parent.matches('.toc'); parent = parent.parentNode) {
-          if (parent.matches('li')) parent.classList.add('active')
-        }
-      }
-    }
-
-    // main of scroll
-    window.tocScrollFn = btf.throttle(() => {
-      const currentTop = window.scrollY || document.documentElement.scrollTop
-      if (isToc && GLOBAL_CONFIG.percent.toc) {
-        $tocPercentage.textContent = btf.getScrollPercent(currentTop, $article)
-      }
-      findHeadPosition(currentTop)
-    }, 100)
-
-    window.addEventListener('scroll', tocScrollFn)
-  }
-
-  /**
-   * Rightside
-   */
-  const rightSideFn = {
-    switchReadMode: () => { // read-mode
-      const $body = document.body
-      $body.classList.add('read-mode')
-      const newEle = document.createElement('button')
-      newEle.type = 'button'
-      newEle.className = 'fas fa-sign-out-alt exit-readmode'
-      $body.appendChild(newEle)
-
-      function clickFn () {
-        $body.classList.remove('read-mode')
-        newEle.remove()
-        newEle.removeEventListener('click', clickFn)
-      }
-
-      newEle.addEventListener('click', clickFn)
-    },
-    switchDarkMode: () => { // Switch Between Light And Dark Mode
-      const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
-      if (nowMode === 'light') {
-        activateDarkMode()
-        saveToLocal.set('theme', 'dark', 2)
-        GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night)
-      } else {
-        activateLightMode()
-        saveToLocal.set('theme', 'light', 2)
-        GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day)
-      }
-      // handle some cases
-      typeof utterancesTheme === 'function' && utterancesTheme()
-      typeof changeGiscusTheme === 'function' && changeGiscusTheme()
-      typeof FB === 'object' && window.loadFBComment && window.loadFBComment()
-      typeof runMermaid === 'function' && window.runMermaid()
-    },
-    showOrHideBtn: (e) => { // rightside 點擊設置 按鈕 展開
-      const rightsideHideClassList = document.getElementById('rightside-config-hide').classList
-      rightsideHideClassList.toggle('show')
-      if (e.classList.contains('show')) {
-        rightsideHideClassList.add('status')
-        setTimeout(() => {
-          rightsideHideClassList.remove('status')
-        }, 300)
-      }
-      e.classList.toggle('show')
-    },
-    scrollToTop: () => { // Back to top
-      btf.scrollToDest(0, 500)
-    },
-    hideAsideBtn: () => { // Hide aside
-      const $htmlDom = document.documentElement.classList
-      $htmlDom.contains('hide-aside')
-        ? saveToLocal.set('aside-status', 'show', 2)
-        : saveToLocal.set('aside-status', 'hide', 2)
-      $htmlDom.toggle('hide-aside')
-    },
-
-    runMobileToc: () => {
-      if (window.getComputedStyle(document.getElementById('card-toc')).getPropertyValue('opacity') === '0') window.mobileToc.open()
-      else window.mobileToc.close()
-    }
-  }
-
-  document.getElementById('rightside').addEventListener('click', function (e) {
-    const $target = e.target.id ? e.target : e.target.parentNode
-    switch ($target.id) {
-      case 'go-up':
-        rightSideFn.scrollToTop()
-        break
-      case 'rightside_config':
-        rightSideFn.showOrHideBtn($target)
-        break
-      case 'mobile-toc-button':
-        rightSideFn.runMobileToc()
-        break
-      case 'readmode':
-        rightSideFn.switchReadMode()
-        break
-      case 'darkmode':
-        rightSideFn.switchDarkMode()
-        break
-      case 'hide-aside-btn':
-        rightSideFn.hideAsideBtn()
-        break
-      default:
-        break
-    }
-  })
-
-  /**
-   * menu
-   * 側邊欄sub-menu 展開/收縮
-   */
-  const clickFnOfSubMenu = () => {
-    document.querySelectorAll('#sidebar-menus .site-page.group').forEach(function (item) {
-      item.addEventListener('click', function () {
-        this.classList.toggle('hide')
-      })
-    })
-  }
-
-  /**
-   * 複製時加上版權信息
-   */
-  const addCopyright = () => {
-    const copyright = GLOBAL_CONFIG.copyright
-    document.body.oncopy = (e) => {
-      e.preventDefault()
-      let textFont; const copyFont = window.getSelection(0).toString()
-      if (copyFont.length > copyright.limitCount) {
-        textFont = copyFont + '\n' + '\n' + '\n' +
-        copyright.languages.author + '\n' +
-        copyright.languages.link + window.location.href + '\n' +
-        copyright.languages.source + '\n' +
-        copyright.languages.info
-      } else {
-        textFont = copyFont
-      }
-      if (e.clipboardData) {
-        return e.clipboardData.setData('text', textFont)
-      } else {
-        return window.clipboardData.setData('text', textFont)
-      }
-    }
-  }
-
-  /**
-   * 網頁運行時間
-   */
-  const addRuntime = () => {
-    const $runtimeCount = document.getElementById('runtimeshow')
-    if ($runtimeCount) {
-      const publishDate = $runtimeCount.getAttribute('data-publishDate')
-      $runtimeCount.innerText = btf.diffDate(publishDate) + ' ' + GLOBAL_CONFIG.runtime
-    }
-  }
-
-  /**
-   * 最後一次更新時間
-   */
-  const addLastPushDate = () => {
-    const $lastPushDateItem = document.getElementById('last-push-date')
-    if ($lastPushDateItem) {
-      const lastPushDate = $lastPushDateItem.getAttribute('data-lastPushDate')
-      $lastPushDateItem.innerText = btf.diffDate(lastPushDate, true)
-    }
-  }
-
-  /**
-   * table overflow
-   */
-  const addTableWrap = () => {
-    const $table = document.querySelectorAll('#article-container :not(.highlight) > table, #article-container > table')
-    if ($table.length) {
-      $table.forEach(item => {
-        btf.wrap(item, 'div', { class: 'table-wrap' })
-      })
-    }
-  }
-
-  /**
-   * tag-hide
-   */
-  const clickFnOfTagHide = function () {
-    const $hideInline = document.querySelectorAll('#article-container .hide-button')
-    if ($hideInline.length) {
-      $hideInline.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-          const $this = this
-          $this.classList.add('open')
-          const $fjGallery = $this.nextElementSibling.querySelectorAll('.fj-gallery')
-          $fjGallery.length && btf.initJustifiedGallery($fjGallery)
-        })
-      })
-    }
-  }
-
-  const tabsFn = {
-    clickFnOfTabs: function () {
-      document.querySelectorAll('#article-container .tab > button').forEach(function (item) {
-        item.addEventListener('click', function (e) {
-          const $this = this
-          const $tabItem = $this.parentNode
-
-          if (!$tabItem.classList.contains('active')) {
-            const $tabContent = $tabItem.parentNode.nextElementSibling
-            const $siblings = btf.siblings($tabItem, '.active')[0]
-            $siblings && $siblings.classList.remove('active')
-            $tabItem.classList.add('active')
-            const tabId = $this.getAttribute('data-href').replace('#', '')
-            const childList = [...$tabContent.children]
-            childList.forEach(item => {
-              if (item.id === tabId) item.classList.add('active')
-              else item.classList.remove('active')
-            })
-            const $isTabJustifiedGallery = $tabContent.querySelectorAll(`#${tabId} .fj-gallery`)
-            if ($isTabJustifiedGallery.length > 0) {
-              btf.initJustifiedGallery($isTabJustifiedGallery)
+    // 重新初始化粒子系统
+    particlesJS('particles-js', {
+        particles: {
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: particleColor
+            },
+            shape: {
+                type: 'circle',
+                stroke: {
+                    width: 0,
+                    color: '#000000'
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 3,
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 2,
+                    size_min: 0.1,
+                    sync: false
+                }
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: particleColor,
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 1,
+                direction: 'none',
+                random: true,
+                straight: false,
+                out_mode: 'out',
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
             }
-          }
-        })
-      })
-    },
-    backToTop: () => {
-      document.querySelectorAll('#article-container .tabs .tab-to-top').forEach(function (item) {
-        item.addEventListener('click', function () {
-          btf.scrollToDest(btf.getEleTop(btf.getParents(this, '.tabs')), 300)
-        })
-      })
-    }
-  }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: 'grab'
+                },
+                onclick: {
+                    enable: true,
+                    mode: 'push'
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 140,
+                    line_linked: {
+                        opacity: 1
+                    }
+                },
+                push: {
+                    particles_nb: 4
+                }
+            }
+        },
+        retina_detect: true
+    });
+}
 
-  const toggleCardCategory = function () {
-    const $cardCategory = document.querySelectorAll('#aside-cat-list .card-category-list-item.parent i')
-    if ($cardCategory.length) {
-      $cardCategory.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-          e.preventDefault()
-          const $this = this
-          $this.classList.toggle('expand')
-          const $parentEle = $this.parentNode.nextElementSibling
-          if (btf.isHidden($parentEle)) {
-            $parentEle.style.display = 'block'
-          } else {
-            $parentEle.style.display = 'none'
-          }
-        })
-      })
-    }
-  }
+// 设置自定义鼠标跟随效果
+function setupCursorEffects() {
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
 
-  const switchComments = function () {
-    let switchDone = false
-    const $switchBtn = document.querySelector('#comment-switch > .switch-btn')
-    $switchBtn && $switchBtn.addEventListener('click', function () {
-      this.classList.toggle('move')
-      document.querySelectorAll('#post-comment > .comment-wrap > div').forEach(function (item) {
-        if (btf.isHidden(item)) {
-          item.style.cssText = 'display: block;animation: tabshow .5s'
-        } else {
-          item.style.cssText = "display: none;animation: ''"
-        }
-      })
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
 
-      if (!switchDone && typeof loadOtherComment === 'function') {
-        switchDone = true
-        loadOtherComment()
-      }
-    })
-  }
+        setTimeout(function() {
+            cursorFollower.style.left = e.clientX + 'px';
+            cursorFollower.style.top = e.clientY + 'px';
+        }, 100);
+    });
+}
 
-  const addPostOutdateNotice = function () {
-    const data = GLOBAL_CONFIG.noticeOutdate
-    const diffDay = btf.diffDate(GLOBAL_CONFIG_SITE.postUpdate)
-    if (diffDay >= data.limitDay) {
-      const ele = document.createElement('div')
-      ele.className = 'post-outdate-notice'
-      ele.textContent = data.messagePrev + ' ' + diffDay + ' ' + data.messageNext
-      const $targetEle = document.getElementById('article-container')
-      if (data.position === 'top') {
-        $targetEle.insertBefore(ele, $targetEle.firstChild)
-      } else {
-        $targetEle.appendChild(ele)
-      }
-    }
-  }
+// 为工具卡片设置悬停效果
+function setupCursorItemEffects() {
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+    
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            cursor.style.width = '30px';
+            cursor.style.height = '30px';
+            cursorFollower.style.width = '60px';
+            cursorFollower.style.height = '60px';
+        });
 
-  const lazyloadImg = () => {
-    window.lazyLoadInstance = new LazyLoad({
-      elements_selector: 'img',
-      threshold: 0,
-      data_src: 'lazy-src'
-    })
-  }
+        item.addEventListener('mouseleave', function() {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+            cursorFollower.style.width = '40px';
+            cursorFollower.style.height = '40px';
+        });
+    });
+}
 
-  const relativeDate = function (selector) {
-    selector.forEach(item => {
-      const $this = item
-      const timeVal = $this.getAttribute('datetime')
-      $this.innerText = btf.diffDate(timeVal, true)
-      $this.style.display = 'inline'
-    })
-  }
-
-  const unRefreshFn = function () {
-    window.addEventListener('resize', () => {
-      adjustMenu(false)
-      btf.isHidden(document.getElementById('toggle-menu')) && mobileSidebarOpen && sidebarFn.close()
-    })
-
-    document.getElementById('menu-mask').addEventListener('click', e => { sidebarFn.close() })
-
-    clickFnOfSubMenu()
-    GLOBAL_CONFIG.islazyload && lazyloadImg()
-    GLOBAL_CONFIG.copyright !== undefined && addCopyright()
-  }
-
-  window.refreshFn = function () {
-    initAdjust()
-
-    if (GLOBAL_CONFIG_SITE.isPost) {
-      GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice()
-      GLOBAL_CONFIG.relativeDate.post && relativeDate(document.querySelectorAll('#post-meta time'))
-    } else {
-      GLOBAL_CONFIG.relativeDate.homepage && relativeDate(document.querySelectorAll('#recent-posts time'))
-      GLOBAL_CONFIG.runtime && addRuntime()
-      addLastPushDate()
-      toggleCardCategory()
-    }
-
-    scrollFnToDo()
-    GLOBAL_CONFIG_SITE.isHome && scrollDownInIndex()
-    addHighlightTool()
-    GLOBAL_CONFIG.isPhotoFigcaption && addPhotoFigcaption()
-    scrollFn()
-
-    const $jgEle = document.querySelectorAll('#article-container .fj-gallery')
-    $jgEle.length && runJustifiedGallery($jgEle)
-
-    runLightbox()
-    addTableWrap()
-    clickFnOfTagHide()
-    tabsFn.clickFnOfTabs()
-    tabsFn.backToTop()
-    switchComments()
-    document.getElementById('toggle-menu').addEventListener('click', () => { sidebarFn.open() })
-  }
-
-  refreshFn()
-  unRefreshFn()
-})
+// 当文档加载完成时初始化应用
+document.addEventListener('DOMContentLoaded', initApp);
