@@ -143,7 +143,7 @@ async function loadTools() {
             const toolCard = document.createElement('div');
             toolCard.className = 'gallery-item';
             toolCard.onclick = function() {
-                location.href = tool.url;
+                window.open(tool.url, '_blank');
             };
             
             toolCard.innerHTML = `
@@ -151,7 +151,7 @@ async function loadTools() {
                 <div class="gallery-item-content">
                     <h2>${tool.name}</h2>
                     <p>${tool.description}</p>
-                    <a href="${tool.url}" class="btn">立即使用</a>
+                    <a href="${tool.url}" target="_blank" class="btn">立即使用</a>
                 </div>
             `;
             
