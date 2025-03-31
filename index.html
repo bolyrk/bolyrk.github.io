@@ -6,6 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>张博的AI工具导航</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 按钮容器样式 */
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        
+        /* 购买按钮新样式 - 蓝底白字 */
+        .recharge-btn {
+            background-color: #2563eb; /* 蓝色背景 */
+            color: white; /* 白色文字 */
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .recharge-btn:hover {
+            background-color: #1d4ed8; /* 悬停时更深的蓝色 */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
+        }
+        
+        /* 针对不同主题的蓝色调整 */
+        [data-theme="dark"] .recharge-btn {
+            background-color: #3b82f6;
+        }
+        [data-theme="dark"] .recharge-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        [data-theme="blue"] .recharge-btn {
+            background-color: #0284c7;
+        }
+        [data-theme="blue"] .recharge-btn:hover {
+            background-color: #0369a1;
+        }
+        
+        [data-theme="green"] .recharge-btn {
+            background-color: #3b82f6;
+        }
+        [data-theme="green"] .recharge-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        [data-theme="purple"] .recharge-btn {
+            background-color: #4f46e5;
+        }
+        [data-theme="purple"] .recharge-btn:hover {
+            background-color: #4338ca;
+        }
+        
+        [data-theme="orange"] .recharge-btn {
+            background-color: #2563eb;
+        }
+        [data-theme="orange"] .recharge-btn:hover {
+            background-color: #1d4ed8;
+        }
+        
+        [data-theme="light"] .recharge-btn {
+            background-color: #3b82f6;
+        }
+        [data-theme="light"] .recharge-btn:hover {
+            background-color: #2563eb;
+        }
+    </style>
 </head>
 
 <body>

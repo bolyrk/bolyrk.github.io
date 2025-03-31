@@ -142,18 +142,37 @@ async function loadTools() {
         tools.forEach(tool => {
             const toolCard = document.createElement('div');
             toolCard.className = 'gallery-item';
-            toolCard.onclick = function() {
-                window.open(tool.url, '_self');
+            toolCard.onclick = function(event) {
+                // 防止充值按钮点击事件冒泡
+                if (!event.target.classList.contains('recharge-btn')) {
+                    window.open(tool.url, '_self');
+                }
             };
             
-            toolCard.innerHTML = `
+            // 构建基本卡片结构
+            let cardContent = `
                 <img src="${tool.image}" alt="${tool.name}">
                 <div class="gallery-item-content">
                     <h2>${tool.name}</h2>
                     <p>${tool.description}</p>
-                    <a href="${tool.url}" target="_self" class="btn">立即使用</a>
+                    <div class="btn-container">
+                        <a href="${tool.url}" target="_self" class="btn">立即使用</a>
+            `;
+            
+            // 如果有充值选项，添加购买按钮
+            if (tool.hasRecharge) {
+                cardContent += `
+                        <a href="${tool.rechargeUrl}" target="_self" class="btn recharge-btn">购买</a>
+                `;
+            }
+            
+            // 关闭div标签
+            cardContent += `
+                    </div>
                 </div>
             `;
+            
+            toolCard.innerHTML = cardContent;
             
             toolsContainer.appendChild(toolCard);
         });

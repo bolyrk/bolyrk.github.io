@@ -105,14 +105,18 @@ class MockApi {
                         name: "Claude镜像2",
                         description: "Claude AI的第二个镜像站点，备用镜像服务器，保障访问稳定性",
                         url: "https://pro.restai.fun",
-                        image: "img/10.jpg"
+                        image: "img/10.jpg",
+                        hasRecharge: true,
+                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC  "
                     },
                     {
                         id: 11,
                         name: "Grok镜像站1",
                         description: "Grok AI的镜像站点，提供稳定快速的Grok人工智能服务访问",
                         url: "https://grok.aijp.top/sign-in",
-                        image: "img/11.jpg"
+                        image: "img/11.jpg",
+                        hasRecharge: true,
+                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC"
                     },
                     {
                         id: 12,
