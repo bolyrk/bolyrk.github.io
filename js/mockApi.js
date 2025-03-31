@@ -129,7 +129,7 @@ class MockApi {
                         id: 13,
                         name: "DeepSeek",
                         description: "国内领先的开源大语言模型研发公司，提供强大的AI推理和生成能力",
-                        url: "https://www.deepseek.com/",
+                        url: "https://chat.deepseek.com/",
                         image: "img/13.jpg"
                     },
                     {
