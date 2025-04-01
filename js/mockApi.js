@@ -133,6 +133,13 @@ class MockApi {
                         image: "img/13.jpg"
                     },
                     {
+                        id: 14,
+                        name: "Gemini 2.5 Pro",
+                        description: "谷歌DeepMind最新多模态AI模型，具备先进推理能力和百万级长文本理解",
+                        url: "https://deepmind.google/technologies/gemini/pro/",
+                        image: "img/14.jpg"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
