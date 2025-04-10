@@ -41,7 +41,7 @@ class MockApi {
                         id: 1,
                         name: "ChatGPT",
                         description: "强大的AI对话助手，解答问题、创作内容、辅助工作",
-                        url: "https://chat.openai.com",
+                        url: "https://chatgpt.com/",
                         image: "img/1.jpg"
                     },
                     {
