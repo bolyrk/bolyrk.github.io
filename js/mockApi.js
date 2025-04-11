@@ -140,6 +140,13 @@ class MockApi {
                         image: "img/14.jpg"
                     },
                     {
+                        id: 15,
+                        name: "Bolt",
+                        description: "通过提示、运行、编辑和部署全栈网络和移动应用程序构建您想要的应用",
+                        url: "https://bolt.new/",
+                        image: "img/15.png"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
