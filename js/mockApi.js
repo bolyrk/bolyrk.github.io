@@ -147,6 +147,20 @@ class MockApi {
                         image: "img/15.png"
                     },
                     {
+                        id: 16,
+                        name: "Coze",
+                        description: "扣子是新一代AI 大模型智能体开发平台",
+                        url: "https://www.coze.cn/",
+                        image: "img/16.png"
+                    },
+                    {
+                        id: 17,
+                        name: "Dify",
+                        description: "开源LLM应用开发平台，支持RAG引擎和AI工作流，比LangChain更适合生产环境",
+                        url: "https://dify.ai/",
+                        image: "img/17.png"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
