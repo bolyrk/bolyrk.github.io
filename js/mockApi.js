@@ -168,6 +168,13 @@ class MockApi {
                         image: "img/18.png"
                     },
                     {
+                        id: 19,
+                        name: "Chatbox",
+                        description: "开源AI聊天应用，支持多种模型接入，提供简洁高效的AI对话体验",
+                        url: "https://web.chatboxai.app/",
+                        image: "img/19.png"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
