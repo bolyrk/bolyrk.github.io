@@ -161,6 +161,13 @@ class MockApi {
                         image: "img/17.png"
                     },
                     {
+                        id: 18,
+                        name: "Firebase Studio",
+                        description: "全栈AI工作空间，将AI与开发平台融合，加速应用开发全生命周期",
+                        url: "https://studio.firebase.google.com/",
+                        image: "img/18.png"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
