@@ -175,6 +175,13 @@ class MockApi {
                         image: "img/19.png"
                     },
                     {
+                        id: 20,
+                        name: "小爱AI",
+                        description: "综合AI工具镜像站，提供多种AI服务的稳定访问与使用体验",
+                        url: "https://xiaoai.shop/list/#/home",
+                        image: "img/20.png"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
