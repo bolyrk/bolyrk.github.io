@@ -34,6 +34,9 @@ async function initApp() {
         // 设置主题切换器悬停效果
         setupThemeSwitcher();
         
+        // 设置搜索功能
+        setupSearch();
+        
         // 注释或删除以下行来禁用鼠标跟随效果
         // setupCursorEffects();
     } catch (error) {
@@ -327,6 +330,126 @@ function setupCursorItemEffects() {
             cursorFollower.style.width = '40px';
             cursorFollower.style.height = '40px';
         });
+    });
+}
+
+// 设置搜索功能
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    
+    // 存储所有工具数据的引用，避免重复请求
+    let allTools = [];
+    
+    // 加载所有工具数据
+    async function loadAllTools() {
+        if (allTools.length === 0) {
+            allTools = await window.api.getTools();
+        }
+        return allTools;
+    }
+    
+    // 搜索处理函数
+    async function handleSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const toolsContainer = document.getElementById('tools-container');
+        
+        // 获取所有工具
+        const tools = await loadAllTools();
+        
+        if (searchTerm === '') {
+            // 如果搜索框为空，显示所有工具
+            displayFilteredTools(tools);
+            return;
+        }
+        
+        // 过滤工具
+        const filteredTools = tools.filter(tool => {
+            return tool.name.toLowerCase().includes(searchTerm) || 
+                   tool.description.toLowerCase().includes(searchTerm);
+        });
+        
+        // 显示过滤后的工具
+        displayFilteredTools(filteredTools);
+    }
+    
+    // 显示过滤后的工具
+    function displayFilteredTools(filteredTools) {
+        const toolsContainer = document.getElementById('tools-container');
+        
+        // 清空容器
+        toolsContainer.innerHTML = '';
+        
+        if (filteredTools.length === 0) {
+            // 没有搜索结果
+            toolsContainer.innerHTML = '<div class="no-results">没有找到匹配的工具，请尝试其他搜索词</div>';
+            return;
+        }
+        
+        // 按sortOrder字段排序工具列表（值越小越靠前）
+        const sortedTools = [...filteredTools].sort((a, b) => {
+            const sortOrderA = a.sortOrder !== undefined ? a.sortOrder : 1000;
+            const sortOrderB = b.sortOrder !== undefined ? b.sortOrder : 1000;
+            return sortOrderA - sortOrderB;
+        });
+        
+        // 重置容器样式以保持一致的布局
+        toolsContainer.className = 'gallery-container';
+        
+        // 创建并添加工具卡片
+        sortedTools.forEach(tool => {
+            const toolCard = document.createElement('div');
+            toolCard.className = 'gallery-item';
+            toolCard.onclick = function(event) {
+                // 防止充值按钮点击事件冒泡
+                if (!event.target.classList.contains('recharge-btn')) {
+                    window.open(tool.url, '_self');
+                }
+            };
+            
+            // 构建基本卡片结构
+            let cardContent = `
+                <img src="${tool.image}" alt="${tool.name}">
+                <div class="gallery-item-content">
+                    <h2>${tool.name}</h2>
+                    <p>${tool.description}</p>
+                    <div class="btn-container">
+                        <a href="${tool.url}" target="_self" class="btn">立即使用</a>
+            `;
+            
+            // 如果有充值选项，添加购买按钮
+            if (tool.hasRecharge) {
+                cardContent += `
+                        <a href="${tool.rechargeUrl}" target="_self" class="btn recharge-btn">购买</a>
+                `;
+            }
+            
+            // 关闭div标签
+            cardContent += `
+                    </div>
+                </div>
+            `;
+            
+            toolCard.innerHTML = cardContent;
+            toolsContainer.appendChild(toolCard);
+        });
+    }
+    
+    // 添加事件监听器
+    searchBtn.addEventListener('click', handleSearch);
+    
+    // 键盘输入事件（按Enter键搜索）
+    searchInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    });
+    
+    // 添加输入实时搜索功能，使用防抖处理
+    let debounceTimer;
+    searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(handleSearch, 300); // 300ms防抖
     });
 }
 
