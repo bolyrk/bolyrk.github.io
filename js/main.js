@@ -139,7 +139,15 @@ async function loadTools() {
             throw new Error('没有获取到工具数据');
         }
         
-        tools.forEach(tool => {
+        // 按sortOrder字段排序工具列表（值越小越靠前）
+        const sortedTools = [...tools].sort((a, b) => {
+            // 如果没有sortOrder字段，设置一个默认的高值
+            const sortOrderA = a.sortOrder !== undefined ? a.sortOrder : 1000;
+            const sortOrderB = b.sortOrder !== undefined ? b.sortOrder : 1000;
+            return sortOrderA - sortOrderB;
+        });
+        
+        sortedTools.forEach(tool => {
             const toolCard = document.createElement('div');
             toolCard.className = 'gallery-item';
             toolCard.onclick = function(event) {

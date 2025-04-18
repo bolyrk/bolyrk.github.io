@@ -42,63 +42,72 @@ class MockApi {
                         name: "ChatGPT",
                         description: "强大的AI对话助手，解答问题、创作内容、辅助工作",
                         url: "https://chatgpt.com/",
-                        image: "img/1.jpg"
+                        image: "img/1.jpg",
+                        sortOrder: 10
                     },
                     {
                         id: 2,
-                        name: "Coze",
+                        name: "Coze国际版",
                         description: "字节跳动推出的AI机器人创建平台，无需编程即可构建AI应用",
                         url: "https://www.coze.com/home",
-                        image: "img/2.jpg"
+                        image: "img/2.jpg",
+                        sortOrder: 100
                     },
                     {
                         id: 3,
                         name: "Claude",
                         description: "人性化的AI助手，擅长自然对话、创意写作与深度思考",
                         url: "https://claude.ai/",
-                        image: "img/3.jpg"
+                        image: "img/3.jpg",
+                        sortOrder: 23
                     },
                     {
                         id: 4,
                         name: "问小白",
                         description: "基于DeepSeek满血版AI引擎，拥有强大知识库与推理能力",
                         url: "https://www.wenxiaobai.com/chat/tourist",
-                        image: "img/4.jpg"
+                        image: "img/4.jpg",
+                        sortOrder: 50
                     },
                     {
                         id: 5,
                         name: "通义千问",
                         description: "阿里云推出的大语言模型，擅长中文理解与内容创作",
                         url: "https://tongyi.aliyun.com/",
-                        image: "img/5.jpg"
+                        image: "img/5.jpg",
+                        sortOrder: 60
                     },
                     {
                         id: 6,
                         name: "Kimi",
                         description: "月之暗面推出的AI助手，擅长中文语境下的多轮对话与知识处理",
                         url: "https://kimi.moonshot.cn/",
-                        image: "img/6.jpg"
+                        image: "img/6.jpg",
+                        sortOrder: 70
                     },
                     {
                         id: 7,
                         name: "Gemini",
                         description: "谷歌推出的多模态AI助手，支持图像理解与强大的推理能力",
                         url: "https://gemini.google.com/",
-                        image: "img/7.jpg"
+                        image: "img/7.jpg",
+                        sortOrder: 41
                     },
                     {
                         id: 8,
                         name: "Grok",
                         description: "X.AI推出的幽默对话AI，具有实时网络知识和独特个性",
                         url: "https://x.ai/",
-                        image: "img/8.jpg"
+                        image: "img/8.jpg",
+                        sortOrder: 31
                     },
                     {
                         id: 9,
                         name: "Claude镜像1",
                         description: "Claude AI的第一个镜像站点，提供稳定的Claude人工智能服务访问",
                         url: "https://claudechn.com/pastel/#/login",
-                        image: "img/9.jpg"
+                        image: "img/9.jpg",
+                        sortOrder: 20
                     },
                     {
                         id: 10,
@@ -107,7 +116,8 @@ class MockApi {
                         url: "https://pro.restai.fun",
                         image: "img/10.jpg",
                         hasRecharge: true,
-                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC  "
+                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC  ",
+                        sortOrder: 21
                     },
                     {
                         id: 11,
@@ -116,84 +126,96 @@ class MockApi {
                         url: "https://grok.aijp.top/sign-in",
                         image: "img/11.jpg",
                         hasRecharge: true,
-                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC"
+                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC",
+                        sortOrder: 30
                     },
                     {
                         id: 12,
                         name: "OpenRouter官网",
                         description: "专业的AI模型路由平台，整合多种AI服务，提供统一接口访问各大模型",
                         url: "https://openrouter.ai/",
-                        image: "img/12.jpg"
+                        image: "img/12.jpg",
+                        sortOrder: 3
                     },
                     {
                         id: 13,
                         name: "DeepSeek",
                         description: "国内领先的开源大语言模型研发公司，提供强大的AI推理和生成能力",
                         url: "https://chat.deepseek.com/",
-                        image: "img/13.jpg"
+                        image: "img/13.jpg",
+                        sortOrder: 51
                     },
                     {
                         id: 14,
                         name: "Gemini 2.5 Pro",
                         description: "谷歌DeepMind最新多模态AI模型，具备先进推理能力和百万级长文本理解",
                         url: "https://aistudio.google.com/",
-                        image: "img/14.jpg"
+                        image: "img/14.jpg",
+                        sortOrder: 40
                     },
                     {
                         id: 15,
                         name: "Bolt",
                         description: "通过提示、运行、编辑和部署全栈网络和移动应用程序构建您想要的应用",
                         url: "https://bolt.new/",
-                        image: "img/15.png"
+                        image: "img/15.png",
+                        sortOrder: 80
                     },
                     {
                         id: 16,
-                        name: "Coze",
+                        name: "Coze中文版",
                         description: "扣子是新一代AI 大模型智能体开发平台",
                         url: "https://www.coze.cn/",
-                        image: "img/16.png"
+                        image: "img/16.png",
+                        sortOrder: 101
                     },
                     {
                         id: 17,
                         name: "Dify",
                         description: "开源LLM应用开发平台，支持RAG引擎和AI工作流，比LangChain更适合生产环境",
                         url: "https://dify.ai/",
-                        image: "img/17.png"
+                        image: "img/17.png",
+                        sortOrder: 102
                     },
                     {
                         id: 18,
                         name: "Firebase Studio",
                         description: "全栈AI工作空间，将AI与开发平台融合，加速应用开发全生命周期",
                         url: "https://studio.firebase.google.com/",
-                        image: "img/18.png"
+                        image: "img/18.png",
+                        sortOrder: 81
                     },
                     {
                         id: 19,
                         name: "Chatbox",
                         description: "开源AI聊天应用，支持多种模型接入，提供简洁高效的AI对话体验",
                         url: "https://web.chatboxai.app/",
-                        image: "img/19.png"
+                        image: "img/19.png",
+                        sortOrder: 103
                     },
                     {
                         id: 20,
                         name: "小爱AI",
                         description: "综合AI工具镜像站，提供多种AI服务的稳定访问与使用体验",
                         url: "https://xiaoai.shop/list/#/home",
-                        image: "img/20.png"
+                        image: "img/20.png",
+                        sortOrder: 22
                     },
                     {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
                         url: "https://nf.video/",
-                        image: "img/90.jpg"
+                        image: "img/90.jpg",
+                        sortOrder: 2
                     },
                     {
                         id: 100,
                         name: "野卡",
                         description: "1键订阅AI支付平台，简化各类AI服务的付费流程",
                         url: "https://yeka.ai/pay-service",
-                        image: "img/100.jpg"
+                        image: "img/100.jpg",
+                        sortOrder: 1
                     }
                 ]
             };
@@ -211,7 +233,8 @@ class MockApi {
                         name: "示例工具",
                         description: "数据加载失败，这是一个示例工具",
                         url: "#",
-                        image: "https://via.placeholder.com/400x320/ff0000/ffffff?text=加载失败"
+                        image: "https://via.placeholder.com/400x320/ff0000/ffffff?text=加载失败",
+                        sortOrder: 999
                     }
                 ]
             };
