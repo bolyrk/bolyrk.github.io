@@ -875,4 +875,114 @@ body {
 
 #robot.laughing-3 .robot-mouth {
     animation-duration: 0.25s;
+}
+
+/* 机器人街舞效果的动画 */
+@keyframes breakdanceHead {
+    0% { transform: translateY(0) rotate(0deg) !important; }
+    25% { transform: translateY(-5px) rotate(15deg) !important; }
+    50% { transform: translateY(0) rotate(-15deg) !important; }
+    75% { transform: translateY(-5px) rotate(15deg) !important; }
+    100% { transform: translateY(0) rotate(0deg) !important; }
+}
+
+@keyframes breakdanceBody {
+    0% { transform: rotate(0deg) !important; }
+    25% { transform: rotate(10deg) !important; }
+    50% { transform: rotate(-10deg) !important; }
+    75% { transform: rotate(10deg) !important; }
+    100% { transform: rotate(0deg) !important; }
+}
+
+@keyframes breakdanceArmLeft {
+    0% { transform: rotate(0deg) !important; }
+    25% { transform: rotate(80deg) !important; }
+    50% { transform: rotate(20deg) !important; }
+    75% { transform: rotate(-30deg) !important; }
+    100% { transform: rotate(0deg) !important; }
+}
+
+@keyframes breakdanceArmRight {
+    0% { transform: rotate(0deg) !important; }
+    25% { transform: rotate(-30deg) !important; }
+    50% { transform: rotate(60deg) !important; }
+    75% { transform: rotate(20deg) !important; }
+    100% { transform: rotate(0deg) !important; }
+}
+
+@keyframes breakdanceLegLeft {
+    0% { transform: rotate(0deg) !important; }
+    25% { transform: rotate(30deg) !important; }
+    50% { transform: rotate(-20deg) !important; }
+    75% { transform: rotate(45deg) !important; }
+    100% { transform: rotate(0deg) !important; }
+}
+
+@keyframes breakdanceLegRight {
+    0% { transform: rotate(0deg) !important; }
+    25% { transform: rotate(-45deg) !important; }
+    50% { transform: rotate(30deg) !important; }
+    75% { transform: rotate(10deg) !important; }
+    100% { transform: rotate(0deg) !important; }
+}
+
+@keyframes breakdanceJump {
+    0% { transform: translateY(0) !important; }
+    50% { transform: translateY(-10px) !important; }
+    100% { transform: translateY(0) !important; }
+}
+
+/* 街舞动作类 */
+#robot.breakdancing {
+    animation: breakdanceJump 0.5s infinite !important;
+}
+
+#robot.breakdancing .robot-head {
+    animation: breakdanceHead 0.5s infinite !important;
+}
+
+#robot.breakdancing .robot-body {
+    animation: breakdanceBody 0.5s infinite !important;
+}
+
+#robot.breakdancing .robot-arm.left {
+    animation: breakdanceArmLeft 0.5s infinite !important;
+    transform-origin: top center !important;
+}
+
+#robot.breakdancing .robot-arm.right {
+    animation: breakdanceArmRight 0.5s infinite !important;
+    transform-origin: top center !important;
+}
+
+#robot.breakdancing .robot-leg.left {
+    animation: breakdanceLegLeft 0.5s infinite !important;
+    transform-origin: top center !important;
+}
+
+#robot.breakdancing .robot-leg.right {
+    animation: breakdanceLegRight 0.5s infinite !important;
+    transform-origin: top center !important;
+}
+
+/* 街舞强度级别 */
+#robot.breakdancing-1 .robot-head,
+#robot.breakdancing-1 .robot-body,
+#robot.breakdancing-1 .robot-arm,
+#robot.breakdancing-1 .robot-leg {
+    animation-duration: 0.7s;
+}
+
+#robot.breakdancing-2 .robot-head,
+#robot.breakdancing-2 .robot-body,
+#robot.breakdancing-2 .robot-arm,
+#robot.breakdancing-2 .robot-leg {
+    animation-duration: 0.5s;
+}
+
+#robot.breakdancing-3 .robot-head,
+#robot.breakdancing-3 .robot-body,
+#robot.breakdancing-3 .robot-arm,
+#robot.breakdancing-3 .robot-leg {
+    animation-duration: 0.3s;
 } 

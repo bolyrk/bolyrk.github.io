@@ -80,6 +80,94 @@ function initRobot() {
         }, 3000);
     }, 500); // 延迟500ms显示，以便机器人先出现
     
+    // 机器人笑声互动
+    let clickCount = 0;
+    let clickTimer = null;
+    let danceModeActive = false; // 用于跟踪是否处于街舞模式
+    
+    // 点击机器人事件处理
+    robot.addEventListener('click', function() {
+        // 增加点击计数
+        clickCount++;
+        
+        // 清除旧计时器
+        if (clickTimer) {
+            clearTimeout(clickTimer);
+        }
+        
+        // 移除所有现有的动画类
+        robot.classList.remove(
+            'laughing', 'laughing-1', 'laughing-2', 'laughing-3',
+            'breakdancing', 'breakdancing-1', 'breakdancing-2', 'breakdancing-3'
+        );
+        
+        // 简化模式逻辑：双击切换模式（第2次，第4次，第6次...）
+        if (clickCount % 2 === 0) {
+            // 双击切换模式
+            danceModeActive = !danceModeActive;
+            
+            // 清除可能影响动画的内联样式
+            robot.style = '';
+        }
+        
+        console.log("点击次数:", clickCount, "街舞模式:", danceModeActive); // 调试信息
+        
+        // 应用适当的动画类
+        if (danceModeActive) {
+            // 街舞模式
+            robot.classList.add('breakdancing');
+            
+            // 固定使用较明显的街舞级别
+            robot.classList.add('breakdancing-2');
+            
+            // 显示街舞提示
+            robotSpeech.textContent = "看我街舞！";
+            robotSpeech.classList.add('show');
+            setTimeout(() => {
+                robotSpeech.classList.remove('show');
+            }, 1500);
+        } else {
+            // 大笑模式
+            robot.classList.add('laughing');
+            
+            // 根据点击次数设置笑声级别
+            if (clickCount < 5) {
+                robot.classList.add('laughing-1');
+            } else if (clickCount < 10) {
+                robot.classList.add('laughing-2');
+            } else {
+                robot.classList.add('laughing-3');
+            }
+            
+            // 切换回大笑时显示提示
+            if (danceModeActive === false && clickCount % 2 === 0) {
+                robotSpeech.textContent = "哈哈哈！";
+                robotSpeech.classList.add('show');
+                setTimeout(() => {
+                    robotSpeech.classList.remove('show');
+                }, 1500);
+            }
+        }
+        
+        // 设置重置计时器：3秒后重置计数
+        clickTimer = setTimeout(() => {
+            clickCount = 0;
+        }, 3000);
+    });
+    
+    // 鼠标离开时停止动画
+    robot.addEventListener('mouseleave', function() {
+        robot.classList.remove(
+            'laughing', 'laughing-1', 'laughing-2', 'laughing-3',
+            'breakdancing', 'breakdancing-1', 'breakdancing-2', 'breakdancing-3'
+        );
+        clickCount = 0;
+        danceModeActive = false;
+        if (clickTimer) {
+            clearTimeout(clickTimer);
+        }
+    });
+    
     // 机器人行走
     let walkInterval;
     
