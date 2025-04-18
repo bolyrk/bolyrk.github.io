@@ -37,11 +37,122 @@ async function initApp() {
         // 设置搜索功能
         setupSearch();
         
+        // 初始化机器人
+        initRobot();
+        
         // 注释或删除以下行来禁用鼠标跟随效果
         // setupCursorEffects();
     } catch (error) {
         console.error('初始化应用失败:', error);
     }
+}
+
+// 初始化机器人
+function initRobot() {
+    // 移除localStorage检查，让机器人每次刷新页面都显示
+    
+    const robotContainer = document.getElementById('robot-container');
+    const robot = document.getElementById('robot');
+    const closeButton = document.getElementById('robot-close');
+    const robotSpeech = document.getElementById('robot-speech');
+    
+    // 显示机器人
+    robotContainer.style.display = 'block';
+    
+    // 初始位置
+    const initialX = Math.random() * (window.innerWidth - 100);
+    const initialY = Math.random() * (window.innerHeight - 150);
+    
+    robotContainer.style.left = initialX + 'px';
+    robotContainer.style.top = initialY + 'px';
+    
+    // 显示欢迎气泡
+    setTimeout(() => {
+        // 重置任何可能的内联样式
+        robotSpeech.style = '';
+        
+        // 直接显示欢迎语
+        robotSpeech.classList.add('show');
+        
+        // 3秒后隐藏欢迎气泡
+        setTimeout(() => {
+            robotSpeech.classList.remove('show');
+        }, 3000);
+    }, 500); // 延迟500ms显示，以便机器人先出现
+    
+    // 机器人行走
+    let walkInterval;
+    
+    function startWalking() {
+        walkInterval = setInterval(() => {
+            // 获取当前位置
+            const rect = robotContainer.getBoundingClientRect();
+            let currentX = rect.left;
+            let currentY = rect.top;
+            
+            // 随机决定下一步的方向
+            const directionX = Math.random() > 0.5 ? 1 : -1;
+            const directionY = Math.random() > 0.5 ? 1 : -1;
+            
+            // 计算新位置
+            let newX = currentX + (directionX * (Math.random() * 50 + 10));
+            let newY = currentY + (directionY * (Math.random() * 30 + 5));
+            
+            // 确保机器人不会走出屏幕
+            newX = Math.max(0, Math.min(newX, window.innerWidth - 80));
+            newY = Math.max(0, Math.min(newY, window.innerHeight - 120));
+            
+            // 设置新位置
+            robotContainer.style.left = newX + 'px';
+            robotContainer.style.top = newY + 'px';
+            
+            // 根据移动方向翻转机器人
+            if (directionX < 0) {
+                robot.style.transform = 'scaleX(-1)';
+            } else {
+                robot.style.transform = 'scaleX(1)';
+            }
+            
+        }, 3000); // 每3秒移动一次
+    }
+    
+    // 停止行走
+    function stopWalking() {
+        clearInterval(walkInterval);
+    }
+    
+    // 开始行走
+    startWalking();
+    
+    // 关闭按钮
+    closeButton.addEventListener('click', function() {
+        stopWalking();
+        robotContainer.style.display = 'none';
+    });
+    
+    // 窗口大小改变时重新定位
+    window.addEventListener('resize', function() {
+        const rect = robotContainer.getBoundingClientRect();
+        let x = rect.left;
+        let y = rect.top;
+        
+        // 确保机器人不会在调整窗口大小后超出屏幕范围
+        x = Math.max(0, Math.min(x, window.innerWidth - 80));
+        y = Math.max(0, Math.min(y, window.innerHeight - 120));
+        
+        robotContainer.style.left = x + 'px';
+        robotContainer.style.top = y + 'px';
+    });
+    
+    // 鼠标悬停时暂停行走
+    robot.addEventListener('mouseenter', function() {
+        stopWalking();
+    });
+    
+    // 鼠标移开时继续行走
+    robot.addEventListener('mouseleave', function() {
+        startWalking();
+    });
 }
 
 // 新增：设置主题切换器悬停效果的函数
