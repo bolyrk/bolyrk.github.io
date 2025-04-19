@@ -552,6 +552,8 @@ function setupCursorItemEffects() {
 function setupSearch() {
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
+    const searchDropdown = document.getElementById('search-dropdown');
+    const dropdownOptions = document.querySelectorAll('.dropdown-option');
     
     // 存储所有工具数据的引用，避免重复请求
     let allTools = [];
@@ -588,6 +590,73 @@ function setupSearch() {
         // 显示过滤后的工具
         displayFilteredTools(filteredTools);
     }
+    
+    // 显示下拉菜单
+    function showDropdown() {
+        searchDropdown.classList.add('show');
+    }
+    
+    // 隐藏下拉菜单
+    function hideDropdown() {
+        searchDropdown.classList.remove('show');
+    }
+    
+    // 创建涟漪效果
+    function createRipple(event, element) {
+        const circle = document.createElement('div');
+        const diameter = Math.max(element.clientWidth, element.clientHeight);
+        const radius = diameter / 2;
+        
+        // 获取当前主题的渐变颜色
+        const style = getComputedStyle(document.documentElement);
+        const gradient1 = style.getPropertyValue('--gradient-1').trim();
+        
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${event.clientX - element.getBoundingClientRect().left - radius}px`;
+        circle.style.top = `${event.clientY - element.getBoundingClientRect().top - radius}px`;
+        circle.classList.add('ripple');
+        circle.style.background = `radial-gradient(circle, ${gradient1}20, transparent 70%)`;
+        
+        const ripple = element.querySelector('.ripple');
+        if (ripple) {
+            ripple.remove();
+        }
+        
+        element.appendChild(circle);
+        
+        // 清除涟漪效果
+        setTimeout(() => {
+            if (circle) {
+                circle.remove();
+            }
+        }, 600);
+    }
+    
+    // 点击搜索框显示下拉菜单
+    searchInput.addEventListener('click', showDropdown);
+    
+    // 获取焦点时显示下拉菜单
+    searchInput.addEventListener('focus', showDropdown);
+    
+    // 失去焦点时隐藏下拉菜单，但延迟执行以允许点击下拉选项
+    searchInput.addEventListener('blur', function(e) {
+        setTimeout(hideDropdown, 200);
+    });
+    
+    // 点击下拉选项填充搜索框并触发搜索
+    dropdownOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            createRipple(e, this);
+            const value = this.getAttribute('data-value');
+            searchInput.value = value;
+            
+            // 添加短暂延迟使涟漪效果可见
+            setTimeout(() => {
+                hideDropdown();
+                handleSearch();
+            }, 300);
+        });
+    });
     
     // 显示过滤后的工具
     function displayFilteredTools(filteredTools) {
