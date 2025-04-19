@@ -66,24 +66,24 @@
     --card-bg: #143420;
 }
 
-/* 紫色主题 */
+/* 紫色主题改为黑色主题 */
 [data-theme="purple"] {
-    --bg-color: #1a0b2e;
+    --bg-color: #000000;
     --text-color: #ffffff;
-    --secondary-text: #c8b6e2;
-    --header-bg: rgba(26, 11, 46, 0.7);
-    --gradient-1: #7b2cbf;
-    --gradient-1-rgb: 123, 44, 191;
-    --gradient-2: #c77dff;
-    --gradient-2-rgb: 199, 125, 255;
-    --gradient-3: #e0aaff;
-    --gradient-3-rgb: 224, 170, 255;
-    --button-gradient: linear-gradient(45deg, #7b2cbf, #c77dff);
-    --button-shadow: rgba(123, 44, 191, 0.4);
-    --card-shadow: rgba(26, 11, 46, 0.3);
-    --card-hover-shadow: rgba(26, 11, 46, 0.5);
-    --particle-color: #e0aaff;
-    --card-bg: #2d1645;
+    --secondary-text: #aaaaaa;
+    --header-bg: rgba(0, 0, 0, 0.9);
+    --gradient-1: #222222;
+    --gradient-1-rgb: 34, 34, 34;
+    --gradient-2: #444444;
+    --gradient-2-rgb: 68, 68, 68;
+    --gradient-3: #666666;
+    --gradient-3-rgb: 102, 102, 102;
+    --button-gradient: linear-gradient(45deg, #222222, #444444);
+    --button-shadow: rgba(0, 0, 0, 0.6);
+    --card-shadow: rgba(0, 0, 0, 0.5);
+    --card-hover-shadow: rgba(0, 0, 0, 0.7);
+    --particle-color: #777777;
+    --card-bg: #111111;
 }
 
 /* 橙色主题 */
@@ -199,15 +199,16 @@ body {
     border-radius: 10px !important;
     overflow: hidden !important;
     cursor: pointer !important;
-    transition: transform 0.5s ease, box-shadow 0.5s ease !important;
-    box-shadow: 0 10px 20px var(--card-shadow) !important;
+    transition: transform 0.5s ease !important;
+    box-shadow: none !important;
     max-width: 100% !important;
     background-color: var(--card-bg);
+    border: none !important;
 }
 
 .gallery-item:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px var(--card-hover-shadow);
+    box-shadow: none !important;
 }
 
 .gallery-item img {
@@ -242,6 +243,7 @@ body {
     transform: translateY(20px);
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: none;
 }
 
 .gallery-item:hover .gallery-item-content {
@@ -272,11 +274,90 @@ body {
     font-size: 0.9rem;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
 }
 
 .gallery-item .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px var(--button-shadow);
+}
+
+/* 主题适配 */
+[data-theme="dark"] .gallery-item,
+[data-theme="blue"] .gallery-item,
+[data-theme="purple"] .gallery-item,
+[data-theme="green"] .gallery-item,
+[data-theme="orange"] .gallery-item,
+[data-theme="ghibli"] .gallery-item {
+    box-shadow: none !important;
+}
+
+[data-theme="dark"] .gallery-item:hover,
+[data-theme="blue"] .gallery-item:hover,
+[data-theme="purple"] .gallery-item:hover,
+[data-theme="green"] .gallery-item:hover,
+[data-theme="orange"] .gallery-item:hover,
+[data-theme="ghibli"] .gallery-item:hover {
+    box-shadow: none !important;
+}
+
+/* 只有白色主题有阴影效果 */
+[data-theme="light"] .gallery-item {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+}
+
+[data-theme="light"] .gallery-item:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* 移除其他样式中可能包含的阴影 */
+.gallery-item .btn {
+    box-shadow: none;
+}
+
+[data-theme="light"] .gallery-item .btn {
+    box-shadow: 0 3px 6px rgba(var(--gradient-1-rgb), 0.3);
+}
+
+/* 移除内容区域阴影 */
+.gallery-item-content {
+    box-shadow: none;
+}
+
+[data-theme="light"] .gallery-item-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 10px 10px;
+}
+
+[data-theme="light"] .gallery-item:hover .gallery-item-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* 恢复白色主题的文字颜色 */
+[data-theme="light"] .gallery-item h2 {
+    color: #1d1d1f;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .gallery-item p {
+    color: #515154;
+}
+
+[data-theme="light"] .gallery-item .btn {
+    color: white;
+    font-weight: bold;
 }
 
 .cursor,
@@ -363,7 +444,7 @@ body {
 }
 
 .purple-theme {
-    background: linear-gradient(45deg, #7b2cbf, #c77dff, #e0aaff);
+    background: linear-gradient(45deg, #222222, #444444, #666666);
 }
 
 .orange-theme {
@@ -818,7 +899,7 @@ body {
 [data-theme="dark"] .robot-head { background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); }
 [data-theme="blue"] .robot-head { background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); }
 [data-theme="green"] .robot-head { background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); }
-[data-theme="purple"] .robot-head { background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); }
+[data-theme="purple"] .robot-head { background: linear-gradient(45deg, #222222, #444444); }
 [data-theme="orange"] .robot-head { background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); }
 [data-theme="light"] .robot-head { background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); }
 
@@ -903,12 +984,12 @@ body {
 }
 
 [data-theme="purple"] #robot-speech {
-    background-color: rgba(26, 11, 46, 0.9);
+    background-color: rgba(17, 17, 17, 0.95);
     color: white;
 }
 
 [data-theme="purple"] #robot-speech::after {
-    background-color: rgba(26, 11, 46, 0.9);
+    background-color: rgba(17, 17, 17, 0.95);
 }
 
 [data-theme="orange"] #robot-speech {
@@ -1133,60 +1214,10 @@ body {
     animation-duration: 0.3s;
 }
 
-/* 白色主题下卡片文字颜色优化 */
-[data-theme="light"] .gallery-item h2 {
-    color: #1d1d1f;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="light"] .gallery-item p {
-    color: #515154;
-}
-
-[data-theme="light"] .gallery-item::before {
-    background: var(--gradient-overlay);
-    opacity: 0.5;
-}
-
-[data-theme="light"] .gallery-item-content {
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
-}
-
-[data-theme="light"] .gallery-item:hover .gallery-item-content {
-    background-color: rgba(255, 255, 255, 0.85);
-}
-
-[data-theme="light"] .gallery-item .btn {
-    color: white;
-    font-weight: bold;
-}
-
-[data-theme="light"] .gallery-item {
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.15) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(5px) !important;
-}
-
-[data-theme="light"] .gallery-item:hover {
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-}
-
-[data-theme="light"] .gallery-item-content {
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 0 0 10px 10px;
-}
-
-[data-theme="light"] .gallery-item:hover .gallery-item-content {
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+/* 按钮容器样式 */
+.btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
 } 
