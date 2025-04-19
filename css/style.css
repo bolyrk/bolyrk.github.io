@@ -265,21 +265,126 @@ body {
 }
 
 .gallery-item .btn {
+    position: relative;
     display: inline-block;
-    padding: 8px 15px;
-    background: var(--button-gradient);
-    border: none;
-    border-radius: 30px;
+    padding: 6px 16px;
+    background: rgba(0, 0, 0, 0.3);
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: none;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1;
+    box-shadow: 0 0 12px rgba(var(--gradient-1-rgb), 0.3);
+    border: 1px solid rgba(var(--gradient-1-rgb), 0.3);
+    text-shadow: 0 0 5px rgba(var(--gradient-1-rgb), 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.gallery-item .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--button-gradient);
+    z-index: -2;
+    transition: all 0.5s ease;
+    opacity: 0.9;
+}
+
+.gallery-item .btn:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, 
+        var(--gradient-1),
+        var(--gradient-2),
+        var(--gradient-3),
+        var(--gradient-2),
+        var(--gradient-1));
+    background-size: 300%;
+    z-index: -1;
+    border-radius: 5px;
+    filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: glowingBorder 4s linear infinite;
 }
 
 .gallery-item .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px var(--button-shadow);
+    transform: translateY(-2px) scale(1.02);
+    color: white;
+    box-shadow: 0 0 20px rgba(var(--gradient-1-rgb), 0.6);
+    text-shadow: 0 0 8px rgba(var(--gradient-2-rgb), 0.8);
+    letter-spacing: 1.2px;
+}
+
+.gallery-item .btn:hover:after {
+    opacity: 0.9;
+}
+
+.gallery-item .btn:hover:before {
+    opacity: 1;
+}
+
+.gallery-item .btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* 按钮的闪烁效果 */
+@keyframes glowingBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 确保白色主题下按钮也有良好的可见性 */
+[data-theme="light"] .gallery-item .btn {
+    color: white;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 12px rgba(var(--gradient-1-rgb), 0.5);
+    text-shadow: 0 0 6px rgba(var(--gradient-1-rgb), 0.7);
+    border: 1px solid rgba(var(--gradient-1-rgb), 0.4);
+    border-radius: 4px;
+}
+
+[data-theme="light"] .gallery-item .btn:hover {
+    box-shadow: 0 0 25px rgba(var(--gradient-1-rgb), 0.7);
+    background: rgba(var(--gradient-1-rgb), 0.1);
+}
+
+/* 修复Safari浏览器下的兼容性问题 */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .gallery-item .btn {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+}
+
+/* 修复Firefox浏览器不支持backdrop-filter的问题 */
+@supports not ((backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px))) {
+    .gallery-item .btn {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    [data-theme="light"] .gallery-item .btn {
+        background: rgba(0, 0, 0, 0.3);
+    }
 }
 
 /* 主题适配 */
