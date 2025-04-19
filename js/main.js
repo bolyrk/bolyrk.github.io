@@ -354,8 +354,9 @@ async function loadTools() {
             const toolCard = document.createElement('div');
             toolCard.className = 'gallery-item';
             toolCard.onclick = function(event) {
-                // 防止充值按钮点击事件冒泡
-                if (!event.target.classList.contains('recharge-btn')) {
+                // 防止标签和充值按钮点击事件冒泡
+                if (!event.target.classList.contains('recharge-btn') && 
+                    !event.target.classList.contains('tag')) {
                     window.open(tool.url, '_self');
                 }
             };
@@ -364,7 +365,21 @@ async function loadTools() {
             let cardContent = `
                 <img src="${tool.image}" alt="${tool.name}">
                 <div class="gallery-item-content">
-                    <h2>${tool.name}</h2>
+                    <h2>${tool.name}</h2>`;
+            
+            // 添加标签容器和标签
+            if (tool.tags) {
+                cardContent += `<div class="tags-container">`;
+                const tagsList = tool.tags.split(',');
+                tagsList.forEach(tag => {
+                    if (tag.trim()) {
+                        cardContent += `<span class="tag">${tag.trim()}</span>`;
+                    }
+                });
+                cardContent += `</div>`;
+            }
+            
+            cardContent += `
                     <p>${tool.description}</p>
                     <div class="btn-container">
                         <a href="${tool.url}" target="_self" class="btn">立即使用</a>
@@ -566,7 +581,8 @@ function setupSearch() {
         // 过滤工具
         const filteredTools = tools.filter(tool => {
             return tool.name.toLowerCase().includes(searchTerm) || 
-                   tool.description.toLowerCase().includes(searchTerm);
+                   tool.description.toLowerCase().includes(searchTerm) ||
+                   (tool.tags && tool.tags.toLowerCase().includes(searchTerm));
         });
         
         // 显示过滤后的工具
@@ -601,8 +617,9 @@ function setupSearch() {
             const toolCard = document.createElement('div');
             toolCard.className = 'gallery-item';
             toolCard.onclick = function(event) {
-                // 防止充值按钮点击事件冒泡
-                if (!event.target.classList.contains('recharge-btn')) {
+                // 防止标签和充值按钮点击事件冒泡
+                if (!event.target.classList.contains('recharge-btn') && 
+                    !event.target.classList.contains('tag')) {
                     window.open(tool.url, '_self');
                 }
             };
@@ -611,7 +628,21 @@ function setupSearch() {
             let cardContent = `
                 <img src="${tool.image}" alt="${tool.name}">
                 <div class="gallery-item-content">
-                    <h2>${tool.name}</h2>
+                    <h2>${tool.name}</h2>`;
+            
+            // 添加标签容器和标签
+            if (tool.tags) {
+                cardContent += `<div class="tags-container">`;
+                const tagsList = tool.tags.split(',');
+                tagsList.forEach(tag => {
+                    if (tag.trim()) {
+                        cardContent += `<span class="tag">${tag.trim()}</span>`;
+                    }
+                });
+                cardContent += `</div>`;
+            }
+            
+            cardContent += `
                     <p>${tool.description}</p>
                     <div class="btn-container">
                         <a href="${tool.url}" target="_self" class="btn">立即使用</a>
