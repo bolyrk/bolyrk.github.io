@@ -83,7 +83,7 @@ class MockApi {
                         description: "阿里云推出的大语言模型，擅长中文理解与内容创作",
                         url: "https://tongyi.aliyun.com/",
                         image: "img/5.jpg",
-                        sortOrder: 60,
+                        sortOrder: 51,
                         tags: "国产,AI对话"
                     },
                     {
@@ -92,7 +92,7 @@ class MockApi {
                         description: "月之暗面推出的AI助手，擅长中文语境下的多轮对话与知识处理",
                         url: "https://kimi.moonshot.cn/",
                         image: "img/6.jpg",
-                        sortOrder: 70,
+                        sortOrder: 52,
                         tags: "国产,AI对话"
                     },
                     {
@@ -223,6 +223,15 @@ class MockApi {
                         url: "https://xiaoai.shop/list/#/home",
                         image: "img/20.png",
                         sortOrder: 22,
+                        tags: "国产,AI对话"
+                    },
+                    {
+                        id: 21,
+                        name: "豆包",
+                        description: "字节跳动旗下AI聊天助手，基于先进大语言模型，提供智能对话和创作服务",
+                        url: "https://www.doubao.com/chat/",
+                        image: "img/21.jpg",
+                        sortOrder: 53,
                         tags: "国产,AI对话"
                     },
                     {
