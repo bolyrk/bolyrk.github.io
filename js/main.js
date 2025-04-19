@@ -20,7 +20,7 @@ async function initApp() {
         setInterval(updateTime, 1000);
         
         // 初始默认主题
-        document.body.setAttribute('data-theme', 'dark');
+        document.body.setAttribute('data-theme', 'ghibli');
         
         // 加载主题数据
         await loadThemes();
@@ -287,7 +287,8 @@ async function loadThemes() {
         themeKeys.forEach((themeKey, index) => {
             const theme = themes[themeKey];
             const themeButton = document.createElement('div');
-            themeButton.className = `theme-btn ${themeKey}-theme${index === 0 ? ' active' : ''}`;
+            const isActive = themeKey === 'ghibli'; // 设置Ghibli主题为默认激活
+            themeButton.className = `theme-btn ${themeKey}-theme${isActive ? ' active' : ''}`;
             themeButton.setAttribute('data-theme', themeKey);
             themesContainer.appendChild(themeButton);
             
@@ -316,10 +317,10 @@ async function loadThemes() {
         });
     } catch (error) {
         console.error('加载主题失败:', error);
-        // 使用默认主题作为后备方案
-        document.body.setAttribute('data-theme', 'dark');
+        // 使用Ghibli主题作为后备方案
+        document.body.setAttribute('data-theme', 'ghibli');
         // 显示错误但不阻止用户使用网站
-        themesContainer.innerHTML = '<div class="theme-btn dark-theme active" data-theme="dark"></div>';
+        themesContainer.innerHTML = '<div class="theme-btn ghibli-theme active" data-theme="ghibli"></div>';
         document.querySelector('.theme-label').textContent = '主题加载失败';
     }
 }

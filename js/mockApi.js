@@ -11,8 +11,12 @@ class MockApi {
             // 直接定义内联数据而不是通过fetch加载
             this.data = {
                 themes: {
+                    ghibli: {
+                        name: "Ghibli风格",
+                        gradient: ["#8a4fff", "#b070ff", "#c38fff"]
+                    },
                     dark: {
-                        name: "深色主题",
+                        name: "经典深色",
                         gradient: ["#ff4d94", "#ff9b4d", "#4dffff"]
                     },
                     blue: {
