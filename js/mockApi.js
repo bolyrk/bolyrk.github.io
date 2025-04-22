@@ -118,6 +118,7 @@ class MockApi {
                         name: "Claude镜像1",
                         description: "Claude AI的第一个镜像站点，提供稳定的Claude人工智能服务访问",
                         url: "https://claudechn.com/pastel/#/login",
+                        alternateUrl: "http://114.134.189.221:38300/",
                         image: "img/9.jpg",
                         sortOrder: 20,
                         tags: "国外,AI对话"

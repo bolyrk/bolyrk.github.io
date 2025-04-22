@@ -356,7 +356,8 @@ async function loadTools() {
             toolCard.onclick = function(event) {
                 // 防止标签和充值按钮点击事件冒泡
                 if (!event.target.classList.contains('recharge-btn') && 
-                    !event.target.classList.contains('tag')) {
+                    !event.target.classList.contains('tag') &&
+                    !event.target.classList.contains('alternate-btn')) {
                     window.open(tool.url, '_self');
                 }
             };
@@ -389,6 +390,13 @@ async function loadTools() {
             if (tool.hasRecharge) {
                 cardContent += `
                         <a href="${tool.rechargeUrl}" target="_self" class="btn recharge-btn">购买</a>
+                `;
+            }
+            
+            // 如果有备用URL，添加备用按钮
+            if (tool.alternateUrl) {
+                cardContent += `
+                        <a href="${tool.alternateUrl}" target="_self" class="btn alternate-btn">备用通道</a>
                 `;
             }
             
@@ -688,7 +696,8 @@ function setupSearch() {
             toolCard.onclick = function(event) {
                 // 防止标签和充值按钮点击事件冒泡
                 if (!event.target.classList.contains('recharge-btn') && 
-                    !event.target.classList.contains('tag')) {
+                    !event.target.classList.contains('tag') &&
+                    !event.target.classList.contains('alternate-btn')) {
                     window.open(tool.url, '_self');
                 }
             };
@@ -721,6 +730,13 @@ function setupSearch() {
             if (tool.hasRecharge) {
                 cardContent += `
                         <a href="${tool.rechargeUrl}" target="_self" class="btn recharge-btn">购买</a>
+                `;
+            }
+            
+            // 如果有备用URL，添加备用按钮
+            if (tool.alternateUrl) {
+                cardContent += `
+                        <a href="${tool.alternateUrl}" target="_self" class="btn alternate-btn">备用通道</a>
                 `;
             }
             

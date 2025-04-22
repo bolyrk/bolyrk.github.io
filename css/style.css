@@ -1571,4 +1571,67 @@ body {
         transform: scale(2.5);
         opacity: 0;
     }
+}
+
+/* 备用通道按钮样式 */
+.alternate-btn {
+    background-color: #6b21a8 !important; /* 紫色背景 */
+    color: white !important; /* 白色文字 */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(107, 33, 168, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.alternate-btn:hover {
+    background-color: #7e22ce !important; /* 悬停时更亮的紫色 */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(107, 33, 168, 0.4);
+}
+
+/* 针对不同主题的紫色调整 */
+[data-theme="dark"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="dark"] .alternate-btn:hover {
+    background-color: #7c3aed;
+}
+
+[data-theme="blue"] .alternate-btn {
+    background-color: #7209b7;
+}
+[data-theme="blue"] .alternate-btn:hover {
+    background-color: #6b21a8;
+}
+
+[data-theme="green"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="green"] .alternate-btn:hover {
+    background-color: #7c3aed;
+}
+
+[data-theme="purple"] .alternate-btn {
+    background-color: #7c3aed;
+}
+[data-theme="purple"] .alternate-btn:hover {
+    background-color: #6d28d9;
+}
+
+[data-theme="orange"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="orange"] .alternate-btn:hover {
+    background-color: #7c3aed;
+}
+
+[data-theme="light"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="light"] .alternate-btn:hover {
+    background-color: #7c3aed;
 } 
