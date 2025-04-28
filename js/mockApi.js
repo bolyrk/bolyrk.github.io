@@ -223,7 +223,7 @@ class MockApi {
                         description: "综合AI工具镜像站，提供多种AI服务的稳定访问与使用体验",
                         url: "https://xiaoai.shop/list/#/home",
                         image: "img/20.png",
-                        sortOrder: 22,
+                        sortOrder: 23,
                         tags: "国产,AI对话"
                     },
                     {
@@ -234,6 +234,33 @@ class MockApi {
                         image: "img/21.jpg",
                         sortOrder: 53,
                         tags: "国产,AI对话"
+                    },
+                    {
+                        id: 22,
+                        name: "Claude镜像3",
+                        description: "Claude AI的第三个镜像站点，提供稳定可靠的Claude人工智能服务访问",
+                        url: "https://cn2.ziling.cc/list/#/home",
+                        image: "img/22.png",
+                        sortOrder: 22,
+                        tags: "国外,AI对话"
+                    },
+                    {
+                        id: 23,
+                        name: "CopyCoder",
+                        description: "为AI编码工具创建强大提示词的平台，可上传UI设计图快速生成代码提示",
+                        url: "https://copycoder.ai/",
+                        image: "img/23.png",
+                        sortOrder: 82,
+                        tags: "国外,AI开发"
+                    },
+                    {
+                        id: 24,
+                        name: "Lovable.dev",
+                        description: "从想法到应用的个人全栈工程师服务，支持快速将设计转为功能完整的应用",
+                        url: "https://lovable.dev/",
+                        image: "img/24.png",
+                        sortOrder: 83,
+                        tags: "国外,AI开发"
                     },
                     {
                         id: 90,
