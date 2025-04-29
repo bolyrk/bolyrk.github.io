@@ -251,7 +251,7 @@ class MockApi {
                         url: "https://copycoder.ai/",
                         image: "img/23.png",
                         sortOrder: 82,
-                        tags: "国外,AI开发"
+                        tags: "国外,编程"
                     },
                     {
                         id: 24,
@@ -260,7 +260,16 @@ class MockApi {
                         url: "https://lovable.dev/",
                         image: "img/24.png",
                         sortOrder: 83,
-                        tags: "国外,AI开发"
+                        tags: "国外,编程"
+                    },
+                    {
+                        id: 25,
+                        name: "Perplexity",
+                        description: "AI搜索引擎，能够实时从互联网获取信息并提供深度分析和准确答案",
+                        url: "https://www.perplexity.ai/",
+                        image: "img/25.png",
+                        sortOrder: 4,
+                        tags: "国外,搜索"
                     },
                     {
                         id: 90,
