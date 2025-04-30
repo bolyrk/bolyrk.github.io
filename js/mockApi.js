@@ -65,7 +65,7 @@ class MockApi {
                         description: "人性化的AI助手，擅长自然对话、创意写作与深度思考",
                         url: "https://claude.ai/",
                         image: "img/3.jpg",
-                        sortOrder: 23,
+                        sortOrder: 24,
                         tags: "AI对话,国外"
                     },
                     {
