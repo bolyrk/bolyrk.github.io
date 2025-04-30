@@ -193,44 +193,78 @@ body {
     margin: 0 auto !important;
 }
 
+/* 新的卡片样式 - 信用卡风格 */
 .gallery-item {
     position: relative !important;
     height: 280px !important;
-    border-radius: 10px !important;
+    border-radius: 16px !important;
     overflow: hidden !important;
     cursor: pointer !important;
-    transition: transform 0.5s ease !important;
-    box-shadow: none !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
     max-width: 100% !important;
-    background-color: var(--card-bg);
-    border: none !important;
+    background-color: rgba(40, 40, 50, 0.3) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 100% 0%, 
+        rgba(var(--gradient-1-rgb), 0.5), 
+        rgba(var(--gradient-2-rgb), 0.2) 40%, 
+        transparent 60%
+    );
+    opacity: 0.6;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    border-radius: 16px;
+    mix-blend-mode: overlay;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.1) 10%,
+        rgba(255, 255, 255, 0) 30%
+    );
+    opacity: 0.3;
+    z-index: 2;
+    border-radius: 16px;
 }
 
 .gallery-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: none !important;
+    transform: translateY(-10px) scale(1.02) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25), 0 5px 15px rgba(var(--gradient-1-rgb), 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.gallery-item:hover::before {
+    opacity: 0.8;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    opacity: 0.8;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    filter: saturate(0.8);
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-overlay);
-    z-index: 1;
+    transform: scale(1.05);
+    opacity: 0.7;
 }
 
 .gallery-item-content {
@@ -239,11 +273,14 @@ body {
     left: 0;
     width: 100%;
     padding: 20px;
-    z-index: 2;
-    transform: translateY(20px);
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    box-shadow: none;
+    z-index: 3;
+    transform: translateY(10px);
+    opacity: 0.95;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    background: linear-gradient(to top, 
+        rgba(20, 20, 25, 0.8) 0%,
+        rgba(20, 20, 25, 0.6) 60%, 
+        rgba(20, 20, 25, 0) 100%);
 }
 
 .gallery-item:hover .gallery-item-content {
@@ -252,35 +289,46 @@ body {
 }
 
 .gallery-item h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+/* 白色主题下的标题文字颜色调整 */
+[data-theme="light"] .gallery-item h2 {
+    color: #000000;
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.7), 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item p {
     font-size: 0.9rem;
     margin-bottom: 15px;
-    color: var(--secondary-text);
+    color: rgba(255, 255, 255, 0.85);
     transition: color 0.5s ease;
+    line-height: 1.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* 按钮样式更新 */
 .gallery-item .btn {
     position: relative;
     display: inline-block;
-    padding: 6px 16px;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    background: rgba(30, 30, 35, 0.6);
     color: white;
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
     z-index: 1;
-    box-shadow: 0 0 12px rgba(var(--gradient-1-rgb), 0.3);
-    border: 1px solid rgba(var(--gradient-1-rgb), 0.3);
-    text-shadow: 0 0 5px rgba(var(--gradient-1-rgb), 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
@@ -313,156 +361,160 @@ body {
         var(--gradient-1));
     background-size: 300%;
     z-index: -1;
-    border-radius: 5px;
-    filter: blur(3px);
+    filter: blur(8px);
     opacity: 0;
     transition: opacity 0.4s ease;
     animation: glowingBorder 4s linear infinite;
 }
 
 .gallery-item .btn:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px);
     color: white;
-    box-shadow: 0 0 20px rgba(var(--gradient-1-rgb), 0.6);
-    text-shadow: 0 0 8px rgba(var(--gradient-2-rgb), 0.8);
+    box-shadow: 0 6px 15px rgba(var(--gradient-1-rgb), 0.3);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     letter-spacing: 1.2px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .gallery-item .btn:hover:after {
-    opacity: 0.9;
+    opacity: 0.6;
 }
 
-.gallery-item .btn:hover:before {
-    opacity: 1;
+/* 标签容器样式更新 */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.gallery-item .btn:active {
-    transform: translateY(-1px) scale(0.98);
-}
-
-/* 按钮的闪烁效果 */
-@keyframes glowingBorder {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* 确保白色主题下按钮也有良好的可见性 */
-[data-theme="light"] .gallery-item .btn {
-    color: white;
-    background: rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 12px rgba(var(--gradient-1-rgb), 0.5);
-    text-shadow: 0 0 6px rgba(var(--gradient-1-rgb), 0.7);
-    border: 1px solid rgba(var(--gradient-1-rgb), 0.4);
-    border-radius: 4px;
-}
-
-[data-theme="light"] .gallery-item .btn:hover {
-    box-shadow: 0 0 25px rgba(var(--gradient-1-rgb), 0.7);
-    background: rgba(var(--gradient-1-rgb), 0.1);
-}
-
-/* 修复Safari浏览器下的兼容性问题 */
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .gallery-item .btn {
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-    }
-}
-
-/* 修复Firefox浏览器不支持backdrop-filter的问题 */
-@supports not ((backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px))) {
-    .gallery-item .btn {
-        background: rgba(0, 0, 0, 0.5);
-    }
-    
-    [data-theme="light"] .gallery-item .btn {
-        background: rgba(0, 0, 0, 0.3);
-    }
-}
-
-/* 主题适配 */
-[data-theme="dark"] .gallery-item,
-[data-theme="blue"] .gallery-item,
-[data-theme="purple"] .gallery-item,
-[data-theme="green"] .gallery-item,
-[data-theme="orange"] .gallery-item,
-[data-theme="ghibli"] .gallery-item {
-    box-shadow: none !important;
-}
-
-[data-theme="dark"] .gallery-item:hover,
-[data-theme="blue"] .gallery-item:hover,
-[data-theme="purple"] .gallery-item:hover,
-[data-theme="green"] .gallery-item:hover,
-[data-theme="orange"] .gallery-item:hover,
-[data-theme="ghibli"] .gallery-item:hover {
-    box-shadow: none !important;
-}
-
-/* 只有白色主题有阴影效果 */
-[data-theme="light"] .gallery-item {
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.15) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(5px) !important;
-}
-
-[data-theme="light"] .gallery-item:hover {
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid rgba(255, 255, 255, 0.4) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-}
-
-/* 移除其他样式中可能包含的阴影 */
-.gallery-item .btn {
-    box-shadow: none;
-}
-
-[data-theme="light"] .gallery-item .btn {
-    box-shadow: 0 3px 6px rgba(var(--gradient-1-rgb), 0.3);
-}
-
-/* 移除内容区域阴影 */
-.gallery-item-content {
-    box-shadow: none;
-}
-
-[data-theme="light"] .gallery-item-content {
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 0 0 10px 10px;
-}
-
-[data-theme="light"] .gallery-item:hover .gallery-item-content {
-    background-color: rgba(255, 255, 255, 0.85);
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    background: rgba(var(--gradient-1-rgb), 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(var(--gradient-1-rgb), 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* 恢复白色主题的文字颜色 */
-[data-theme="light"] .gallery-item h2 {
-    color: #1d1d1f;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.tag:hover {
+    background: rgba(var(--gradient-1-rgb), 0.3);
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-[data-theme="light"] .gallery-item p {
-    color: #515154;
+/* 按钮容器样式 */
+.btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-[data-theme="light"] .gallery-item .btn {
-    color: white;
+/* 响应式搜索框 */
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 90%;
+    }
+    
+    #search-input {
+        padding: 10px 40px 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* 添加涟漪效果样式 */
+.dropdown-option {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* 备用通道按钮样式 */
+.alternate-btn {
+    background-color: #6b21a8 !important; /* 紫色背景 */
+    color: white !important; /* 白色文字 */
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(107, 33, 168, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.alternate-btn:hover {
+    background-color: #7e22ce !important; /* 悬停时更亮的紫色 */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(107, 33, 168, 0.4);
+}
+
+/* 针对不同主题的紫色调整 */
+[data-theme="dark"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="dark"] .alternate-btn:hover {
+    background-color: #7c3aed;
+}
+
+[data-theme="blue"] .alternate-btn {
+    background-color: #7209b7;
+}
+[data-theme="blue"] .alternate-btn:hover {
+    background-color: #6b21a8;
+}
+
+[data-theme="green"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="green"] .alternate-btn:hover {
+    background-color: #7c3aed;
+}
+
+[data-theme="purple"] .alternate-btn {
+    background-color: #7c3aed;
+}
+[data-theme="purple"] .alternate-btn:hover {
+    background-color: #6d28d9;
+}
+
+[data-theme="orange"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="orange"] .alternate-btn:hover {
+    background-color: #7c3aed;
+}
+
+[data-theme="light"] .alternate-btn {
+    background-color: #8b5cf6;
+}
+[data-theme="light"] .alternate-btn:hover {
+    background-color: #7c3aed;
 }
 
 .cursor,
@@ -491,6 +543,76 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
+    display: none; /* 隐藏粒子背景 */
+}
+
+/* 新的现代渐变背景 */
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at top right, 
+                rgba(var(--gradient-1-rgb), 0.2), 
+                rgba(var(--gradient-2-rgb), 0.1) 40%, 
+                rgba(10, 10, 14, 0.9) 70%),
+                linear-gradient(135deg, 
+                rgba(var(--gradient-3-rgb), 0.1) 0%, 
+                rgba(var(--gradient-1-rgb), 0.2) 100%);
+    z-index: -2;
+    transition: background 0.8s ease;
+}
+
+/* 添加几何网格效果 */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(var(--gradient-1-rgb), 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--gradient-1-rgb), 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.2;
+    transition: background-image 0.8s ease, opacity 0.8s ease;
+}
+
+/* 针对不同主题的背景调整 */
+[data-theme="light"] body::before {
+    background: radial-gradient(circle at top right, 
+                rgba(var(--gradient-1-rgb), 0.1), 
+                rgba(var(--gradient-2-rgb), 0.05) 40%, 
+                rgba(245, 245, 247, 0.9) 70%),
+                linear-gradient(135deg, 
+                rgba(var(--gradient-3-rgb), 0.05) 0%, 
+                rgba(var(--gradient-1-rgb), 0.1) 100%);
+}
+
+[data-theme="light"] body::after {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    opacity: 0.6;
+}
+
+/* 添加一个微妙的底部阴影效果 */
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, 
+                rgba(var(--gradient-1-rgb), 0.1), 
+                transparent);
     z-index: -1;
 }
 
@@ -1497,37 +1619,31 @@ body {
 .tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 6px;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
 .tag {
     display: inline-block;
-    padding: 2px 6px;
-    background: rgba(var(--gradient-1-rgb), 0.15);
-    color: var(--text-color);
-    border-radius: 4px;
+    padding: 3px 8px;
+    background: rgba(var(--gradient-1-rgb), 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
     font-size: 0.7rem;
     font-weight: 500;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(var(--gradient-1-rgb), 0.3);
     transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .tag:hover {
-    background: rgba(var(--gradient-1-rgb), 0.25);
-    transform: translateY(-1px);
-}
-
-[data-theme="light"] .tag {
-    background: rgba(var(--gradient-1-rgb), 0.1);
-    border: 1px solid rgba(var(--gradient-1-rgb), 0.2);
-}
-
-[data-theme="light"] .tag:hover {
-    background: rgba(var(--gradient-1-rgb), 0.2);
+    background: rgba(var(--gradient-1-rgb), 0.3);
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* 按钮容器样式 */

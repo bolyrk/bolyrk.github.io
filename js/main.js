@@ -28,9 +28,6 @@ async function initApp() {
         // 加载工具数据
         await loadTools();
         
-        // 初始化粒子背景
-        updateParticlesColor();
-        
         // 设置主题切换器悬停效果
         setupThemeSwitcher();
         
@@ -80,6 +77,12 @@ function initRobot() {
         }, 3000);
     }, 500); // 延迟500ms显示，以便机器人先出现
     
+    // 添加自动关闭计时器 - 10秒后自动关闭
+    let autoCloseTimer = setTimeout(() => {
+        stopWalking();
+        robotContainer.style.display = 'none';
+    }, 10000);
+    
     // 机器人笑声互动
     let clickCount = 0;
     let clickTimer = null;
@@ -87,6 +90,9 @@ function initRobot() {
     
     // 点击机器人事件处理
     robot.addEventListener('click', function() {
+        // 用户点击了机器人，清除自动关闭计时器
+        clearTimeout(autoCloseTimer);
+        
         // 增加点击计数
         clickCount++;
         
@@ -168,6 +174,11 @@ function initRobot() {
         }
     });
     
+    // 鼠标悬停时也会清除自动关闭计时器
+    robot.addEventListener('mouseenter', function() {
+        clearTimeout(autoCloseTimer);
+    });
+    
     // 机器人行走
     let walkInterval;
     
@@ -214,6 +225,7 @@ function initRobot() {
     
     // 关闭按钮
     closeButton.addEventListener('click', function() {
+        clearTimeout(autoCloseTimer); // 清除自动关闭计时器
         stopWalking();
         robotContainer.style.display = 'none';
     });
@@ -305,9 +317,6 @@ async function loadThemes() {
                 // 获取并设置主题
                 const selectedTheme = this.getAttribute('data-theme');
                 document.body.setAttribute('data-theme', selectedTheme);
-                
-                // 更新粒子颜色
-                updateParticlesColor();
             });
             
             // 添加悬停效果显示主题名称
@@ -421,101 +430,10 @@ async function loadTools() {
     }
 }
 
-// 更新粒子颜色的函数
+// 更新粒子颜色的函数 - 保留但不再使用
 function updateParticlesColor() {
-    // 获取当前主题的粒子颜色
-    const computedStyle = getComputedStyle(document.documentElement);
-    const particleColor = computedStyle.getPropertyValue('--particle-color').trim();
-
-    // 重新初始化粒子系统
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: particleColor
-            },
-            shape: {
-                type: 'circle',
-                stroke: {
-                    width: 0,
-                    color: '#000000'
-                }
-            },
-            opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            size: {
-                value: 3,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 2,
-                    size_min: 0.1,
-                    sync: false
-                }
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: particleColor,
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 1,
-                direction: 'none',
-                random: true,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                }
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'grab'
-                },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
-                },
-                resize: true
-            },
-            modes: {
-                grab: {
-                    distance: 140,
-                    line_linked: {
-                        opacity: 1
-                    }
-                },
-                push: {
-                    particles_nb: 4
-                }
-            }
-        },
-        retina_detect: true
-    });
+    // 保留函数但不执行任何操作，因为已改用CSS渐变背景
+    console.log('使用CSS渐变背景替代粒子背景');
 }
 
 // 设置自定义鼠标跟随效果
