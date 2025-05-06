@@ -272,6 +272,15 @@ class MockApi {
                         tags: "国外,搜索"
                     },
                     {
+                        id: 26,
+                        name: "v0.dev",
+                        description: "Vercel的AI界面生成工具，使用简单提示快速创建精美的React组件和完整页面",
+                        url: "https://v0.dev/",
+                        image: "img/26.png",
+                        sortOrder: 84,
+                        tags: "国外,编程"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
