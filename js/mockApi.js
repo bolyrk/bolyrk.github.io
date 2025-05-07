@@ -127,10 +127,10 @@ class MockApi {
                         id: 10,
                         name: "Claude镜像2",
                         description: "Claude AI的第二个镜像站点，备用镜像服务器，保障访问稳定性",
-                        url: "https://pro.restai.fun",
+                        url: "https://c.gpt600.com/new",
                         image: "img/10.jpg",
                         hasRecharge: true,
-                        rechargeUrl: "https://m.tb.cn/h.6VYF4WBsT4P8boC  ",
+                        rechargeUrl: "https://e.tb.cn/h.6oE4dvyYgjVOf1W?tk=ocDVVgIdlk0",
                         sortOrder: 21,
                         tags: "国外,AI对话"
                     },
