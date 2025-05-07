@@ -240,6 +240,7 @@ class MockApi {
                         name: "Claude镜像3",
                         description: "Claude AI的第三个镜像站点，提供稳定可靠的Claude人工智能服务访问",
                         url: "https://cn2.ziling.cc/list/#/home",
+                        alternateUrl: "https://ziling.cc/speed-test.html",
                         image: "img/22.png",
                         sortOrder: 22,
                         tags: "国外,AI对话"
