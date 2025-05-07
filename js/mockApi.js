@@ -127,7 +127,7 @@ class MockApi {
                         id: 10,
                         name: "Claude镜像2",
                         description: "Claude AI的第二个镜像站点，备用镜像服务器，保障访问稳定性",
-                        url: "https://c.gpt600.com/new",
+                        url: "https://c.gpt600.com",
                         image: "img/10.jpg",
                         hasRecharge: true,
                         rechargeUrl: "https://e.tb.cn/h.6oE4dvyYgjVOf1W?tk=ocDVVgIdlk0",
