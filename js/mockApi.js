@@ -282,6 +282,15 @@ class MockApi {
                         tags: "国外,编程"
                     },
                     {
+                        id: 27,
+                        name: "Jules",
+                        description: "Google推出的AI编程助手，自动处理不想做的编码任务，如bug修复、版本更新和特性构建",
+                        url: "https://jules.google/",
+                        image: "img/27.png",
+                        sortOrder: 85,
+                        tags: "国外,编程"
+                    },
+                    {
                         id: 90,
                         name: "银录录像局",
                         description: "专业的AI账号租赁平台，提供多种AI工具的账号服务",
