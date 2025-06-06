@@ -34,9 +34,6 @@ async function initApp() {
         // 设置搜索功能
         setupSearch();
         
-        // 初始化机器人
-        initRobot();
-        
         // 注释或删除以下行来禁用鼠标跟随效果
         // setupCursorEffects();
     } catch (error) {
