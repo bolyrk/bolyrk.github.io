@@ -287,7 +287,16 @@ class MockApi {
                         description: "Google推出的AI编程助手，自动处理不想做的编码任务，如bug修复、版本更新和特性构建",
                         url: "https://jules.google/",
                         image: "img/27.png",
-                        sortOrder: 85,
+                        sortOrder: 845,
+                        tags: "国外,编程"
+                    },
+                    {
+                        id: 28,
+                        name: "Claude Code",
+                        description: "Anthropic推出的代码编辑智能助手，专为开发者设计的高效编程工具",
+                        url: "https://code.gac.zoco.cc/",
+                        image: "img/28.png",
+                        sortOrder: 80,
                         tags: "国外,编程"
                     },
                     {
