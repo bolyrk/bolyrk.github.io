@@ -294,7 +294,7 @@ class MockApi {
                         id: 28,
                         name: "Claude Code",
                         description: "Anthropic推出的代码编辑智能助手，专为开发者设计的高效编程工具",
-                        url: "https://code.gac.zoco.cc/",
+                        url: "https://gaccode.com/",
                         image: "img/28.png",
                         sortOrder: 80,
                         tags: "国外,编程"
