@@ -31,6 +31,10 @@ class MockApi {
                         name: "紫色主题",
                         gradient: ["#7b2cbf", "#c77dff", "#e0aaff"]
                     },
+                    black: {
+                        name: "极简黑色",
+                        gradient: ["#222222", "#444444", "#666666"]
+                    },
                     orange: {
                         name: "橙色主题",
                         gradient: ["#ff7700", "#ff9500", "#ffc300"]
@@ -297,6 +301,15 @@ class MockApi {
                         url: "https://gaccode.com/",
                         image: "img/28.png",
                         sortOrder: 80,
+                        tags: "国外,编程"
+                    },
+                    {
+                        id: 29,
+                        name: "Augment Code",
+                        description: "业界领先的AI软件开发平台，提供自主软件代理和上下文感知编程助手",
+                        url: "https://www.augmentcode.com/",
+                        image: "img/29.png",
+                        sortOrder: 85,
                         tags: "国外,编程"
                     },
                     {

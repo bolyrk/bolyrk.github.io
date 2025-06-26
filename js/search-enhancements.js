@@ -116,7 +116,8 @@ function enhanceThemeSwitcher() {
         'dark-theme': '深色',
         'blue-theme': '海洋蓝',
         'green-theme': '自然绿',
-        'purple-theme': '极简黑',
+        'purple-theme': '紫色',
+        'black-theme': '极简黑',
         'orange-theme': '日落橙',
         'light-theme': '纯净白'
     };
