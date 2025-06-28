@@ -16,7 +16,7 @@
             gap: 10px;
             justify-content: flex-start;
         }
-        
+
         /* 购买按钮新样式 - 蓝底白字 */
         .recharge-btn {
             background-color: #2563eb; /* 蓝色背景 */
@@ -30,13 +30,13 @@
             font-size: 15px;
             letter-spacing: 0.5px;
         }
-        
+
         .recharge-btn:hover {
             background-color: #1d4ed8; /* 悬停时更深的蓝色 */
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
         }
-        
+
         /* 针对不同主题的蓝色调整 */
         [data-theme="dark"] .recharge-btn {
             background-color: #3b82f6;
@@ -44,35 +44,35 @@
         [data-theme="dark"] .recharge-btn:hover {
             background-color: #2563eb;
         }
-        
+
         [data-theme="blue"] .recharge-btn {
             background-color: #0284c7;
         }
         [data-theme="blue"] .recharge-btn:hover {
             background-color: #0369a1;
         }
-        
+
         [data-theme="green"] .recharge-btn {
             background-color: #3b82f6;
         }
         [data-theme="green"] .recharge-btn:hover {
             background-color: #2563eb;
         }
-        
+
         [data-theme="purple"] .recharge-btn {
             background-color: #4f46e5;
         }
         [data-theme="purple"] .recharge-btn:hover {
             background-color: #4338ca;
         }
-        
+
         [data-theme="orange"] .recharge-btn {
             background-color: #2563eb;
         }
         [data-theme="orange"] .recharge-btn:hover {
             background-color: #1d4ed8;
         }
-        
+
         [data-theme="light"] .recharge-btn {
             background-color: #3b82f6;
         }
@@ -114,6 +114,49 @@
         </div>
     </div>
 
+    <!-- 右键菜单 -->
+    <div id="context-menu" class="context-menu">
+        <div class="context-menu-header">
+            <span class="context-menu-icon">⚙️</span>
+            <span>显示设置</span>
+        </div>
+        <div class="context-menu-section">
+            <div class="context-menu-label">分辨率模式</div>
+            <div class="resolution-option" data-resolution="compact">
+                <span class="resolution-icon">📱</span>
+                <div class="resolution-info">
+                    <div class="resolution-name">紧凑模式</div>
+                    <div class="resolution-desc">小卡片 • 5-6列</div>
+                </div>
+                <span class="resolution-shortcut">Ctrl+1</span>
+            </div>
+            <div class="resolution-option" data-resolution="standard">
+                <span class="resolution-icon">💻</span>
+                <div class="resolution-info">
+                    <div class="resolution-name">标准模式</div>
+                    <div class="resolution-desc">中等卡片 • 3-4列</div>
+                </div>
+                <span class="resolution-shortcut">Ctrl+2</span>
+            </div>
+            <div class="resolution-option" data-resolution="large">
+                <span class="resolution-icon">🖥️</span>
+                <div class="resolution-info">
+                    <div class="resolution-name">大屏模式</div>
+                    <div class="resolution-desc">大卡片 • 2-3列</div>
+                </div>
+                <span class="resolution-shortcut">Ctrl+3</span>
+            </div>
+            <div class="resolution-option" data-resolution="ultra">
+                <span class="resolution-icon">📺</span>
+                <div class="resolution-info">
+                    <div class="resolution-name">超大模式</div>
+                    <div class="resolution-desc">超大卡片 • 1-2列</div>
+                </div>
+                <span class="resolution-shortcut">Ctrl+4</span>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
         <div class="header-decoration">
             <div class="header-icon">🤖</div>
@@ -124,7 +167,7 @@
         <h1>张博的AI工具导航</h1>
         <p class="subtitle">探索前沿AI工具，提升工作效率</p>
         <p id="current-time">正在加载时间...</p>
-        
+
         <!-- 添加搜索框 -->
         <div class="search-container">
             <div class="search-input-wrapper">
@@ -148,11 +191,18 @@
         <div class="loading">加载中...</div>
     </main>
 
+    <!-- 功能提示 -->
+    <div class="feature-hint">
+        <span class="hint-icon">💡</span>
+        <span class="hint-text">右键点击页面可调整显示模式，或使用 Ctrl+1~4 快捷键</span>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/mockApi.js"></script>
     <script src="js/main.js"></script>
     <script src="js/search-enhancements.js"></script>
     <script src="js/advanced-effects.js"></script>
+    <script src="js/resolution-settings.js"></script>
 
     <!-- 在</body>标签前添加全屏切换脚本 -->
     <script>
@@ -161,7 +211,7 @@
             const fullscreenToggle = document.getElementById('fullscreen-toggle');
             const fullscreenIcon = document.getElementById('fullscreen-icon');
             const exitFullscreenIcon = document.getElementById('exit-fullscreen-icon');
-            
+
             fullscreenToggle.addEventListener('click', function() {
                 if (!document.fullscreenElement) {
                     // 进入全屏
@@ -187,13 +237,13 @@
                     exitFullscreenIcon.style.display = 'none';
                 }
             });
-            
+
             // 监听全屏状态变化
             document.addEventListener('fullscreenchange', updateFullscreenButton);
             document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
             document.addEventListener('mozfullscreenchange', updateFullscreenButton);
             document.addEventListener('MSFullscreenChange', updateFullscreenButton);
-            
+
             function updateFullscreenButton() {
                 if (document.fullscreenElement) {
                     fullscreenIcon.style.display = 'none';
